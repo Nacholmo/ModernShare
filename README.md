@@ -51,6 +51,8 @@ were verified on 2026-11-08; see [download details](docs/GETTING_FIRMWARE.md).
 Linux builds target Ubuntu 22.04 or a compatible newer distribution. The
 [release page](https://github.com/Nacholmo/ModernShare/releases/tag/v0.8.0) also
 includes checksums, source and licence notices. [GUI instructions](docs/GUI.md).
+Both release apps were built and verified on their native platforms in
+[GitHub Actions](https://github.com/Nacholmo/ModernShare/actions/runs/42529526318).
 
 For a terminal-only workflow, with no third-party Python packages:
 

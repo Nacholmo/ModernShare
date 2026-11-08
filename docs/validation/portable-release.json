@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "source_commit": "62f787e149a90274b6f85805a46be41767eec6b5",
+  "source_archives_match_git_commit": true,
+  "workflow": "https://github.com/Nacholmo/ModernShare/actions/runs/42529526318",
+  "platforms": {
+    "Windows": {
+      "passed": true,
+      "platform": "Windows",
+      "architecture": "AMD64",
+      "asset": "ModernShare-0.8-Windows-x86_64.exe",
+      "executable_sha256": "cbb72007f613a9c84ccf64b8617b7ee94805db78eb22bf96dc29af915169e670",
+      "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+      "checks": [
+        "executable startup",
+        "packaged Tk GUI startup",
+        "original updater to exact confirmed firmware",
+        "existing output preserved",
+        "invalid input rejected"
+      ],
+      "appimage_extraction_mode": false
+    },
+    "Linux": {
+      "passed": true,
+      "platform": "Linux",
+      "architecture": "x86_64",
+      "asset": "ModernShare-0.8-Linux-x86_64.AppImage",
+      "executable_sha256": "a6d815e7b94b9123076c4b00d725056b89b73c26fcddde6a50aaccbf56cf48a7",
+      "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+      "checks": [
+        "executable startup",
+        "packaged Tk GUI startup",
+        "original updater to exact confirmed firmware",
+        "existing output preserved",
+        "invalid input rejected"
+      ],
+      "appimage_extraction_mode": true
+    }
+  },
+  "proprietary_firmware_included": false
+}

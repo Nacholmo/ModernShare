@@ -39,6 +39,23 @@ The standalone repository build reassembles every custom hook, generates header,
 theme and artwork, verifies the exact final release hash and checks tile decoder
 roundtrips. Package verification records are in `docs/validation/repository.json`.
 
+## Published Windows and AppImage release
+
+[Release v0.8.0](https://github.com/Nacholmo/ModernShare/releases/tag/v0.8.0)
+contains native Windows x86-64 and Linux x86-64 AppImage applications, built and
+verified in [GitHub Actions](https://github.com/Nacholmo/ModernShare/actions/runs/42529526318).
+Both platforms passed all 19 host integration tests, four GUI-flow cases, and
+five checks of the actual packaged app: startup, Tk GUI initialization, exact
+confirmed firmware from the original updater, existing-output protection, and
+invalid-input rejection. Both corresponding source archives were compared byte
+for byte with the tested Git commit before publishing. Uploaded asset hashes
+were checked against the verified local artifacts. Results are preserved in
+`validation/portable-release.json` and the release's `verification.json`.
+
+The Linux AppImage built on Ubuntu 22.04 was also checked locally. Hosted CI uses
+AppImage extract-and-run mode because FUSE mounting may be unavailable. Earlier
+local packaging reports below predate these native release checks.
+
 ## Public repository and GUI checks
 
 The standalone source build and the standard-library GUI patch bundle both
@@ -49,8 +66,7 @@ passed without using the original workspace's sources. See
 
 Nineteen host tests pass when supplied the local stock/updater. Four GUI cases
 pass on Linux using a virtual display. A packaged Linux executable starts the GUI
-and generates the exact firmware from the original updater. Windows packaging is
-prepared in GitHub Actions but no Windows runtime result is claimed. Reports:
+and generates the exact firmware from the original updater. The initial local build report predates the native Windows release validation above. Reports:
 `validation/gui.json`, `validation/linux-app.json`, and `validation/public-emulation.json`.
 
 The mirror download was independently fetched and hash-checked; see
