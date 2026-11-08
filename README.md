@@ -9,7 +9,16 @@ tested firmware, SHA-256
 `091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003`.
 Compatibility with other camera models or firmware versions is not established.
 
-![ModernShare boot artwork](boot_image.png)
+## On the camera
+
+ModernShare 0.8 running on a Kodak EasyShare CD703:
+
+| Boot screen | Share-button settings | Camera menu |
+|---|---|---|
+| ![ModernShare boot screen on a Kodak CD703](photos/boot.png) | ![ModernShare menu showing Kodachrome 64, DNG saving OFF and v0.8 SD saved](photos/modernshare_menu.png) | ![Kodak CD703 camera menu with the ModernShare charcoal theme](photos/menus.png) |
+
+The settings photo shows Kodachrome 64 selected, DNG saving OFF and the
+**SD saved** status. [View the original boot artwork](boot_image.png).
 
 ## Features
 
@@ -63,7 +72,7 @@ python3 modernshare_patcher.py /path/to/KC713130.exe --output /output/folder/KC7
 ## Rebuild the modification from source
 
 This repository contains modification source and patch recipes. **Kodak firmware,
-updaters, memory dumps, personal photos and tool binaries are not distributed.**
+updaters, memory dumps and tool binaries are not included in this source repository.**
 Supply your own stock C713 1.30 image with SHA-256:
 
 ```text
@@ -124,6 +133,7 @@ See [SD settings](mods/sd_settings/README.md), [architecture](docs/ARCHITECTURE.
 | `tools/` | Firmware inspection/checksum tool and legacy RAW→DNG converter |
 | `decompiler-project/` | Annotation/model sources and analysis setup scripts |
 | `docs/validation/0.8/` | Historical automated results and user camera acceptance |
+| `photos/` | Photos of ModernShare running on the camera |
 | `tests/` | Public tests and metadata fixtures without personal photographs |
 
 The original staged builders are retained for research and history; their old
