@@ -1,0 +1,3 @@
+63 LUTs from https://github.com/YahiaAngelo/Film-Luts (MIT, see LICENSE),
+the selection used by https://github.com/HNGSeries/mfilm-canon-film-simulation.
+They take ordinary sRGB pictures as input.

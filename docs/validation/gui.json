@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cases": [
+    "missing fields",
+    "invalid updater",
+    "original updater to exact firmware",
+    "existing output preserved"
+  ],
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "platform": "Linux x86-64 / Tkinter / Xvfb",
+  "windows_runtime_tested": false,
+  "screenshot": "docs/modernshare-gui.png"
+}

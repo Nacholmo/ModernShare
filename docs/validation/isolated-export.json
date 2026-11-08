@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "source_archive_no_firmware": true,
+  "clean_path_with_spaces": true,
+  "pythonpath_cleared": true,
+  "pure_patcher_exact": true,
+  "source_build_exact": true,
+  "external_requirements": "Explicit local stock/updater and ARC binutils only; installed Python build dependencies",
+  "original_workspace_sources_required": false
+}

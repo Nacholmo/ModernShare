@@ -1,0 +1,10 @@
+{
+  "status": "camera-confirmed by user report",
+  "version": "ModernShare 0.8",
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "evidence": "User reports: works as intended",
+  "scope": "Overall acceptance of the supplied boot image/branding, default DNG OFF and SD-backed Film/DNG settings build",
+  "independent_post_flash_card_readback": false,
+  "individual_trial_steps_reported": false,
+  "power_interruption_durability_tested": false
+}

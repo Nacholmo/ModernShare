@@ -1,0 +1,19 @@
+{
+  "language": "ARCompact:LE:32:kodak",
+  "upstream": "ARCompact (PR 3006)",
+  "changes": [
+    "Widen auxregs address space and lr/sr address expressions to 32 bits.",
+    "Mark full auxiliary range volatile.",
+    "Preserve r24 in the default ABI.",
+    "Model 14 shared save and 14 shared restore helpers with call-fixup p-code.",
+    "Use equivalent branchless semantics for non-flag-setting conditional sub and sub_s.ne in delayed branches."
+  ],
+  "generated_files_sha256": {
+    "KodakARCompact.slaspec": "07ef1cac65b10d60cff44c491e0de44eb3791aebe5c03889a23d0062ae5717a3",
+    "KodakARCompact.pspec": "79025eadc3ada1b009793a08f49802980fc87706d005f4b377917629ebcd8f71",
+    "KodakARCompact.cspec": "2a4ddb5766cbb255cfa3f8f67c3783a4a27c16b3cc88ad99f9d33cacd018ae8c",
+    "KodakARCompact.ldefs": "04c999532e9be6f8a35a2f689912cc55460c23fd47d91a8a576b0b61601988ea"
+  },
+  "scope": "Static analysis model only; no firmware bytes changed. No claim of full CPU or MetaWare ABI emulation.",
+  "compiled_sla_sha256": "60ae6f0ab4482d4bfdf2526e24b02966f056d3f5650205a86325bf4d7723c463"
+}

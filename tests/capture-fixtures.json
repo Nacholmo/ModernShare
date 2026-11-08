@@ -1,0 +1,290 @@
+[
+  {
+    "name": "0307",
+    "date": "2007:01:01 12:00:23",
+    "exposure_us": 108299,
+    "fnumber_100": 270,
+    "iso": 160,
+    "aperture_flag": 0,
+    "aperture_index": 0
+  },
+  {
+    "name": "0308",
+    "date": "2007:01:01 12:00:40",
+    "exposure_us": 125000,
+    "fnumber_100": 480,
+    "iso": 200,
+    "aperture_flag": 0,
+    "aperture_index": 5
+  },
+  {
+    "name": "0309",
+    "date": "2007:01:01 12:00:47",
+    "exposure_us": 125000,
+    "fnumber_100": 480,
+    "iso": 200,
+    "aperture_flag": 0,
+    "aperture_index": 5
+  },
+  {
+    "name": "0310",
+    "date": "2007:01:01 12:01:19",
+    "exposure_us": 125000,
+    "fnumber_100": 480,
+    "iso": 200,
+    "aperture_flag": 0,
+    "aperture_index": 5
+  },
+  {
+    "name": "0311",
+    "date": "2007:01:01 12:01:25",
+    "exposure_us": 125000,
+    "fnumber_100": 480,
+    "iso": 200,
+    "aperture_flag": 0,
+    "aperture_index": 5
+  },
+  {
+    "name": "0312",
+    "date": "2007:01:01 12:01:41",
+    "exposure_us": 116954,
+    "fnumber_100": 480,
+    "iso": 400,
+    "aperture_flag": 0,
+    "aperture_index": 5
+  },
+  {
+    "name": "aperture-0-0",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50000,
+    "fnumber_100": 270,
+    "iso": 80,
+    "aperture_flag": 0,
+    "aperture_index": 0
+  },
+  {
+    "name": "aperture-0-1",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50001,
+    "fnumber_100": 300,
+    "iso": 180,
+    "aperture_flag": 0,
+    "aperture_index": 1
+  },
+  {
+    "name": "aperture-0-2",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50002,
+    "fnumber_100": 340,
+    "iso": 280,
+    "aperture_flag": 0,
+    "aperture_index": 2
+  },
+  {
+    "name": "aperture-0-3",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50003,
+    "fnumber_100": 380,
+    "iso": 380,
+    "aperture_flag": 0,
+    "aperture_index": 3
+  },
+  {
+    "name": "aperture-0-4",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50004,
+    "fnumber_100": 430,
+    "iso": 480,
+    "aperture_flag": 0,
+    "aperture_index": 4
+  },
+  {
+    "name": "aperture-0-5",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50005,
+    "fnumber_100": 480,
+    "iso": 580,
+    "aperture_flag": 0,
+    "aperture_index": 5
+  },
+  {
+    "name": "aperture-0-6",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50006,
+    "fnumber_100": 480,
+    "iso": 680,
+    "aperture_flag": 0,
+    "aperture_index": 6
+  },
+  {
+    "name": "aperture-0-7",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50007,
+    "fnumber_100": 480,
+    "iso": 780,
+    "aperture_flag": 0,
+    "aperture_index": 7
+  },
+  {
+    "name": "aperture-1-0",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50000,
+    "fnumber_100": 480,
+    "iso": 80,
+    "aperture_flag": 1,
+    "aperture_index": 0
+  },
+  {
+    "name": "aperture-1-1",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50001,
+    "fnumber_100": 540,
+    "iso": 180,
+    "aperture_flag": 1,
+    "aperture_index": 1
+  },
+  {
+    "name": "aperture-1-2",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50002,
+    "fnumber_100": 600,
+    "iso": 280,
+    "aperture_flag": 1,
+    "aperture_index": 2
+  },
+  {
+    "name": "aperture-1-3",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50003,
+    "fnumber_100": 670,
+    "iso": 380,
+    "aperture_flag": 1,
+    "aperture_index": 3
+  },
+  {
+    "name": "aperture-1-4",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50004,
+    "fnumber_100": 760,
+    "iso": 480,
+    "aperture_flag": 1,
+    "aperture_index": 4
+  },
+  {
+    "name": "aperture-1-5",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50005,
+    "fnumber_100": 850,
+    "iso": 580,
+    "aperture_flag": 1,
+    "aperture_index": 5
+  },
+  {
+    "name": "aperture-1-6",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50006,
+    "fnumber_100": 480,
+    "iso": 680,
+    "aperture_flag": 1,
+    "aperture_index": 6
+  },
+  {
+    "name": "aperture-1-7",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50007,
+    "fnumber_100": 480,
+    "iso": 780,
+    "aperture_flag": 1,
+    "aperture_index": 7
+  },
+  {
+    "name": "aperture-255-0",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50000,
+    "fnumber_100": 480,
+    "iso": 80,
+    "aperture_flag": 255,
+    "aperture_index": 0
+  },
+  {
+    "name": "aperture-255-1",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50001,
+    "fnumber_100": 540,
+    "iso": 180,
+    "aperture_flag": 255,
+    "aperture_index": 1
+  },
+  {
+    "name": "aperture-255-2",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50002,
+    "fnumber_100": 600,
+    "iso": 280,
+    "aperture_flag": 255,
+    "aperture_index": 2
+  },
+  {
+    "name": "aperture-255-3",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50003,
+    "fnumber_100": 670,
+    "iso": 380,
+    "aperture_flag": 255,
+    "aperture_index": 3
+  },
+  {
+    "name": "aperture-255-4",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50004,
+    "fnumber_100": 760,
+    "iso": 480,
+    "aperture_flag": 255,
+    "aperture_index": 4
+  },
+  {
+    "name": "aperture-255-5",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50005,
+    "fnumber_100": 850,
+    "iso": 580,
+    "aperture_flag": 255,
+    "aperture_index": 5
+  },
+  {
+    "name": "aperture-255-6",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50006,
+    "fnumber_100": 480,
+    "iso": 680,
+    "aperture_flag": 255,
+    "aperture_index": 6
+  },
+  {
+    "name": "aperture-255-7",
+    "date": "2026:11:07 23:59:58",
+    "exposure_us": 50007,
+    "fnumber_100": 480,
+    "iso": 780,
+    "aperture_flag": 255,
+    "aperture_index": 7
+  },
+  {
+    "name": "clamp",
+    "date": "2028:02:29 01:02:03",
+    "exposure_us": 100,
+    "fnumber_100": 850,
+    "iso": 1250,
+    "aperture_flag": 1,
+    "aperture_index": 5
+  },
+  {
+    "name": "year-2037",
+    "date": "2037:12:31 23:59:59",
+    "exposure_us": 2000000,
+    "fnumber_100": 850,
+    "iso": 1250,
+    "aperture_flag": 1,
+    "aperture_index": 5
+  }
+]

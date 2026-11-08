@@ -1,0 +1,786 @@
+{
+  "metadata_timing": "before_raw_write",
+  "metadata_hook_bytes": 180,
+  "metadata_callsite_address": "0x125a34",
+  "default_date": "2026-11-07",
+  "default_time": "12:00:00",
+  "struct_tm": [
+    0,
+    0,
+    12,
+    7,
+    10,
+    126,
+    6,
+    310,
+    0
+  ],
+  "status": "ModernShare 0.8; camera-confirmed by user report",
+  "version": "ModernShare 0.8",
+  "base": "mods/classic_films/test-v0.7/KC713.FW",
+  "base_sha256": "57a25b3f46bff1b6bf19f23853034abe665909f379831501dff13b48ff572c4e",
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "firmware_bytes": 2172416,
+  "builder_sha256": "68cfb9a49ba23772e07d3d9424da313978230e73fbaa4f34ce254de2df07a680",
+  "source_sha256": "4b9f04b278bb4c98c36991506b51807dbf4e17d525567d72776c56d52798709f",
+  "symbols": {
+    "film_next": "0x1247a0",
+    "start": "0x1256c0",
+    "init": "0x1256da",
+    "refresh": "0x125700",
+    "toggle_dng": "0x125758",
+    "hidden_menu": "0x1259e0",
+    "version": "0x1259ec",
+    "film_end": "0x1247f8",
+    "menu_end": "0x125778",
+    "tail_end": "0x1259f0"
+  },
+  "labels": {
+    "TITLE": "0x168218",
+    "DNG_ON": "0x168225",
+    "DNG_OFF": "0x168234",
+    "HIDDEN": "0x168244",
+    "VERSION": "0x168250",
+    "FILM_0": "0x168262",
+    "FILM_1": "0x168270",
+    "FILM_2": "0x16827c",
+    "FILM_3": "0x168291",
+    "FILM_4": "0x1682a4",
+    "FILM_5": "0x168340",
+    "FILM_6": "0x168351"
+  },
+  "menu_hook_address": "0x1256c0",
+  "menu_hook_bytes": 184,
+  "code_ranges": [
+    {
+      "start": "0x1247a0",
+      "end_exclusive": "0x1247f8",
+      "capacity": 96
+    },
+    {
+      "start": "0x1256c0",
+      "end_exclusive": "0x125778",
+      "capacity": 192
+    },
+    {
+      "start": "0x1259e0",
+      "end_exclusive": "0x1259f0",
+      "capacity": 32
+    }
+  ],
+  "widget_address": "0x168154",
+  "items_address": "0x1681b8",
+  "events_address": "0x1682d4",
+  "film_state_address": "0x1682d0",
+  "film_label_table": "0x168324",
+  "film_table_address": "0x125780",
+  "film_choices": [
+    "By mode",
+    "Stock",
+    "Agfa Vista 200",
+    "Kodak E100VS",
+    "Fuji Neopan 1600",
+    "Velvia 100",
+    "Kodachrome 64"
+  ],
+  "film_default": "By mode",
+  "film_persistence": "current session",
+  "dng_default_on_at_boot": true,
+  "toggle_persistence": "current session",
+  "widget_owners": [
+    {
+      "screen": "0xa8",
+      "child": "0x168190"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x1681b0"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x168224"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x1681d0"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x1681ec"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x168240"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x16825c"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x168278"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x168298"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x1682b4"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x1682d4"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x1682f0"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x168310"
+    },
+    {
+      "screen": "0xa8",
+      "child": "0x168208"
+    }
+  ],
+  "patches": [
+    {
+      "address": "0xec050",
+      "file_offset": 770640,
+      "length": 4,
+      "reason": "Disconnect obsolete Share event table before reclaiming it",
+      "old_sha256": "3b107365ef634e3b2c7858f893affeea9ad84a0b28a177a51f9af02ae3a2bd8d",
+      "new_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "address": "0xebecc",
+      "file_offset": 770252,
+      "length": 324,
+      "reason": "SD preferences: startup, menu actions and status",
+      "old_sha256": "ae1788872e7407dd0d908ab7b02f8099678bc23612a1e91c40f3262afd4ad4ff",
+      "new_sha256": "f6f16322ca89aacd79dfa519f5becd5c12227495d91cdc0aa88143da6571ba42"
+    },
+    {
+      "address": "0xec088",
+      "file_offset": 770696,
+      "length": 384,
+      "reason": "SD preferences: validated read and alternating-slot write",
+      "old_sha256": "57ae497727fca999c5011b57d482840c728f3eda8e095d0930d4c0547cb595ec",
+      "new_sha256": "08e3b246f83500bd65de1da4beec340b028c5c86235b0c1b3b95e1f954d79cbb"
+    },
+    {
+      "address": "0x16839c",
+      "file_offset": 1279388,
+      "length": 176,
+      "reason": "SD state, absolute card paths and status strings",
+      "old_sha256": "0e1971712032194fc6bfeb59ea4aec37b9fa70b1d30ccc9103e1becd3ef40c6c",
+      "new_sha256": "5800686acc744c0067c9579da2cb53d899e19b1a694d9e32d02efb58b397366b"
+    },
+    {
+      "address": "0x1508bc",
+      "file_offset": 1182396,
+      "length": 4,
+      "reason": "Install capture_init callback",
+      "old_sha256": "dcb925fbfc8706e9c17f9b21b16f1c83ce38b7780ce00bedb83864b5b7871026",
+      "new_sha256": "62e18331e8da13646d6e4dc7f4b1177504a16b9feed02166ec1d562e238be195"
+    },
+    {
+      "address": "0x1682d8",
+      "file_offset": 1279192,
+      "length": 4,
+      "reason": "Install menu_init callback",
+      "old_sha256": "a419c8b30ab174cbcc7af6a0a91571f0da4b7e25abacf4c3fe17f2e77f98e119",
+      "new_sha256": "75601e84458c08ba5f13a452679bf37fe617fd0df900752e3dab407bad5b876e"
+    },
+    {
+      "address": "0x1682e8",
+      "file_offset": 1279208,
+      "length": 4,
+      "reason": "Install changed callback",
+      "old_sha256": "a9c9f951d9e7f2d19dea92ffb7b82e36eef86232b25ff14d998fab085e1d0d0a",
+      "new_sha256": "c2f03b58a2b606bee09808c0e0b9fda48186a78c2f9ff664cc6c2ca29e20db82"
+    },
+    {
+      "address": "0x1682f0",
+      "file_offset": 1279216,
+      "length": 4,
+      "reason": "Install changed callback",
+      "old_sha256": "905c7ec6d5e15866cebda85acd03e5a6576586eed04d321cecb34225d402791b",
+      "new_sha256": "c2f03b58a2b606bee09808c0e0b9fda48186a78c2f9ff664cc6c2ca29e20db82"
+    },
+    {
+      "address": "0x13358c",
+      "file_offset": 1062796,
+      "length": 1,
+      "reason": "DNG off on cards with no valid saved preference",
+      "old_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "new_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+    },
+    {
+      "address": "0x1681d4",
+      "file_offset": 1278932,
+      "length": 4,
+      "reason": "Initial DNG label OFF",
+      "old_sha256": "5a6858d2813055b7bba95ef0b07b8d5de3d885f46acf06b1a80f7c1b63e883eb",
+      "new_sha256": "a1b8fb72dc04395fb43f74dd62a87a3c917b3e41dd6d382ef908f17f584724e4"
+    },
+    {
+      "address": "0x168204",
+      "file_offset": 1278980,
+      "length": 4,
+      "reason": "Firmware version and SD status row",
+      "old_sha256": "f2b6d181cbe6ed888cd688753837e92c0b98df23e14f62207c63de75fe91ffbd",
+      "new_sha256": "70b4d2672b422b5fec8f25f1085cd17dc84d800d6720e71b06a2582fb38cf078"
+    },
+    {
+      "address": "0x168218",
+      "file_offset": 1279000,
+      "length": 13,
+      "reason": "ModernShare menu title",
+      "old_sha256": "afc8ca88da2a448693597fc6702619927dd5677417f6c43f9a58e49a708ff56d",
+      "new_sha256": "89e0d67d78f3abdbc0008197985a45d2814379e1518b3bbed5fe8f82f0a61b6b"
+    },
+    {
+      "address": "0x168250",
+      "file_offset": 1279056,
+      "length": 18,
+      "reason": "ModernShare version label",
+      "old_sha256": "458dfd6256f1da1f70cde9071e69e4401024461ed54e03f160977a6b63f7238d",
+      "new_sha256": "76b41d3a16f53e15d3c8029f89cde30b8b1bef417b80c5489de882afcf0af7b0"
+    },
+    {
+      "address": null,
+      "file_offset": 2097664,
+      "length": 47616,
+      "reason": "ModernShare boot streams; preserve English text prefix",
+      "old_sha256": "53b0a7e3e6794567f4c9369bb9cd919ca8e7be5035c6b5ee5d057f89d9f1f771",
+      "new_sha256": "6a1ad999d310d4dc712fe2aa6eaf7bb2cd736fc9f45bb98ab3ee46b0612b4ef3"
+    },
+    {
+      "address": "0x1254b0",
+      "file_offset": 1005232,
+      "length": 4,
+      "reason": "Updated boot tile data pointer",
+      "old_sha256": "17c965b6fecc88c18f667108797037b765fb0f27629012fbd14a1030cc57322e",
+      "new_sha256": "17c965b6fecc88c18f667108797037b765fb0f27629012fbd14a1030cc57322e"
+    },
+    {
+      "address": "0x1254c4",
+      "file_offset": 1005252,
+      "length": 4,
+      "reason": "Updated boot tile data pointer",
+      "old_sha256": "b2104bfbaa0ee4622ee3add0b1f580413c46e6919e2cd0d06c14351a8b878413",
+      "new_sha256": "7c6ca5c9ca27cf86fd4d29b75e82e27bf36b992b2fd5f89382287c345751ff68"
+    },
+    {
+      "address": "0x1254d8",
+      "file_offset": 1005272,
+      "length": 4,
+      "reason": "Updated boot tile data pointer",
+      "old_sha256": "023de526cc10d372ee0c1533fdad57aa815244627537a6b649b8763ec1fda0d3",
+      "new_sha256": "8b6a820ddd2d5e0955b2afc833228e1a4131f8358b421fa61836b1abb8059340"
+    },
+    {
+      "address": "0x1254ec",
+      "file_offset": 1005292,
+      "length": 4,
+      "reason": "Updated boot tile data pointer",
+      "old_sha256": "726df94bb0d43423752031dda47b81301e69642f5c9d7bfe0f774b34999a9450",
+      "new_sha256": "bfec357e5abc7e9aec68f8e7cadd80dfecac46bd789814183a50ddaa77a62e69"
+    },
+    {
+      "address": "0x125500",
+      "file_offset": 1005312,
+      "length": 4,
+      "reason": "Updated boot tile data pointer",
+      "old_sha256": "53466b0212680f2ae4737b19164430afa8b33406430fb4ed58a856892a47585a",
+      "new_sha256": "3da2f053950e1dfebeb2dd26f521ca7b18a10875b7ec79ff44f0069d10a9897f"
+    }
+  ],
+  "changed_bytes": 24311,
+  "checksums": [],
+  "limitations": [
+    "camera test required",
+    "JPEG matrix approximations, not full 3D LUTs",
+    "DNG sensor data unaffected",
+    "native exposure/color-mode behavior remains active",
+    "film and DNG selections reset at power-on"
+  ],
+  "preview_symbols": {
+    "start": "0x125c24",
+    "body_end": "0x125cb2",
+    "guard": "0x12fe98",
+    "tail": "0x12feb8",
+    "tail_end": "0x12fef0",
+    "refresh": "0xebc50",
+    "stock": "0xebc80",
+    "refresh_end": "0xebc8c"
+  },
+  "preview_code_ranges": [
+    {
+      "start": "0xebc50",
+      "end_exclusive": "0xebc8c",
+      "capacity": 64
+    },
+    {
+      "start": "0x125c24",
+      "end_exclusive": "0x125cb2",
+      "capacity": 156
+    },
+    {
+      "start": "0x12fe98",
+      "end_exclusive": "0x12fef0",
+      "capacity": 104
+    }
+  ],
+  "preview_transforms": [
+    {
+      "film_id": 1,
+      "relative_rgb": [
+        [
+          0.9211928963791278,
+          0.10991121731098995,
+          -0.031104113690118007
+        ],
+        [
+          -0.0352607996727956,
+          1.121103342614182,
+          -0.0858425429413866
+        ],
+        [
+          -0.0014144188885343717,
+          0.033489136935739516,
+          0.9689018444527951
+        ]
+      ],
+      "q12": [
+        [
+          3773,
+          450,
+          -127
+        ],
+        [
+          -144,
+          4592,
+          -352
+        ],
+        [
+          -6,
+          137,
+          3969
+        ]
+      ],
+      "max_quantization_error": 0.0001045496727955994
+    },
+    {
+      "film_id": 2,
+      "relative_rgb": [
+        [
+          0.804613886303321,
+          0.2007195830366935,
+          -0.004356906840014538
+        ],
+        [
+          -0.048385643571824864,
+          1.072172917131128,
+          -0.023787273559303324
+        ],
+        [
+          0.08886314910764721,
+          -0.20693834242141312,
+          1.118075193313766
+        ]
+      ],
+      "q12": [
+        [
+          3296,
+          822,
+          -18
+        ],
+        [
+          -198,
+          4392,
+          -97
+        ],
+        [
+          364,
+          -848,
+          4580
+        ]
+      ],
+      "max_quantization_error": 0.00010563293430332354
+    },
+    {
+      "film_id": 3,
+      "relative_rgb": [
+        [
+          0.15869434214650777,
+          0.5527032497498194,
+          0.2886024081036729
+        ],
+        [
+          0.15869434214650777,
+          0.5527032497498194,
+          0.2886024081036729
+        ],
+        [
+          0.15869434214650777,
+          0.5527032497498194,
+          0.2886024081036729
+        ]
+      ],
+      "q12": [
+        [
+          650,
+          2264,
+          1182
+        ],
+        [
+          650,
+          2264,
+          1182
+        ],
+        [
+          650,
+          2264,
+          1182
+        ]
+      ],
+      "max_quantization_error": 3.112525018056367e-05
+    },
+    {
+      "film_id": 4,
+      "relative_rgb": [
+        [
+          1.2799772976625632,
+          -0.15711514146251057,
+          0.0050675312999470395
+        ],
+        [
+          -0.042665260804125305,
+          1.2389091758128041,
+          -0.06733766500867888
+        ],
+        [
+          -0.040054079197303666,
+          -0.07278528031884196,
+          1.2417456095161459
+        ]
+      ],
+      "q12": [
+        [
+          5243,
+          -644,
+          21
+        ],
+        [
+          -175,
+          5075,
+          -276
+        ],
+        [
+          -164,
+          -298,
+          5086
+        ]
+      ],
+      "max_quantization_error": 0.00011142103748942866
+    },
+    {
+      "film_id": 5,
+      "relative_rgb": [
+        [
+          0.7755744786640092,
+          0.2393065085219344,
+          -0.03636536218594373
+        ],
+        [
+          -0.0008736354686392014,
+          0.9622348286324329,
+          0.01715443183620624
+        ],
+        [
+          -0.03345716987637064,
+          0.3897156297927058,
+          0.621280602583665
+        ]
+      ],
+      "q12": [
+        [
+          3177,
+          980,
+          -149
+        ],
+        [
+          -4,
+          3941,
+          70
+        ],
+        [
+          -137,
+          1596,
+          2545
+        ]
+      ],
+      "max_quantization_error": 0.00010292703136079856
+    }
+  ],
+  "preview_transforms_address": "0xebe10",
+  "reclaimed_share_entry_pointer_sites": [],
+  "preview_limits": [
+    "New captures only: existing color thumbnails are not rewritten",
+    "Preview uses the film CCM transform; curve/Ymat differences can prevent exact JPEG matching",
+    "Hardware preview timing/thumbnail generation requires camera trial"
+  ],
+  "menu_rows": [
+    "Film",
+    "DNG saving",
+    "Hidden menu",
+    "Version / SD status"
+  ],
+  "row_events": {
+    "film": "0x5000",
+    "dng": "0x5001",
+    "hidden": "0x5002",
+    "version": "0x5003"
+  },
+  "initial_selection": "Film",
+  "inherited_camera_confirmation": "mods/film_preview/test-v0.5/camera-user-report.json",
+  "film_record_bases": [
+    "0x1257a0",
+    "0x125860",
+    "0x125920",
+    "0xebc90",
+    "0xebd50"
+  ],
+  "matrix_pointer_table": "0xebe6c",
+  "new_film_fits": [
+    {
+      "name": "Velvia 100",
+      "lut": "mods/lut/looks/filmluts/colorslide/fuji_velvia_100_generic.cube",
+      "lut_sha256": "0a455565ce788143cdb1e6c214ed571fa557f31b052a711408fc60231ef36708",
+      "method": "CCM-only, stock curves/Ymat; grayscale neutrality preserved",
+      "R": [
+        [
+          1.2800823707852174,
+          -0.15676517668196108,
+          0.005291072136917699
+        ],
+        [
+          -0.04287633228674795,
+          1.2388926722213554,
+          -0.06740807369443355
+        ],
+        [
+          -0.04010450047134377,
+          -0.07294788490559016,
+          1.241660651617108
+        ]
+      ],
+      "stock_deltaE": [
+        11.556096410095645,
+        22.870448667292127,
+        29.981127913277827
+      ],
+      "fit_deltaE": [
+        6.633531706117409,
+        13.281766417445498,
+        19.348011150878172
+      ],
+      "matrices_sha256": "53e507eabbccc4cd0dce009426fc615df7cf019c391ed39ab42d9eec9091f6b0"
+    },
+    {
+      "name": "Kodachrome 64",
+      "lut": "mods/lut/looks/filmluts/colorslide/kodak_kodachrome_64.cube",
+      "lut_sha256": "6fce987295dac264a689a8ef1b1b3a407f26ffcb3f6d81a356ebc5d9c565d0b4",
+      "method": "CCM-only, stock curves/Ymat; grayscale neutrality preserved",
+      "R": [
+        [
+          0.775502138308845,
+          0.23942587455313777,
+          -0.03655450797368344
+        ],
+        [
+          -0.000720424531800975,
+          0.962058692051297,
+          0.01703523736880304
+        ],
+        [
+          -0.033182430802720854,
+          0.38994793347184936,
+          0.6216080022191707
+        ]
+      ],
+      "stock_deltaE": [
+        21.895167199141774,
+        51.26294083264863,
+        67.91915734040862
+      ],
+      "fit_deltaE": [
+        9.068280844203063,
+        16.851800889271416,
+        34.097599034954676
+      ],
+      "matrices_sha256": "f13c6478f6ad22f384c44c3312d858d33a02c101505a23fd3b8524f0f2955c72"
+    }
+  ],
+  "reclaimed_callbacks_pointer_sites": [
+    [
+      "0x1683a0",
+      "0xebc90"
+    ],
+    [
+      "0x1683a8",
+      "0xebd5c"
+    ]
+  ],
+  "space_audit": "mods/classic_films/research/space-audit.json",
+  "settings_source_sha256": "2fd8a4f07acd12babfe70e719c0a37d89c364d37f94240e71158980e91f36ddd",
+  "settings_symbols": {
+    "capture_init": "0xebecc",
+    "menu_init": "0xebeec",
+    "changed": "0xebf00",
+    "load_once": "0xebf2c",
+    "apply": "0xebff0",
+    "status": "0xec004",
+    "first_end": "0xec010",
+    "read_slot": "0xec088",
+    "validate": "0xec0e4",
+    "save": "0xec130",
+    "code_end": "0xec208"
+  },
+  "settings_layout": {
+    "STATE": "0x16839c",
+    "PATH0": "0x1683ac",
+    "PATH1": "0x1683b9",
+    "LABEL_DEFAULT": "0x1683c6",
+    "LABEL_LOADED": "0x1683d5",
+    "LABEL_SAVED": "0x1683e5",
+    "LABEL_ERROR": "0x1683f4"
+  },
+  "settings_strings": {
+    "PATH0": "B:\\KMOD0.CFG",
+    "PATH1": "B:\\KMOD1.CFG",
+    "LABEL_DEFAULT": "v0.8: defaults",
+    "LABEL_LOADED": "v0.8: SD loaded",
+    "LABEL_SAVED": "v0.8: SD saved",
+    "LABEL_ERROR": "v0.8: SD error"
+  },
+  "default_dng": false,
+  "default_film": "By mode",
+  "settings_format": {
+    "bytes": 16,
+    "magic": "KMOD",
+    "schema": 1,
+    "words": [
+      "magic",
+      "0x10000 | film<<8 | dng",
+      "generation",
+      "~(magic ^ config ^ generation)"
+    ],
+    "files": [
+      "KMOD0.CFG",
+      "KMOD1.CFG"
+    ],
+    "write_policy": "alternate inactive slot; commit sequence after close succeeds"
+  },
+  "artwork": {
+    "source": "boot_image.png",
+    "sha256": "da2630f58fe6046c9d5fab8e2e42a9d1f24c8ee82d1b25bd3f4d2b4672ee8ce9",
+    "dimensions": [
+      1448,
+      1086
+    ],
+    "palette": "existing unchanged palette, indices 1..251",
+    "flatten_lab": 16,
+    "median_size": 3,
+    "protected_text_boxes": [
+      [
+        0,
+        0,
+        180,
+        52
+      ],
+      [
+        0,
+        85,
+        251,
+        145
+      ],
+      [
+        0,
+        203,
+        480,
+        240
+      ]
+    ],
+    "tile_bytes": [
+      3299,
+      3863,
+      8495,
+      4563,
+      3827
+    ],
+    "used": 47608,
+    "capacity": 47616,
+    "free": 8,
+    "roundtrip_exact": true
+  },
+  "reclaimed_raw_references": [
+    [
+      "0x1683b0",
+      "0xebecc"
+    ],
+    [
+      "0x1683b8",
+      "0xebf08"
+    ],
+    [
+      "0x1683c0",
+      "0xebfd8"
+    ],
+    [
+      "0x1683c8",
+      "0xebfd8"
+    ],
+    [
+      "0x1683d0",
+      "0xec010"
+    ],
+    [
+      "0x1683d8",
+      "0xebf50"
+    ],
+    [
+      "0x1683e0",
+      "0xebf50"
+    ],
+    [
+      "0x1683e8",
+      "0xebfa8"
+    ],
+    [
+      "0x1683f0",
+      "0xebfa8"
+    ],
+    [
+      "0x1683f8",
+      "0xec034"
+    ],
+    [
+      "0x168400",
+      "0xec088"
+    ],
+    [
+      "0x168438",
+      "0xec1d0"
+    ],
+    [
+      "0x168440",
+      "0xec1d0"
+    ]
+  ],
+  "camera_confirmation": "camera-confirmation.json"
+}

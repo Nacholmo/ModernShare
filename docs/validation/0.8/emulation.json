@@ -1,0 +1,981 @@
+{
+  "passed": true,
+  "engine": "Ghidra ARCompact p-code emulator; external file APIs mocked",
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "scenarios": [
+    {
+      "name": "success",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "path-error",
+      "passed": true,
+      "instructions": 92,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "open-error",
+      "passed": true,
+      "instructions": 123,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "header-error",
+      "passed": true,
+      "instructions": 147,
+      "writes": 1,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "header-short",
+      "passed": true,
+      "instructions": 150,
+      "writes": 1,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "payload-error",
+      "passed": true,
+      "instructions": 163,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "payload-short",
+      "passed": true,
+      "instructions": 166,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "close-error",
+      "passed": true,
+      "instructions": 168,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "header-error-close-error",
+      "passed": true,
+      "instructions": 147,
+      "writes": 1,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "payload-error-close-error",
+      "passed": true,
+      "instructions": 163,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "short-path",
+      "passed": true,
+      "instructions": 98,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "long-path",
+      "passed": true,
+      "instructions": 100,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "minimum-path",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "maximum-path",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "black-frame-stock",
+      "passed": true,
+      "instructions": 13,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": true,
+      "metadata_before_write": false,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "unknown-kind-stock",
+      "passed": true,
+      "instructions": 13,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": true,
+      "metadata_before_write": false,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "16-bit-frame-stock",
+      "passed": true,
+      "instructions": 15,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": true,
+      "metadata_before_write": false,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "small-frame-stock",
+      "passed": true,
+      "instructions": 15,
+      "writes": 0,
+      "closes": 0,
+      "stock_fallback": true,
+      "metadata_before_write": false,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "capture-0307",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0307",
+        "date": "2007:01:01 12:00:23",
+        "exposure_us": 108299,
+        "fnumber_100": 270,
+        "iso": 160,
+        "aperture_flag": 0,
+        "aperture_index": 0,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0307.DNG"
+      }
+    },
+    {
+      "name": "capture-0308",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0308",
+        "date": "2007:01:01 12:00:40",
+        "exposure_us": 125000,
+        "fnumber_100": 480,
+        "iso": 200,
+        "aperture_flag": 0,
+        "aperture_index": 5,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0308.DNG"
+      }
+    },
+    {
+      "name": "capture-0309",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0309",
+        "date": "2007:01:01 12:00:47",
+        "exposure_us": 125000,
+        "fnumber_100": 480,
+        "iso": 200,
+        "aperture_flag": 0,
+        "aperture_index": 5,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0309.DNG"
+      }
+    },
+    {
+      "name": "capture-0310",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0310",
+        "date": "2007:01:01 12:01:19",
+        "exposure_us": 125000,
+        "fnumber_100": 480,
+        "iso": 200,
+        "aperture_flag": 0,
+        "aperture_index": 5,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0310.DNG"
+      }
+    },
+    {
+      "name": "capture-0311",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0311",
+        "date": "2007:01:01 12:01:25",
+        "exposure_us": 125000,
+        "fnumber_100": 480,
+        "iso": 200,
+        "aperture_flag": 0,
+        "aperture_index": 5,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0311.DNG"
+      }
+    },
+    {
+      "name": "capture-0312",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "0312",
+        "date": "2007:01:01 12:01:41",
+        "exposure_us": 116954,
+        "fnumber_100": 480,
+        "iso": 400,
+        "aperture_flag": 0,
+        "aperture_index": 5,
+        "payload_dng": "cd703_card_dng_metadata_test_20261108T014417Z/DCIM/100KC713/CCDI0312.DNG"
+      }
+    },
+    {
+      "name": "capture-aperture-0-0",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-0",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50000,
+        "fnumber_100": 270,
+        "iso": 80,
+        "aperture_flag": 0,
+        "aperture_index": 0
+      }
+    },
+    {
+      "name": "capture-aperture-0-1",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-1",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50001,
+        "fnumber_100": 300,
+        "iso": 180,
+        "aperture_flag": 0,
+        "aperture_index": 1
+      }
+    },
+    {
+      "name": "capture-aperture-0-2",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-2",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50002,
+        "fnumber_100": 340,
+        "iso": 280,
+        "aperture_flag": 0,
+        "aperture_index": 2
+      }
+    },
+    {
+      "name": "capture-aperture-0-3",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-3",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50003,
+        "fnumber_100": 380,
+        "iso": 380,
+        "aperture_flag": 0,
+        "aperture_index": 3
+      }
+    },
+    {
+      "name": "capture-aperture-0-4",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-4",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50004,
+        "fnumber_100": 430,
+        "iso": 480,
+        "aperture_flag": 0,
+        "aperture_index": 4
+      }
+    },
+    {
+      "name": "capture-aperture-0-5",
+      "passed": true,
+      "instructions": 169,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-5",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50005,
+        "fnumber_100": 480,
+        "iso": 580,
+        "aperture_flag": 0,
+        "aperture_index": 5
+      }
+    },
+    {
+      "name": "capture-aperture-0-6",
+      "passed": true,
+      "instructions": 164,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-6",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50006,
+        "fnumber_100": 480,
+        "iso": 680,
+        "aperture_flag": 0,
+        "aperture_index": 6
+      }
+    },
+    {
+      "name": "capture-aperture-0-7",
+      "passed": true,
+      "instructions": 164,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-0-7",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50007,
+        "fnumber_100": 480,
+        "iso": 780,
+        "aperture_flag": 0,
+        "aperture_index": 7
+      }
+    },
+    {
+      "name": "capture-aperture-1-0",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-0",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50000,
+        "fnumber_100": 480,
+        "iso": 80,
+        "aperture_flag": 1,
+        "aperture_index": 0
+      }
+    },
+    {
+      "name": "capture-aperture-1-1",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-1",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50001,
+        "fnumber_100": 540,
+        "iso": 180,
+        "aperture_flag": 1,
+        "aperture_index": 1
+      }
+    },
+    {
+      "name": "capture-aperture-1-2",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-2",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50002,
+        "fnumber_100": 600,
+        "iso": 280,
+        "aperture_flag": 1,
+        "aperture_index": 2
+      }
+    },
+    {
+      "name": "capture-aperture-1-3",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-3",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50003,
+        "fnumber_100": 670,
+        "iso": 380,
+        "aperture_flag": 1,
+        "aperture_index": 3
+      }
+    },
+    {
+      "name": "capture-aperture-1-4",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-4",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50004,
+        "fnumber_100": 760,
+        "iso": 480,
+        "aperture_flag": 1,
+        "aperture_index": 4
+      }
+    },
+    {
+      "name": "capture-aperture-1-5",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-5",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50005,
+        "fnumber_100": 850,
+        "iso": 580,
+        "aperture_flag": 1,
+        "aperture_index": 5
+      }
+    },
+    {
+      "name": "capture-aperture-1-6",
+      "passed": true,
+      "instructions": 164,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-6",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50006,
+        "fnumber_100": 480,
+        "iso": 680,
+        "aperture_flag": 1,
+        "aperture_index": 6
+      }
+    },
+    {
+      "name": "capture-aperture-1-7",
+      "passed": true,
+      "instructions": 164,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-1-7",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50007,
+        "fnumber_100": 480,
+        "iso": 780,
+        "aperture_flag": 1,
+        "aperture_index": 7
+      }
+    },
+    {
+      "name": "capture-aperture-255-0",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-0",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50000,
+        "fnumber_100": 480,
+        "iso": 80,
+        "aperture_flag": 255,
+        "aperture_index": 0
+      }
+    },
+    {
+      "name": "capture-aperture-255-1",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-1",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50001,
+        "fnumber_100": 540,
+        "iso": 180,
+        "aperture_flag": 255,
+        "aperture_index": 1
+      }
+    },
+    {
+      "name": "capture-aperture-255-2",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-2",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50002,
+        "fnumber_100": 600,
+        "iso": 280,
+        "aperture_flag": 255,
+        "aperture_index": 2
+      }
+    },
+    {
+      "name": "capture-aperture-255-3",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-3",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50003,
+        "fnumber_100": 670,
+        "iso": 380,
+        "aperture_flag": 255,
+        "aperture_index": 3
+      }
+    },
+    {
+      "name": "capture-aperture-255-4",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-4",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50004,
+        "fnumber_100": 760,
+        "iso": 480,
+        "aperture_flag": 255,
+        "aperture_index": 4
+      }
+    },
+    {
+      "name": "capture-aperture-255-5",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-5",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50005,
+        "fnumber_100": 850,
+        "iso": 580,
+        "aperture_flag": 255,
+        "aperture_index": 5
+      }
+    },
+    {
+      "name": "capture-aperture-255-6",
+      "passed": true,
+      "instructions": 164,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-6",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50006,
+        "fnumber_100": 480,
+        "iso": 680,
+        "aperture_flag": 255,
+        "aperture_index": 6
+      }
+    },
+    {
+      "name": "capture-aperture-255-7",
+      "passed": true,
+      "instructions": 164,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "aperture-255-7",
+        "date": "2026:11:07 23:59:58",
+        "exposure_us": 50007,
+        "fnumber_100": 480,
+        "iso": 780,
+        "aperture_flag": 255,
+        "aperture_index": 7
+      }
+    },
+    {
+      "name": "capture-clamp",
+      "passed": true,
+      "instructions": 171,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "clamp",
+        "date": "2028:02:29 01:02:03",
+        "exposure_us": 100,
+        "fnumber_100": 850,
+        "iso": 1250,
+        "aperture_flag": 1,
+        "aperture_index": 5
+      }
+    },
+    {
+      "name": "capture-year-2037",
+      "passed": true,
+      "instructions": 170,
+      "writes": 2,
+      "closes": 1,
+      "stock_fallback": false,
+      "metadata_before_write": true,
+      "stock_aperture_verified": true,
+      "fixture": {
+        "name": "year-2037",
+        "date": "2037:12:31 23:59:59",
+        "exposure_us": 2000000,
+        "fnumber_100": 850,
+        "iso": 1250,
+        "aperture_flag": 1,
+        "aperture_index": 5
+      }
+    }
+  ]
+}

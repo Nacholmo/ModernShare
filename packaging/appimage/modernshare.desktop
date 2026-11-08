@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ModernShare
+Comment=Generate ModernShare firmware from the original Kodak updater
+Exec=ModernShare
+Icon=modernshare
+Categories=Utility;
+Terminal=false

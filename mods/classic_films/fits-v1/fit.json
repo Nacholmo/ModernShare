@@ -1,0 +1,76 @@
+{
+  "source_sha256": "2a6945c0dbf41377618aaacc82f1aa3e3b7a5d295c51cde68e3db898910bc06b",
+  "base_sha256": "73801de48242acecfccd31d917c73a025f83d27ff16d97a755b782969a28fecd",
+  "records": [
+    {
+      "name": "Velvia 100",
+      "lut": "mods/lut/looks/filmluts/colorslide/fuji_velvia_100_generic.cube",
+      "lut_sha256": "0a455565ce788143cdb1e6c214ed571fa557f31b052a711408fc60231ef36708",
+      "method": "CCM-only, stock curves/Ymat; grayscale neutrality preserved",
+      "R": [
+        [
+          1.2800823707852174,
+          -0.15676517668196108,
+          0.005291072136917699
+        ],
+        [
+          -0.04287633228674795,
+          1.2388926722213554,
+          -0.06740807369443355
+        ],
+        [
+          -0.04010450047134377,
+          -0.07294788490559016,
+          1.241660651617108
+        ]
+      ],
+      "stock_deltaE": [
+        11.556096410095645,
+        22.870448667292127,
+        29.981127913277827
+      ],
+      "fit_deltaE": [
+        6.633531706117409,
+        13.281766417445498,
+        19.348011150878172
+      ],
+      "matrices_sha256": "53e507eabbccc4cd0dce009426fc615df7cf019c391ed39ab42d9eec9091f6b0"
+    },
+    {
+      "name": "Kodachrome 64",
+      "lut": "mods/lut/looks/filmluts/colorslide/kodak_kodachrome_64.cube",
+      "lut_sha256": "6fce987295dac264a689a8ef1b1b3a407f26ffcb3f6d81a356ebc5d9c565d0b4",
+      "method": "CCM-only, stock curves/Ymat; grayscale neutrality preserved",
+      "R": [
+        [
+          0.775502138308845,
+          0.23942587455313777,
+          -0.03655450797368344
+        ],
+        [
+          -0.000720424531800975,
+          0.962058692051297,
+          0.01703523736880304
+        ],
+        [
+          -0.033182430802720854,
+          0.38994793347184936,
+          0.6216080022191707
+        ]
+      ],
+      "stock_deltaE": [
+        21.895167199141774,
+        51.26294083264863,
+        67.91915734040862
+      ],
+      "fit_deltaE": [
+        9.068280844203063,
+        16.851800889271416,
+        34.097599034954676
+      ],
+      "matrices_sha256": "f13c6478f6ad22f384c44c3312d858d33a02c101505a23fd3b8524f0f2955c72"
+    }
+  ],
+  "bytes": 384,
+  "sha256": "c3d8919057f5f3cfd5ea8a9f572772ca97e480de7fe0e01e750a330314dcfea0"
+}

@@ -1,0 +1,2 @@
+# Optional browser QA; runtime dependencies are installed only in runtime/qa-venv.
+playwright==1.58.0

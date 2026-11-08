@@ -1,0 +1,232 @@
+{
+  "start": "0xebecc",
+  "end_exclusive": "0xec208",
+  "preserved_literal_gap": "0xec04c..0xec087, including shared literal 0xec05c; only obsolete event-table pointer 0xec050 is cleared",
+  "internal_references": [
+    {
+      "from": "ram:000ebf48",
+      "to": "ebee4",
+      "type": "UNCONDITIONAL_CALL"
+    },
+    {
+      "from": "ram:000ebf86",
+      "to": "ebee4",
+      "type": "UNCONDITIONAL_CALL"
+    },
+    {
+      "from": "ram:000ebeec",
+      "to": "ebef6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebef4",
+      "to": "ebef8",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebef0",
+      "to": "ebefc",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf18",
+      "to": "ebf24",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf22",
+      "to": "ebf34",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf28",
+      "to": "ebf3e",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf32",
+      "to": "ebf3e",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf3c",
+      "to": "ebf4a",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf42",
+      "to": "ebf4a",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf74",
+      "to": "ebf7e",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf7c",
+      "to": "ebf84",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf64",
+      "to": "ebfa2",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebf6c",
+      "to": "ebfa2",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec0fa",
+      "to": "ec0c0",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec09e",
+      "to": "ec0c6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec0a6",
+      "to": "ec0c6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec0ae",
+      "to": "ec0c6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec0ba",
+      "to": "ec0c6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec118",
+      "to": "ec0f6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec1c4",
+      "to": "ec0f6",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec0d8",
+      "to": "ec0fc",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec0f4",
+      "to": "ec0fc",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec10e",
+      "to": "ec11a",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec13c",
+      "to": "ec14c",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec152",
+      "to": "ec15c",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec15a",
+      "to": "ec164",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec16a",
+      "to": "ec174",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec162",
+      "to": "ec196",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec172",
+      "to": "ec196",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec18c",
+      "to": "ec196",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec14a",
+      "to": "ec1a2",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec0c4",
+      "to": "ec1c6",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec122",
+      "to": "ec1c6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec1b8",
+      "to": "ec1c6",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec1ea",
+      "to": "ec1f2",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ec1f0",
+      "to": "ec202",
+      "type": "UNCONDITIONAL_JUMP"
+    }
+  ],
+  "unexpected_external_references": [],
+  "graphics_rle_value_coincidences": [
+    {
+      "from": "ram:001b3450",
+      "to": "ec003",
+      "type": "DATA"
+    },
+    {
+      "from": "ram:001c034c",
+      "to": "ec003",
+      "type": "DATA"
+    },
+    {
+      "from": "ram:001c5b88",
+      "to": "ec003",
+      "type": "DATA"
+    },
+    {
+      "from": "ram:001c5bbc",
+      "to": "ec003",
+      "type": "DATA"
+    },
+    {
+      "from": "ram:001c5bc0",
+      "to": "ec003",
+      "type": "DATA"
+    },
+    {
+      "from": "ram:001c5bc4",
+      "to": "ec003",
+      "type": "DATA"
+    }
+  ],
+  "graphics_note": "Odd value 0xec003 is embedded in packed graphics RLE data, not a callable ARC entry or a pointer table; graphics bytes are preserved",
+  "passed": true
+}

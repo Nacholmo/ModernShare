@@ -1,0 +1,3 @@
+# Versions used for the byte-identical ModernShare 0.8 build.
+numpy==2.5.4
+Pillow==13.0.0

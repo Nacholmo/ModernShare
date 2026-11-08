@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Kodak C713 · Firmware atlas</title>
+  <link rel="stylesheet" href="assets/atlas.css">
+  <script defer src="data.js"></script>
+  <script defer src="assets/atlas.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="identity"><span class="brand-mark" aria-hidden="true">K</span><div><p class="eyebrow">CD703 / C713 · REVERSE ENGINEERING</p><h1>Firmware atlas<span class="version">1.30</span></h1></div></div>
+    <div class="header-links"><span class="offline"><i></i>Works offline</span><a href="../README.md">Project guide ↗</a></div>
+  </header>
+  <section class="overview" aria-label="Analysis overview" id="overview"></section>
+  <nav class="sections" aria-label="Workspace sections">
+    <button type="button" data-section="functions" aria-current="page">Functions</button>
+    <button type="button" data-section="symbols">Annotations</button>
+    <button type="button" data-section="strings">Strings</button>
+    <button type="button" data-section="coverage">Coverage &amp; limits</button>
+    <button type="button" data-section="findings">Field guide</button>
+    <span class="analysis-label">Static analysis · verify against assembly</span>
+  </nav>
+  <main>
+    <section id="functions-section" class="workspace" aria-label="Function browser">
+      <aside class="function-sidebar">
+        <label for="function-search" class="search-label">Find a function <kbd>/</kbd></label>
+        <input id="function-search" type="search" placeholder="Name, address, or annotation…" autocomplete="off" spellcheck="false">
+        <div class="filter-row"><label for="function-filter" class="sr-only">Function filter</label><select id="function-filter"><option value="all">All functions</option><option value="annotated">Annotated</option><option value="review">Needs review</option></select><span id="result-count" aria-live="polite"></span></div>
+        <div id="function-list" class="function-list" aria-label="Matching functions"></div>
+        <div class="pagination"><button type="button" id="previous-page">← Previous</button><span id="page-number"></span><button type="button" id="next-page">Next →</button></div>
+      </aside>
+      <article class="function-detail" id="function-detail">
+        <div class="detail-heading"><div><p class="eyebrow" id="function-address">SELECT A FUNCTION</p><h2 id="function-name">Explore the firmware</h2></div><div class="detail-actions"><button type="button" id="copy-address" disabled>Copy address</button></div></div>
+        <p class="signature" id="function-signature"></p>
+        <div id="function-badges" class="badges"></div>
+        <p id="function-comment" class="function-comment"></p>
+        <div class="detail-tabs" role="tablist" aria-label="Function detail">
+          <button type="button" role="tab" id="tab-c" data-tab="c" aria-selected="true" aria-controls="detail-content">Pseudocode</button>
+          <button type="button" role="tab" id="tab-assembly" data-tab="assembly" aria-selected="false" aria-controls="detail-content">Assembly</button>
+          <button type="button" role="tab" id="tab-calls" data-tab="calls" aria-selected="false" aria-controls="detail-content">Calls</button>
+          <button type="button" role="tab" id="tab-references" data-tab="references" aria-selected="false" aria-controls="detail-content">Data references</button>
+          <button type="button" role="tab" id="tab-notes" data-tab="notes" aria-selected="false" aria-controls="detail-content">Review notes</button>
+        </div>
+        <div class="content-toolbar"><span id="content-status" aria-live="polite">Choose a function from the list.</span><a id="raw-source" hidden>Open raw file ↗</a><button type="button" id="copy-source" hidden>Copy text</button></div>
+        <div id="detail-content" role="tabpanel" aria-labelledby="tab-c"></div>
+      </article>
+    </section>
+    <section id="symbols-section" class="standalone" hidden><div class="section-heading"><div><p class="eyebrow">RESEARCH ANNOTATIONS</p><h2>Known locations, with provenance</h2></div><input type="search" id="symbol-search" aria-label="Search annotations" placeholder="Search names, addresses, or notes…"></div><div id="symbols-content"></div></section>
+    <section id="strings-section" class="standalone" hidden><div class="section-heading"><div><p class="eyebrow">DEFINED STRING DATA</p><h2>Strings recognized by Ghidra</h2></div><input type="search" id="string-search" aria-label="Search strings" placeholder="Search text or address…"></div><p class="muted">This list contains strings defined in the current analysis. It does not claim to decode every language resource.</p><div id="strings-content"></div></section>
+    <section id="coverage-section" class="standalone" hidden><p class="eyebrow">ANALYSIS QUALITY</p><h2>What this project knows</h2><div id="coverage-content"></div></section>
+    <section id="findings-section" class="standalone" hidden><p class="eyebrow">START HERE</p><h2>A guide to the camera</h2><div id="findings-content"></div></section>
+  </main>
+  <footer><span id="firmware-hash"></span><span>Generated from the saved Ghidra database. No firmware bytes modified.</span></footer>
+  <noscript>This offline browser needs JavaScript. The Markdown export index and raw C/assembly files work without it.</noscript>
+</body>
+</html>

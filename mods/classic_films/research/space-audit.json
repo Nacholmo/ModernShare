@@ -1,0 +1,219 @@
+{
+  "start": "0xebc90",
+  "end_exclusive": "0xebecc",
+  "internal_or_disconnected_table_references": [
+    {
+      "from": "ram:000ebc9c",
+      "to": "ebcaa",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebca2",
+      "to": "ebcaa",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebca8",
+      "to": "ebcb8",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebcbe",
+      "to": "ebcda",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebcc6",
+      "to": "ebcda",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebcce",
+      "to": "ebcda",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebcf8",
+      "to": "ebcfe",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebcf0",
+      "to": "ebd02",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebce8",
+      "to": "ebd06",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd2e",
+      "to": "ebd34",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebcd8",
+      "to": "ebd36",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebcfc",
+      "to": "ebd36",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd00",
+      "to": "ebd36",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd04",
+      "to": "ebd36",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd32",
+      "to": "ebd36",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe82",
+      "to": "ebd3c",
+      "type": "UNCONDITIONAL_CALL"
+    },
+    {
+      "from": "ram:000ebf00",
+      "to": "ebd3c",
+      "type": "UNCONDITIONAL_CALL"
+    },
+    {
+      "from": "ram:000ebd70",
+      "to": "ebd76",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd74",
+      "to": "ebd78",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd86",
+      "to": "ebdca",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd92",
+      "to": "ebdca",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebd9e",
+      "to": "ebdca",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebda8",
+      "to": "ebdca",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebdb2",
+      "to": "ebdca",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebdbc",
+      "to": "ebdca",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebdc4",
+      "to": "ebdca",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebdd0",
+      "to": "ebdde",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebdd8",
+      "to": "ebdde",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebdf0",
+      "to": "ebdfe",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebde4",
+      "to": "ebe04",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebdfc",
+      "to": "ebe04",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe14",
+      "to": "ebe26",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe2c",
+      "to": "ebe36",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe34",
+      "to": "ebe4c",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe3e",
+      "to": "ebe4c",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe4a",
+      "to": "ebe52",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebeaa",
+      "to": "ebe9e",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebeb2",
+      "to": "ebe9e",
+      "type": "UNCONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe9a",
+      "to": "ebea8",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebe90",
+      "to": "ebeac",
+      "type": "CONDITIONAL_JUMP"
+    },
+    {
+      "from": "ram:000ebefc",
+      "to": "ebeb4",
+      "type": "UNCONDITIONAL_CALL"
+    },
+    {
+      "from": "ram:000ebec2",
+      "to": "ebec8",
+      "type": "CONDITIONAL_JUMP"
+    }
+  ],
+  "unexpected_external_references": [],
+  "required_disconnections": "Redirect original create/init event pointers at 0x1683a0/0x1683a8; NOP original legacy calls at 0xebed0/0xebefc/0xebf00",
+  "passed": true
+}

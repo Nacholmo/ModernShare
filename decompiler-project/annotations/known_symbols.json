@@ -1,0 +1,635 @@
+{
+  "functions": [
+    {
+      "address": "0x0003bd7c",
+      "name": "GetCaptureMode",
+      "comment": "Returns settings.capture_mode, byte at 0x1328ff.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0003c128",
+      "name": "ApplyCaptureMode",
+      "comment": "Applies capture mode. Called by SetScene.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0003c5ec",
+      "name": "SetScene",
+      "comment": "Takes SCN menu index; stores last SCN selection then maps to capture mode.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00040ee4",
+      "name": "HandleMemdumpShortcut",
+      "comment": "W held plus UP release triggers built-in RAM dump; entry from project notes, verify boundary.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00042040",
+      "name": "LookupOsdPalette",
+      "comment": "Converts RGBA colour and searches hardware palette for an exact match.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00043730",
+      "name": "LoadOsdPalette",
+      "comment": "Converts RGBA palette to hardware OSD format.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00043960",
+      "name": "BlitIndexedImage",
+      "comment": "Indexed image blitter; palette entries map by exact colour match.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000445c8",
+      "name": "ApplyColorMenuSelection",
+      "comment": "Five-way colour menu switch; entry from notes, verify boundary.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000627ac",
+      "name": "ConvertCcmCoefficient",
+      "comment": "Sign-magnitude Q8 conversion; sign bit 0x400. Offset units unknown.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000629f4",
+      "name": "SetColorMode",
+      "comment": "Writes effect << 2 to ISP register 0x0ff10118. 0 normal, 1 BW, 2 sepia.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00063070",
+      "name": "LoadPerShotToneLut",
+      "comment": "Called with 0 before capture; leads to 0xa56f4. Runtime LUT swaps had no visible effect.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00067dec",
+      "name": "LookupImageRecord",
+      "comment": "Looks up image_id in the image record table pointed to by UI state +0x14; writes a record pointer through its second argument. Returns 0 on success or 0x400002 for a null record. Name inferred from stock assembly.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00067e04",
+      "name": "DecodeAndBlitImage",
+      "comment": "Decompresses whole image then chooses blitter by bit depth.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000789f8",
+      "name": "DrawImage",
+      "comment": "UI DrawImage(x,y,image_id), coordinate scaling then decode/blit.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00078ad8",
+      "name": "GetImageWidth",
+      "comment": "Image width helper.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00078b14",
+      "name": "GetImageHeight",
+      "comment": "Image height helper.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0008a2f8",
+      "name": "LoadLanguage",
+      "comment": "Copies selected language from flash to 0x183330 (0xba00-byte buffer). Language section is not resident at 0x1f0000.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000a56f4",
+      "name": "UploadPerShotToneLut",
+      "comment": "Uploads LUT to ISP 0x0ff11000 and above; stage may be bypassed.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000af508",
+      "name": "GetCaptureCcm",
+      "comment": "GetCCM(illuminant 0..2): pointer table at 0x197868. Scene films hook target.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000af514",
+      "name": "GetCaptureYmat",
+      "comment": "GetYmat(colour_mode): pipeline +0x38 normal, +0x3c BW (3), +0x40 sepia (4). Scene films hook target.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000c8a3c",
+      "name": "LoadResourceSection",
+      "comment": "Loads flash section into RAM; graphics call uses (0x144c00,0x4fc00,0x1a0000).",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000c97ec",
+      "name": "RenderImageWidget",
+      "comment": "Renders type-7 image widget, size 0x1c.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000f1120",
+      "name": "RegisterImageTable",
+      "comment": "Image table registration called at boot.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000fe304",
+      "name": "ValidateFirmwareUpdate",
+      "comment": "Checks RHIR magic, model, size and type-1 sums; entry from notes, verify boundary.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0011e124",
+      "name": "ConfigureCapturePipeline",
+      "comment": "Capture matrix configuration reached through 0x401 dispatch. Fetches CCM and Ymat, packs coefficients, writes auxiliary registers. Diagnostic log measured getter calls at 0x11e134 and 0x11e142 per photo; task-startup path also exists. Do not assume all invocation timing from static code alone.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0011e3a0",
+      "name": "CaptureMessageDispatch",
+      "comment": "Intermediate capture-configuration routine in the 0x401 message path; invocation timing requires runtime evidence.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x000af4c4",
+      "name": "SetCapturePipelineState",
+      "comment": "Copies 0x48 bytes from its argument into runtime capture_pipeline using routine 0x4cbb0, then returns 1. Observed in stock disassembly/decompilation; called by initialization.",
+      "source": "Stock firmware: diagnostics/photo_conversion.binutils.asm, exported assembly, annotations/NOTES.snapshot.md",
+      "status": "static-analysis finding; inferred names, ABI needs review unless explicitly typed"
+    },
+    {
+      "address": "0x0011e0b8",
+      "name": "PackCaptureMatrixRegisters",
+      "comment": "Packs three matrix rows into six auxiliary-register words. Three signed coefficients use magnitude Q16>>6 and sign bit12, requiring |coefficient| < 4.0 to avoid overlapping the sign/fields. Fourth row element occupies upper16 of second word. Shared prologue/epilogue require the Kodak compiler model.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "static-analysis finding; inferred names, ABI needs review unless explicitly typed"
+    },
+    {
+      "address": "0x00098734",
+      "name": "BuildKodakCommonInfo",
+      "comment": "Builds a KodakCommonInfo record, including nine CCM coefficient fetches around 0x98990..0x989a8. Name inferred from written text and fields; not original debug symbol.",
+      "source": "Stock firmware: diagnostics/photo_conversion.binutils.asm, exported assembly, annotations/NOTES.snapshot.md",
+      "status": "static-analysis finding; inferred names, ABI needs review unless explicitly typed"
+    },
+    {
+      "address": "0x0009fec0",
+      "name": "ConvertPhotoVariant0",
+      "comment": "Photo conversion path: fetches Ymat only for colour modes 3/4 and CCM independently. Prologue independently decoded with GNU binutils. Exact input pixel format and complete ABI not established.",
+      "source": "Stock firmware: diagnostics/photo_conversion.binutils.asm, exported assembly, annotations/NOTES.snapshot.md",
+      "status": "static-analysis finding; inferred names, ABI needs review unless explicitly typed"
+    },
+    {
+      "address": "0x000a00e4",
+      "name": "ConvertPhotoVariant1",
+      "comment": "Sibling photo conversion routine identified in project notes. Confirm boundary against stock disassembly; exact pixel format and ABI not established.",
+      "source": "Stock firmware: diagnostics/photo_conversion.binutils.asm, exported assembly, annotations/NOTES.snapshot.md",
+      "status": "static-analysis finding; inferred names, ABI needs review unless explicitly typed"
+    },
+    {
+      "address": "0x00090384",
+      "name": "RegisterFirmwareImages",
+      "comment": "Registers firmware image tables. True entry at push_s blink, push_s r13; 0x9038c is an internal call to RegisterImageTable.",
+      "source": "diagnostics/boundaries.binutils.asm",
+      "status": "entry reviewed against independent disassembly; types and hardware effects still require review"
+    },
+    {
+      "address": "0x000f2664",
+      "name": "InitializeCaptureTables",
+      "comment": "Initializes preview/capture ISP tables. Prologue allocates 204 stack bytes; 0xf26f8 is an internal block constructing capture table pointers. True entry independently decoded at 0xf2664.",
+      "source": "diagnostics/boundaries.binutils.asm",
+      "status": "entry reviewed against independent disassembly; types and hardware effects still require review"
+    },
+    {
+      "address": "0x001206d0",
+      "name": "HandleCaptureMessage401",
+      "comment": "Capture-message handler. True entry saves blink/registers at 0x1206d0; internal site 0x1206f4 compares message code 0x401.",
+      "source": "diagnostics/boundaries.binutils.asm",
+      "status": "entry reviewed against independent disassembly; types and hardware effects still require review"
+    },
+    {
+      "address": "0x00067f10",
+      "name": "DrawGlyphWithEffects",
+      "comment": "Renders a glyph/image with shadow and outline paths using UI draw-state colours. True prologue at 0x67f10; interior shadow block at 0x67fc0 was previously mistaken for an independent DrawText function. Name inferred from control flow.",
+      "source": "diagnostics/boundaries.binutils.asm and independent GNU disassembly",
+      "status": "entry reviewed against independent disassembly; inferred descriptive name"
+    },
+    {
+      "address": "0x0011de40",
+      "name": "UploadCaptureCurveTables",
+      "comment": "Loads companion A, curve B and curve C into the capture processing hardware. Exact register-level semantics still need review; inverse-table role is supported by the camera-tested curve_inverse correction.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x00067898",
+      "name": "WriteSensorCfaRaw",
+      "comment": "Sensor CFA RAW writer identified by the updated camera notes. SaveCFAonTake enables CCDInnnn.RAW alongside JPEG; stock program remains unmodified.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x0007166c",
+      "name": "ValidateCameraDate",
+      "comment": "Stock date validator limits the year to 2006..2025. Latest date_fix build extends its upper bound to 2037; this stock analysis preserves the original comparison.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    }
+  ],
+  "labels": [
+    {
+      "address": "0x001328fc",
+      "name": "camera_settings",
+      "comment": "Settings struct; +3 capture mode, +5 last SCN menu index.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x001328ff",
+      "name": "capture_mode",
+      "comment": "Mode byte 0..23. Auto=0; Museum=17; Children=9; Sunset=22. Corrected help-string order starts at High ISO; measured by scene_films v3 call log.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00132901",
+      "name": "last_scene_menu_index",
+      "comment": "Last SCN selection index.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00132928",
+      "name": "flash_mode_slots",
+      "comment": "11 per-mode/group flash slots, through 0x132932. Off = 1.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00132b5a",
+      "name": "memdump_enabled",
+      "comment": "Flag enabling built-in RAM dump shortcut.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x001334de",
+      "name": "preview_color_level",
+      "comment": "0..2 preview CCM selection; distinct from saved-photo CCMs.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x001335a4",
+      "name": "ui_draw_state",
+      "comment": "UI state: +4 text foreground, +8 shadow, +0xc outline; notes also associate decode-buffer state.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00141c00",
+      "name": "osd_palette_source",
+      "comment": "Data-section palette source. Must be updated alongside graphics palette.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0014a26c",
+      "name": "per_shot_tone_lut",
+      "comment": "Straight-line per-shot LUT; edits showed no visible capture effect.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0014d310",
+      "name": "ui_color_words",
+      "comment": "UI colour words 0xAABBGGRR, through 0x14d3a0.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0014fca4",
+      "name": "language_offset_size_table",
+      "comment": "19 offsets and 19 sizes; offsets relative to language section in flash.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0015eedc",
+      "name": "boot_screen",
+      "comment": "Screen id 0x73; static screen struct.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016b798",
+      "name": "preview_ccm_level0",
+      "comment": "Preview CCM level 0; editing these did not change saved JPEGs.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016b7f8",
+      "name": "preview_ccm_level2",
+      "comment": "VIVID v4 saturation patch affects preview only.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016bac8",
+      "name": "capture_tone_curve_A_green",
+      "comment": "1024-byte 10-bit to 8-bit LUT; loaded once at startup.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016bec8",
+      "name": "capture_curve_companion_A",
+      "comment": "256 x little-endian uint16 inverse curve-B lookup table (8-bit code to 10-bit input). Stock matches companion B. Rebuild both companions when changing curve B; stale inverses caused lavender whites, corrected in camera photo 0291. Sensor CCDI RAW decoding uses this STOCK table regardless of installed film curves.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016c0c8",
+      "name": "capture_tone_curve_B_red_blue",
+      "comment": "1024-byte LUT shared by red and blue; loaded once at startup.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016c4c8",
+      "name": "capture_curve_companion_B",
+      "comment": "Second 256 x little-endian uint16 inverse curve-B table; identical to companion A in stock. Must be regenerated along with companion A whenever curve B changes.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016cac8",
+      "name": "capture_ccm_illuminant0",
+      "comment": "3x4 signed int32 Q16 matrix. Stock coefficients multiples of 64.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016caf8",
+      "name": "capture_ccm_illuminant1",
+      "comment": "3x4 signed int32 Q16 matrix.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016cb28",
+      "name": "capture_ccm_illuminant2",
+      "comment": "3x4 signed int32 Q16 matrix.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016cb58",
+      "name": "capture_ycbcr_normal",
+      "comment": "3x4 int32 matrix, normal COLOR and VIVID. Offsets use quarter units.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016cb88",
+      "name": "capture_ycbcr_bw",
+      "comment": "3x4 int32 matrix, B&W colour mode 3.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0016cbb8",
+      "name": "capture_ycbcr_sepia",
+      "comment": "3x4 int32 matrix, sepia colour mode 4.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00172ef4",
+      "name": "firmware_gp_anchor",
+      "comment": "Known runtime gp value. Seed register context for GP-relative references.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00175420",
+      "name": "osd_palette_runtime",
+      "comment": "Runtime hardware OSD palette, 256 entries.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0017d0c4",
+      "name": "preview_ccm_pointer_table",
+      "comment": "Level CCMs indexed at [8+level].",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00183330",
+      "name": "language_ram_buffer",
+      "comment": "Selected language buffer, 0xba00 bytes; runtime state, not language flash image.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0018fad8",
+      "name": "image_decode_buffer",
+      "comment": "Whole-image decode buffer; keep tile size <= 25800 pixels.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00197844",
+      "name": "capture_pipeline",
+      "comment": "Runtime 0x48-byte struct: curves +0/+8/+0x10, CCM ptrs +0x24/+0x28/+0x2c, Ymat ptrs +0x38/+0x3c/+0x40.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x00197868",
+      "name": "capture_ccm_pointers",
+      "comment": "Runtime illuminant CCM pointer table; 3 entries.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0019f5e8",
+      "name": "main_stack_top",
+      "comment": "Known runtime initial/main stack pointer.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x001cb83c",
+      "name": "graphics_rgba_palette",
+      "comment": "256 RGBA entries; index 0 transparent, 252..255 reserved.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x001cc35c",
+      "name": "startup_logo_record",
+      "comment": "Image 93 record; stock 430x60, data 0x1d8127.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x001ccf50",
+      "name": "image_id_table",
+      "comment": "246 stock pointer entries, entry 0 null.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x001d8127",
+      "name": "startup_logo_rle",
+      "comment": "Stock startup logo RLE data; 6554-byte slot.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)",
+      "status": "prior project finding; review assembly and runtime evidence before patching"
+    },
+    {
+      "address": "0x0009038c",
+      "name": "image_table_registration_site",
+      "comment": "Registers firmware image tables. True entry at push_s blink, push_s r13; 0x9038c is an internal call to RegisterImageTable.",
+      "source": "diagnostics/boundaries.binutils.asm and verified entry/control-flow review",
+      "status": "assembly-reviewed interior code location; not a function entry"
+    },
+    {
+      "address": "0x000f26f8",
+      "name": "capture_table_setup_site",
+      "comment": "Initializes preview/capture ISP tables. Prologue allocates 204 stack bytes; 0xf26f8 is an internal block constructing capture table pointers. True entry independently decoded at 0xf2664.",
+      "source": "diagnostics/boundaries.binutils.asm and verified entry/control-flow review",
+      "status": "assembly-reviewed interior code location; not a function entry"
+    },
+    {
+      "address": "0x001206f4",
+      "name": "capture_message_401_dispatch_site",
+      "comment": "Capture-message handler. True entry saves blink/registers at 0x1206d0; internal site 0x1206f4 compares message code 0x401.",
+      "source": "diagnostics/boundaries.binutils.asm and verified entry/control-flow review",
+      "status": "assembly-reviewed interior code location; not a function entry"
+    },
+    {
+      "address": "0x00067fc0",
+      "name": "glyph_shadow_outline_pass",
+      "comment": "Glyph shadow/outline rendering block within the glyph renderer at 0x67f10, not a separate DrawText function. 0x67f10 has its own prologue; DecodeAndBlitImage at 0x67e04 is a separate preceding function.",
+      "source": "diagnostics/boundaries.binutils.asm and verified entry/control-flow review",
+      "status": "assembly-reviewed interior code location; not a function entry"
+    },
+    {
+      "address": "0x0016c6c8",
+      "name": "capture_tone_curve_C",
+      "comment": "Third 1024-byte tone curve, pipeline +0x10, used by software photo converters and uploaded by 0x11de40.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x0013358c",
+      "name": "save_cfa_on_take",
+      "comment": "Hidden SaveCFAonTake flag. Patched RAW build enables it at boot; each shot saves headerless 3072x2310 8-bit RGGB sensor data in CCDInnnn.RAW.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x00133184",
+      "name": "save_full_yrgb",
+      "comment": "Hidden SaveFullYRGB flag: processed 4:2:0 output YRGBnnnn.RAW, 10,506,528 bytes. Separate from the sensor CFA flag.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x00133185",
+      "name": "save_jpeg_enabled",
+      "comment": "Independent JPEG save flag; left enabled by the RAW-plus-JPEG builds.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x00135235",
+      "name": "date_stamp_format",
+      "comment": "Date stamp setting: 0 Off, 1..3 formats. Stock restores it from settings +0x39; tested date_fix forces Off at power-on while retaining menu control.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x0003e7dc",
+      "name": "date_stamp_restore_site",
+      "comment": "Stock loads saved stamp format from settings +0x39. date_fix replaces that load with mov r0,0 to start with the stamp Off.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x000dc664",
+      "name": "date_screen1_year_limit_site",
+      "comment": "Stock cmp r1,2025. Tested date_fix changes upper year limit to 2037 and low-year wrap to 137.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    },
+    {
+      "address": "0x000eb080",
+      "name": "date_screen2_year_limit_site",
+      "comment": "Second date-screen stock cmp r1,2025; tested date_fix uses 2037.",
+      "source": "annotations/NOTES.snapshot.md (RAW/inverse-curve update 2026-11-07)",
+      "status": "camera finding reported by parent project; no new camera test performed in this workspace"
+    }
+  ],
+  "comments": [
+    {
+      "address": "0x0003c604",
+      "comment": "SetScene table (SCN starts at High ISO): index->mode [21,5,4,3,6,15,10,11,13,16,12,17,7,9,14,22]. Museum index11=17; Children index13=9; final item index15=22 (user calls it Sunset). Early notes were off by one in naming.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)"
+    },
+    {
+      "address": "0x0003c66a",
+      "comment": "Mode switch dispatches flash reset via table at 0x3c682. Treat as code location, not assumed function entry.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)"
+    },
+    {
+      "address": "0x000445de",
+      "comment": "Stock colour jump table bytes [9,13,3,17,19]. VIVID patch changes byte at 0x445e2 from 19 to 3.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)"
+    },
+    {
+      "address": "0x00125420",
+      "comment": "Known unreferenced zero run through 0x125cef; fullscreen uses 0x125420..0x1255ff, scene_films 0x125600..0x125960. Stock project: do not patch.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)"
+    },
+    {
+      "address": "0x0012fed6",
+      "comment": "Code zero tail through 0x130000. Candidate code/data cave; do not treat zeros as functions.",
+      "source": "annotations/NOTES.snapshot.md (copied 2026-11-07)"
+    }
+  ]
+}

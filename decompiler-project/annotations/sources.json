@@ -1,0 +1,9 @@
+{
+  "notes": {
+    "path": "annotations/NOTES.snapshot.md",
+    "sha256": "6959609d5c1e6fdab8af136156bdffe3f5074bee84f8d4958a0e0df132a24ac7",
+    "origin": "../NOTES.md",
+    "copied": "2026-11-07 (RAW, inverse-curve and date update)",
+    "scope": "Read-only source snapshot. Includes camera-tested inverse-curve correction, sensor RAW/DNG work, stock normal-colour preference and date fixes."
+  }
+}

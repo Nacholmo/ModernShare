@@ -1,0 +1,12 @@
+{
+  "listing": "https://www.touslesdrivers.com/index.php?v_page=23&v_code=19867&v_langue=en",
+  "download": "https://fichiers.touslesdrivers.com/19867/KC713130.exe",
+  "resolved_url": "https://fichiers.touslesdrivers.com/19867/KC713130.exe",
+  "http_status": 200,
+  "checked_utc": "2026-11-08T21:53:45.176911+00:00",
+  "updater_bytes": 1110016,
+  "updater_sha256": "0228ebb1bd13fea29942c9f67d572773b829b133bef53d4841cd43f5bd17f712",
+  "firmware_sha256": "06133ed6bc6272f6b1ab9c784723d9259c71cb4ef88b3defb6ed36f4a4e66c9b",
+  "firmware_bytes": 2172416,
+  "exe_executed": false
+}

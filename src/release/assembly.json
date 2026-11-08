@@ -1,0 +1,144 @@
+[
+  {
+    "name": "settings",
+    "source": "src/firmware/settings.s",
+    "origin": 966348,
+    "address": "0xebecc",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 324,
+        "address": "0xebecc"
+      },
+      {
+        "offset": 444,
+        "length": 384,
+        "address": "0xec088"
+      }
+    ]
+  },
+  {
+    "name": "preview",
+    "source": "src/firmware/preview.s",
+    "origin": 965712,
+    "address": "0xebc50",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 60,
+        "address": "0xebc50"
+      },
+      {
+        "offset": 237524,
+        "length": 142,
+        "address": "0x125c24"
+      },
+      {
+        "offset": 279112,
+        "length": 88,
+        "address": "0x12fe98"
+      }
+    ]
+  },
+  {
+    "name": "scene-getters",
+    "source": "src/firmware/scene-getters.s",
+    "origin": 1201664,
+    "address": "0x125600",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 192,
+        "address": "0x125600"
+      }
+    ]
+  },
+  {
+    "name": "menu",
+    "source": "src/firmware/menu.s",
+    "origin": 1197984,
+    "address": "0x1247a0",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 88,
+        "address": "0x1247a0"
+      },
+      {
+        "offset": 3872,
+        "length": 184,
+        "address": "0x1256c0"
+      },
+      {
+        "offset": 4672,
+        "length": 16,
+        "address": "0x1259e0"
+      }
+    ]
+  },
+  {
+    "name": "dng-writer",
+    "source": "src/firmware/dng-writer.s",
+    "origin": 1202688,
+    "address": "0x125a00",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 548,
+        "address": "0x125a00"
+      }
+    ]
+  },
+  {
+    "name": "capture-metadata",
+    "source": "src/firmware/capture-metadata.s",
+    "origin": 1244992,
+    "address": "0x12ff40",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 180,
+        "address": "0x12ff40"
+      }
+    ]
+  },
+  {
+    "name": "boot-guard",
+    "source": "src/firmware/boot-guard.s",
+    "origin": 1244928,
+    "address": "0x12ff00",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 52,
+        "address": "0x12ff00"
+      }
+    ]
+  },
+  {
+    "name": "date-boot",
+    "source": "src/firmware/date-boot.s",
+    "origin": 902232,
+    "address": "0xdc458",
+    "segments": [
+      {
+        "offset": 2,
+        "length": 18,
+        "address": "0xdc45a"
+      }
+    ]
+  },
+  {
+    "name": "date-setup",
+    "source": "src/firmware/date-setup.s",
+    "origin": 962136,
+    "address": "0xeae58",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 36,
+        "address": "0xeae58"
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "source_build_exact": true,
+  "gui_bundle_exact": true,
+  "host_tests": 19,
+  "gui_cases": 4,
+  "firmware_emulator_scenarios": 248,
+  "personal_photos_required": false,
+  "source_build_dependencies": [
+    "Python",
+    "NumPy 2.5.4",
+    "Pillow 13.0.0",
+    "GNU ARC binutils 2.43"
+  ],
+  "gui_runtime_dependencies": [
+    "Python standard library",
+    "Tkinter for GUI"
+  ],
+  "stock_firmware_included": false,
+  "updater_included": false,
+  "tool_binaries_included": false,
+  "source_archive_path_is_independent": true,
+  "windows_packaging": "Workflow prepared; Windows binary not tested locally",
+  "download_source": "download-source.json"
+}

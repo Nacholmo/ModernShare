@@ -1,0 +1,653 @@
+{
+  "passed": true,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "engine": "Actual menu, stock event dispatcher/close handler, both stock hooked matrix getters and capture gate; UI services mocked; compiler restore boundary modeled for known SLEIGH alias issue",
+  "matrix_getter_cases": 1092,
+  "scenarios": [
+    {
+      "name": "preview matrix film\u003d0 level\u003d0 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 102
+    },
+    {
+      "name": "preview matrix film\u003d0 level\u003d0 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 102
+    },
+    {
+      "name": "preview matrix film\u003d0 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 102
+    },
+    {
+      "name": "preview matrix film\u003d0 level\u003d1 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 102
+    },
+    {
+      "name": "preview matrix film\u003d0 level\u003d2 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 103
+    },
+    {
+      "name": "preview matrix film\u003d0 level\u003d2 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 103
+    },
+    {
+      "name": "preview matrix film\u003d0 level\u003d1 skip\u003dtrue custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 93
+    },
+    {
+      "name": "preview matrix film\u003d0 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "full live refresh film\u003d0 level\u003d0 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 150
+    },
+    {
+      "name": "full live refresh film\u003d0 level\u003d1 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 150
+    },
+    {
+      "name": "full live refresh film\u003d0 level\u003d2 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 151
+    },
+    {
+      "name": "full live refresh film\u003d0 level\u003d3 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d0 level\u003d4 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d0 level\u003d1 camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 11
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d0 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d0 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d1 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d2 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 642
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d2 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 642
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d1 skip\u003dtrue custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 93
+    },
+    {
+      "name": "preview matrix film\u003d1 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "full live refresh film\u003d1 level\u003d0 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 689
+    },
+    {
+      "name": "full live refresh film\u003d1 level\u003d1 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 689
+    },
+    {
+      "name": "full live refresh film\u003d1 level\u003d2 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 690
+    },
+    {
+      "name": "full live refresh film\u003d1 level\u003d3 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d1 level\u003d4 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d1 level\u003d1 camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 11
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d0 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d0 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d1 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d2 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d2 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d1 skip\u003dtrue custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 93
+    },
+    {
+      "name": "preview matrix film\u003d2 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "full live refresh film\u003d2 level\u003d0 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 689
+    },
+    {
+      "name": "full live refresh film\u003d2 level\u003d1 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 689
+    },
+    {
+      "name": "full live refresh film\u003d2 level\u003d2 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 689
+    },
+    {
+      "name": "full live refresh film\u003d2 level\u003d3 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d2 level\u003d4 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d2 level\u003d1 camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 11
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d0 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 636
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d0 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 636
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 636
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d1 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 636
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d2 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 636
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d2 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 636
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d1 skip\u003dtrue custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 93
+    },
+    {
+      "name": "preview matrix film\u003d3 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "full live refresh film\u003d3 level\u003d0 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 684
+    },
+    {
+      "name": "full live refresh film\u003d3 level\u003d1 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 684
+    },
+    {
+      "name": "full live refresh film\u003d3 level\u003d2 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 684
+    },
+    {
+      "name": "full live refresh film\u003d3 level\u003d3 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d3 level\u003d4 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d3 level\u003d1 camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 11
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d0 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d0 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d1 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d2 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d2 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 641
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d1 skip\u003dtrue custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 93
+    },
+    {
+      "name": "preview matrix film\u003d4 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "full live refresh film\u003d4 level\u003d0 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 688
+    },
+    {
+      "name": "full live refresh film\u003d4 level\u003d1 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 688
+    },
+    {
+      "name": "full live refresh film\u003d4 level\u003d2 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 689
+    },
+    {
+      "name": "full live refresh film\u003d4 level\u003d3 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d4 level\u003d4 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d4 level\u003d1 camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 11
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d0 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d0 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d1 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 640
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d2 skip\u003dfalse custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 642
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d2 skip\u003dfalse custom\u003dtrue camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 642
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d1 skip\u003dtrue custom\u003dfalse camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 93
+    },
+    {
+      "name": "preview matrix film\u003d5 level\u003d1 skip\u003dfalse custom\u003dfalse camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "full live refresh film\u003d5 level\u003d0 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 688
+    },
+    {
+      "name": "full live refresh film\u003d5 level\u003d1 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 688
+    },
+    {
+      "name": "full live refresh film\u003d5 level\u003d2 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 690
+    },
+    {
+      "name": "full live refresh film\u003d5 level\u003d3 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d5 level\u003d4 camera\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "full live refresh film\u003d5 level\u003d1 camera\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 11
+    },
+    {
+      "name": "open defaults",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "DNG OFF",
+      "passed": true,
+      "instructions_and_service_boundaries": 251
+    },
+    {
+      "name": "DNG ON",
+      "passed": true,
+      "instructions_and_service_boundaries": 249
+    },
+    {
+      "name": "next film from 0",
+      "passed": true,
+      "instructions_and_service_boundaries": 366
+    },
+    {
+      "name": "reopen film 1",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "refresh film 1",
+      "passed": true,
+      "instructions_and_service_boundaries": 63
+    },
+    {
+      "name": "next film from 1",
+      "passed": true,
+      "instructions_and_service_boundaries": 366
+    },
+    {
+      "name": "reopen film 2",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "refresh film 2",
+      "passed": true,
+      "instructions_and_service_boundaries": 63
+    },
+    {
+      "name": "next film from 2",
+      "passed": true,
+      "instructions_and_service_boundaries": 366
+    },
+    {
+      "name": "reopen film 3",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "refresh film 3",
+      "passed": true,
+      "instructions_and_service_boundaries": 63
+    },
+    {
+      "name": "next film from 3",
+      "passed": true,
+      "instructions_and_service_boundaries": 366
+    },
+    {
+      "name": "reopen film 4",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "refresh film 4",
+      "passed": true,
+      "instructions_and_service_boundaries": 63
+    },
+    {
+      "name": "next film from 4",
+      "passed": true,
+      "instructions_and_service_boundaries": 366
+    },
+    {
+      "name": "reopen film 5",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "refresh film 5",
+      "passed": true,
+      "instructions_and_service_boundaries": 63
+    },
+    {
+      "name": "next film from 5",
+      "passed": true,
+      "instructions_and_service_boundaries": 366
+    },
+    {
+      "name": "reopen film 6",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "refresh film 6",
+      "passed": true,
+      "instructions_and_service_boundaries": 63
+    },
+    {
+      "name": "next film from 6",
+      "passed": true,
+      "instructions_and_service_boundaries": 372
+    },
+    {
+      "name": "reopen film 0",
+      "passed": true,
+      "instructions_and_service_boundaries": 98
+    },
+    {
+      "name": "refresh film 0",
+      "passed": true,
+      "instructions_and_service_boundaries": 63
+    },
+    {
+      "name": "missing list refresh",
+      "passed": true,
+      "instructions_and_service_boundaries": 49
+    },
+    {
+      "name": "film change missing list",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "version row inert",
+      "passed": true,
+      "instructions_and_service_boundaries": 66
+    },
+    {
+      "name": "hidden capture",
+      "passed": true,
+      "instructions_and_service_boundaries": 66
+    },
+    {
+      "name": "hidden review",
+      "passed": true,
+      "instructions_and_service_boundaries": 66
+    },
+    {
+      "name": "close Share capture",
+      "passed": true,
+      "instructions_and_service_boundaries": 93
+    },
+    {
+      "name": "close Menu capture",
+      "passed": true,
+      "instructions_and_service_boundaries": 99
+    },
+    {
+      "name": "close Delete capture",
+      "passed": true,
+      "instructions_and_service_boundaries": 105
+    },
+    {
+      "name": "close Share review",
+      "passed": true,
+      "instructions_and_service_boundaries": 84
+    },
+    {
+      "name": "creation delegates",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "release delegates",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "unknown delegates",
+      "passed": true,
+      "instructions_and_service_boundaries": 91
+    },
+    {
+      "name": "film 0: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 1: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 2: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 3: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 4: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 5: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 6: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "capture DNG OFF",
+      "passed": true,
+      "instructions_and_service_boundaries": 6
+    },
+    {
+      "name": "capture DNG ON",
+      "passed": true,
+      "instructions_and_service_boundaries": 17
+    }
+  ]
+}

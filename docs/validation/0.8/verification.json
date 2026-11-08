@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "rebuild": "mods/sd_settings/rebuild-final-v0.8",
+  "byte_identical_rebuild": true,
+  "checksums": [],
+  "changed_bytes": 24311,
+  "reports": {
+    "settings-emulation.json": {
+      "scenarios": 54,
+      "sha256": "e9dd620949aa37fb38a22ebb88537e73cade0a1177f9945f26a238aed0c2c1c4"
+    },
+    "menu-emulation.json": {
+      "scenarios": 129,
+      "sha256": "598bc09037376cfab2b8dbf8a4a3b4dd5c007d7fec596b26ac9756f6baa3a349"
+    },
+    "date-emulation.json": {
+      "scenarios": 15,
+      "sha256": "5534d61de43f13d1c24e1168a695e7b1c3834857a760c558e7e5c3ce8c81e5e5"
+    },
+    "emulation.json": {
+      "scenarios": 50,
+      "sha256": "f160152adbef708af6157e1cc1622012e20dfe6979fd23d6b75860a0d79a207e"
+    }
+  },
+  "host_record_roundtrips": 42,
+  "boot_roundtrip": true,
+  "boot_image_sha256": "da2630f58fe6046c9d5fab8e2e42a9d1f24c8ee82d1b25bd3f4d2b4672ee8ce9",
+  "boot_bytes": 47608,
+  "preserved": [
+    "all graphics/palettes/stock images",
+    "English text prefix",
+    "shared Share helper and literal pool",
+    "all film matrices and preview code",
+    "DNG writer/header/metadata",
+    "date/clock code"
+  ],
+  "limits": "File/UI/RTC boundaries mocked; physical camera persistence, SD write durability and boot display await trial"
+}

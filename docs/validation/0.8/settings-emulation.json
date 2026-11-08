@@ -1,0 +1,277 @@
+{
+  "passed": true,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "engine": "Actual ARC startup/menu/persistence instructions, stock film map fill, native menu dispatch and capture gate; file/OS boundaries modeled with caller-saved register destruction; compiler restore alias modeled",
+  "scenarios": [
+    {
+      "name": "missing settings defaults",
+      "passed": true,
+      "instructions_and_service_boundaries": 291
+    },
+    {
+      "name": "restore film\u003d0 dng\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 345
+    },
+    {
+      "name": "restore film\u003d0 dng\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 344
+    },
+    {
+      "name": "restore film\u003d1 dng\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 339
+    },
+    {
+      "name": "restore film\u003d1 dng\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "restore film\u003d2 dng\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 339
+    },
+    {
+      "name": "restore film\u003d2 dng\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "restore film\u003d3 dng\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 339
+    },
+    {
+      "name": "restore film\u003d3 dng\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "restore film\u003d4 dng\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 339
+    },
+    {
+      "name": "restore film\u003d4 dng\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "restore film\u003d5 dng\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 339
+    },
+    {
+      "name": "restore film\u003d5 dng\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "restore film\u003d6 dng\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 339
+    },
+    {
+      "name": "restore film\u003d6 dng\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "B newer",
+      "passed": true,
+      "instructions_and_service_boundaries": 383
+    },
+    {
+      "name": "A newer",
+      "passed": true,
+      "instructions_and_service_boundaries": 381
+    },
+    {
+      "name": "B only",
+      "passed": true,
+      "instructions_and_service_boundaries": 340
+    },
+    {
+      "name": "ties prefer A",
+      "passed": true,
+      "instructions_and_service_boundaries": 382
+    },
+    {
+      "name": "sequence wrap",
+      "passed": true,
+      "instructions_and_service_boundaries": 383
+    },
+    {
+      "name": "sequence wrap reverse",
+      "passed": true,
+      "instructions_and_service_boundaries": 381
+    },
+    {
+      "name": "Review first restores",
+      "passed": true,
+      "instructions_and_service_boundaries": 334
+    },
+    {
+      "name": "invalid newer magic",
+      "passed": true,
+      "instructions_and_service_boundaries": 362
+    },
+    {
+      "name": "invalid only magic",
+      "passed": true,
+      "instructions_and_service_boundaries": 314
+    },
+    {
+      "name": "invalid newer checksum",
+      "passed": true,
+      "instructions_and_service_boundaries": 370
+    },
+    {
+      "name": "invalid only checksum",
+      "passed": true,
+      "instructions_and_service_boundaries": 322
+    },
+    {
+      "name": "invalid newer short",
+      "passed": true,
+      "instructions_and_service_boundaries": 355
+    },
+    {
+      "name": "invalid only short",
+      "passed": true,
+      "instructions_and_service_boundaries": 307
+    },
+    {
+      "name": "invalid newer film7",
+      "passed": true,
+      "instructions_and_service_boundaries": 374
+    },
+    {
+      "name": "invalid only film7",
+      "passed": true,
+      "instructions_and_service_boundaries": 326
+    },
+    {
+      "name": "invalid newer film255",
+      "passed": true,
+      "instructions_and_service_boundaries": 374
+    },
+    {
+      "name": "invalid only film255",
+      "passed": true,
+      "instructions_and_service_boundaries": 326
+    },
+    {
+      "name": "invalid newer reserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 377
+    },
+    {
+      "name": "invalid only reserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 329
+    },
+    {
+      "name": "invalid newer schema",
+      "passed": true,
+      "instructions_and_service_boundaries": 377
+    },
+    {
+      "name": "invalid only schema",
+      "passed": true,
+      "instructions_and_service_boundaries": 329
+    },
+    {
+      "name": "invalid newer dng2",
+      "passed": true,
+      "instructions_and_service_boundaries": 377
+    },
+    {
+      "name": "invalid only dng2",
+      "passed": true,
+      "instructions_and_service_boundaries": 329
+    },
+    {
+      "name": "read failure open",
+      "passed": true,
+      "instructions_and_service_boundaries": 339
+    },
+    {
+      "name": "read failure read",
+      "passed": true,
+      "instructions_and_service_boundaries": 355
+    },
+    {
+      "name": "read failure read-short",
+      "passed": true,
+      "instructions_and_service_boundaries": 355
+    },
+    {
+      "name": "read failure read-close",
+      "passed": true,
+      "instructions_and_service_boundaries": 355
+    },
+    {
+      "name": "stock init failure preserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 15
+    },
+    {
+      "name": "stock init retry loads",
+      "passed": true,
+      "instructions_and_service_boundaries": 274
+    },
+    {
+      "name": "reboot restores menu choices",
+      "passed": true,
+      "instructions_and_service_boundaries": 383
+    },
+    {
+      "name": "menu actions automatically alternate and save",
+      "passed": true,
+      "instructions_and_service_boundaries": 470
+    },
+    {
+      "name": "save failure and retry: create",
+      "passed": true,
+      "instructions_and_service_boundaries": 387
+    },
+    {
+      "name": "save failure and retry: write",
+      "passed": true,
+      "instructions_and_service_boundaries": 401
+    },
+    {
+      "name": "power loss keeps previous valid slot",
+      "passed": true,
+      "instructions_and_service_boundaries": 355
+    },
+    {
+      "name": "save failure and retry: write-short",
+      "passed": true,
+      "instructions_and_service_boundaries": 404
+    },
+    {
+      "name": "save failure and retry: write-close",
+      "passed": true,
+      "instructions_and_service_boundaries": 404
+    },
+    {
+      "name": "save follows actual loaded slot",
+      "passed": true,
+      "instructions_and_service_boundaries": 145
+    },
+    {
+      "name": "capture DNG OFF",
+      "passed": true,
+      "instructions_and_service_boundaries": 6
+    },
+    {
+      "name": "capture DNG ON",
+      "passed": true,
+      "instructions_and_service_boundaries": 17
+    }
+  ]
+}

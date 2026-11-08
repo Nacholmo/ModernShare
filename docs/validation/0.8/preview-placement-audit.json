@@ -1,0 +1,5 @@
+{
+  "unexpected_stock_references": [],
+  "passed": true,
+  "reclaimed_share_entry": "Only old stock root pointer and internal references permitted; current root points to 0x1256c0"
+}

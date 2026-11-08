@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "platform": "Linux x86-64",
+  "glibc": "2.44",
+  "python": "3.14.9",
+  "pyinstaller": "6.22.3",
+  "version": "ModernShare 0.8",
+  "executable_bytes": 43946152,
+  "executable_sha256": "8d6f006dfdfa04008317f648eb5b9ec6cbb987f8fe4894d2605c22ed33bc0fb9",
+  "cases": [
+    "frozen --version",
+    "frozen original updater to exact firmware",
+    "frozen GUI startup on virtual display"
+  ],
+  "windows_executable_tested": false,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003"
+}

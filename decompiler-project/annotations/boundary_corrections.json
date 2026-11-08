@@ -1,0 +1,34 @@
+[
+  {
+    "site": "0x0009038c",
+    "previous_name": "RegisterFirmwareImages",
+    "site_name": "image_table_registration_site",
+    "entry": "0x00090384",
+    "function_name": "RegisterFirmwareImages",
+    "comment": "Registers firmware image tables. True entry at push_s blink, push_s r13; 0x9038c is an internal call to RegisterImageTable."
+  },
+  {
+    "site": "0x000f26f8",
+    "previous_name": "InitializeCaptureTables",
+    "site_name": "capture_table_setup_site",
+    "entry": "0x000f2664",
+    "function_name": "InitializeCaptureTables",
+    "comment": "Initializes preview/capture ISP tables. Prologue allocates 204 stack bytes; 0xf26f8 is an internal block constructing capture table pointers. True entry independently decoded at 0xf2664."
+  },
+  {
+    "site": "0x001206f4",
+    "previous_name": "HandleCaptureMessage401",
+    "site_name": "capture_message_401_dispatch_site",
+    "entry": "0x001206d0",
+    "function_name": "HandleCaptureMessage401",
+    "comment": "Capture-message handler. True entry saves blink/registers at 0x1206d0; internal site 0x1206f4 compares message code 0x401."
+  },
+  {
+    "site": "0x00067fc0",
+    "previous_name": "DrawText",
+    "site_name": "glyph_shadow_outline_pass",
+    "entry": "0x00067f10",
+    "function_name": "DrawGlyphWithEffects",
+    "comment": "Glyph shadow/outline rendering block within the glyph renderer at 0x67f10, not a separate DrawText function. 0x67f10 has its own prologue; DecodeAndBlitImage at 0x67e04 is a separate preceding function."
+  }
+]

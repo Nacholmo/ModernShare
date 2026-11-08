@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "engine": "Actual patched screen code, stock lost-RTC recovery and both default-reset paths through RTC setter; memcpy and hardware RTC/UI property services mocked",
+  "limits": "Snippet tests stop before screen rendering; reset action tests stop at RTC setter; no physical RTC or camera validation",
+  "scenarios": [
+    {
+      "name": "boot screen default",
+      "passed": true,
+      "instructions_and_service_boundaries": 7
+    },
+    {
+      "name": "setup screen retained year 2007 preserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 9
+    },
+    {
+      "name": "setup screen retained year 2025 preserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 9
+    },
+    {
+      "name": "setup screen retained year 2026 preserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 9
+    },
+    {
+      "name": "setup screen retained year 2037 preserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 9
+    },
+    {
+      "name": "setup screen retained year 2006 falls back",
+      "passed": true,
+      "instructions_and_service_boundaries": 12
+    },
+    {
+      "name": "setup screen retained year 1900 falls back",
+      "passed": true,
+      "instructions_and_service_boundaries": 12
+    },
+    {
+      "name": "setup screen retained year 2038 falls back",
+      "passed": true,
+      "instructions_and_service_boundaries": 14
+    },
+    {
+      "name": "lost RTC read failure",
+      "passed": true,
+      "instructions_and_service_boundaries": 16
+    },
+    {
+      "name": "RTC year 2006 resets",
+      "passed": true,
+      "instructions_and_service_boundaries": 13
+    },
+    {
+      "name": "RTC year 2007 retained",
+      "passed": true,
+      "instructions_and_service_boundaries": 9
+    },
+    {
+      "name": "RTC year 2026 retained",
+      "passed": true,
+      "instructions_and_service_boundaries": 9
+    },
+    {
+      "name": "RTC year 2037 retained",
+      "passed": true,
+      "instructions_and_service_boundaries": 9
+    },
+    {
+      "name": "startup Reset default action",
+      "passed": true,
+      "instructions_and_service_boundaries": 10
+    },
+    {
+      "name": "setup Reset default action",
+      "passed": true,
+      "instructions_and_service_boundaries": 27
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "firmware_sha256": "091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003",
+  "scenarios": 248,
+  "sensor_fixture": "synthetic deterministic bytes; no personal photos",
+  "reports": {
+    "settings-emulation.json": {
+      "scenarios": 54,
+      "sha256": "e9dd620949aa37fb38a22ebb88537e73cade0a1177f9945f26a238aed0c2c1c4"
+    },
+    "menu-emulation.json": {
+      "scenarios": 129,
+      "sha256": "598bc09037376cfab2b8dbf8a4a3b4dd5c007d7fec596b26ac9756f6baa3a349"
+    },
+    "date-emulation.json": {
+      "scenarios": 15,
+      "sha256": "5534d61de43f13d1c24e1168a695e7b1c3834857a760c558e7e5c3ce8c81e5e5"
+    },
+    "emulation.json": {
+      "scenarios": 50,
+      "sha256": "1d27be382c297e80b499c1a6a90a7cc4f763f2fa60bbf262c1edb9823a789c50"
+    }
+  }
+}

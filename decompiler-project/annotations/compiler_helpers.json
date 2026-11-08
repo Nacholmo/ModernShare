@@ -1,0 +1,464 @@
+[
+  {
+    "address": "0x0011adec",
+    "name": "kodak_save_r13_r13",
+    "kind": "save",
+    "registers": [
+      "r13"
+    ],
+    "stack_delta": -4,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae5c",
+    "name": "kodak_restore_r13_r13",
+    "kind": "restore",
+    "registers": [
+      "r13"
+    ],
+    "stack_delta": 8,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ade8",
+    "name": "kodak_save_r13_r14",
+    "kind": "save",
+    "registers": [
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -8,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae54",
+    "name": "kodak_restore_r13_r14",
+    "kind": "restore",
+    "registers": [
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 12,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ade4",
+    "name": "kodak_save_r13_r15",
+    "kind": "save",
+    "registers": [
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -12,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae4c",
+    "name": "kodak_restore_r13_r15",
+    "kind": "restore",
+    "registers": [
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 16,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ade0",
+    "name": "kodak_save_r13_r16",
+    "kind": "save",
+    "registers": [
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -16,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae44",
+    "name": "kodak_restore_r13_r16",
+    "kind": "restore",
+    "registers": [
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 20,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011addc",
+    "name": "kodak_save_r13_r17",
+    "kind": "save",
+    "registers": [
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -20,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae3c",
+    "name": "kodak_restore_r13_r17",
+    "kind": "restore",
+    "registers": [
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 24,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011add8",
+    "name": "kodak_save_r13_r18",
+    "kind": "save",
+    "registers": [
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -24,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae34",
+    "name": "kodak_restore_r13_r18",
+    "kind": "restore",
+    "registers": [
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 28,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011add4",
+    "name": "kodak_save_r13_r19",
+    "kind": "save",
+    "registers": [
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -28,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae2c",
+    "name": "kodak_restore_r13_r19",
+    "kind": "restore",
+    "registers": [
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 32,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011add0",
+    "name": "kodak_save_r13_r20",
+    "kind": "save",
+    "registers": [
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -32,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae24",
+    "name": "kodak_restore_r13_r20",
+    "kind": "restore",
+    "registers": [
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 36,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adcc",
+    "name": "kodak_save_r13_r21",
+    "kind": "save",
+    "registers": [
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -36,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae1c",
+    "name": "kodak_restore_r13_r21",
+    "kind": "restore",
+    "registers": [
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 40,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adc8",
+    "name": "kodak_save_r13_r22",
+    "kind": "save",
+    "registers": [
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -40,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae14",
+    "name": "kodak_restore_r13_r22",
+    "kind": "restore",
+    "registers": [
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 44,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adc4",
+    "name": "kodak_save_r13_r23",
+    "kind": "save",
+    "registers": [
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -44,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae0c",
+    "name": "kodak_restore_r13_r23",
+    "kind": "restore",
+    "registers": [
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 48,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adc0",
+    "name": "kodak_save_r13_r24",
+    "kind": "save",
+    "registers": [
+      "r24",
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -48,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011ae04",
+    "name": "kodak_restore_r13_r24",
+    "kind": "restore",
+    "registers": [
+      "r24",
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 52,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adbc",
+    "name": "kodak_save_r13_r25",
+    "kind": "save",
+    "registers": [
+      "r25",
+      "r24",
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -52,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adfc",
+    "name": "kodak_restore_r13_r25",
+    "kind": "restore",
+    "registers": [
+      "r25",
+      "r24",
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 56,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adb8",
+    "name": "kodak_save_r13_r26",
+    "kind": "save",
+    "registers": [
+      "gp",
+      "r25",
+      "r24",
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": -56,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  },
+  {
+    "address": "0x0011adf4",
+    "name": "kodak_restore_r13_r26",
+    "kind": "restore",
+    "registers": [
+      "gp",
+      "r25",
+      "r24",
+      "r23",
+      "r22",
+      "r21",
+      "r20",
+      "r19",
+      "r18",
+      "r17",
+      "r16",
+      "r15",
+      "r14",
+      "r13"
+    ],
+    "stack_delta": 60,
+    "evidence": "GNU binutils 2.43 disassembly of local stock code; shared suffix helpers at 0x11adb8..0x11ae9a. Restore pops saved blink as well as registers."
+  }
+]
