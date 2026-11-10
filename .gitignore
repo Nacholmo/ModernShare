@@ -48,3 +48,8 @@ mods/**/test-*/
 mods/**/rebuild*/
 mods/**/validation/
 mods/**/probe/
+
+# User-authorized camera demonstration photos; keep all other JPEGs private.
+!/photos/modernshare.jpg
+!/photos/film_selector.jpg
+!/photos/menus.jpg

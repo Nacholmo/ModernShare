@@ -11,14 +11,31 @@ Compatibility with other camera models or firmware versions is not established.
 
 ## On the camera
 
-ModernShare 0.8 running on a Kodak EasyShare CD703:
+### Latest Ember interface — unreleased
+
+Camera-tested development work running on the Kodak EasyShare CD703:
+
+| ModernShare settings | Film chooser | Capture menu |
+|---|---|---|
+| ![Ember ModernShare settings showing Velvia 100, JPEG + DNG, LCD Power save and Review High power](photos/modernshare.jpg) | ![Film chooser with Kodak E100VS selected and marked with an amber check](photos/film_selector.jpg) | ![Ember Capture menu with separate setting names and values and an amber selection rail](photos/menus.jpg) |
+
+The settings photo shows **Velvia 100**, **JPEG + DNG**, normal LCD brightness
+**Power save**, Review brightness **High power**, and **SD saved**. The chooser
+highlights the current film; the Capture menu shows the updated spacing and
+selection style. These photos show the unreleased development interface. The
+**0.8 downloads below build the earlier interface** shown here:
+
+<details>
+<summary>Released ModernShare 0.8 interface</summary>
 
 | Boot screen | Share-button settings | Camera menu |
 |---|---|---|
-| ![ModernShare boot screen on a Kodak CD703](photos/boot.png) | ![ModernShare menu showing Kodachrome 64, DNG saving OFF and v0.8 SD saved](photos/modernshare_menu.png) | ![Kodak CD703 camera menu with the ModernShare charcoal theme](photos/menus.png) |
+| ![ModernShare boot screen on a Kodak CD703](photos/boot.png) | ![ModernShare 0.8 menu showing Kodachrome 64, DNG saving OFF and SD saved](photos/modernshare_menu.png) | ![Kodak CD703 camera menu with the ModernShare 0.8 charcoal theme](photos/menus.png) |
 
-The settings photo shows Kodachrome 64 selected, DNG saving OFF and the
-**SD saved** status. [View the original boot artwork](boot_image.png).
+</details>
+
+[View the original boot artwork](boot_image.png). Public photo copies omit
+location metadata; the image pixels are unchanged.
 
 ## Features
 
@@ -33,6 +50,18 @@ The settings photo shows Kodachrome 64 selected, DNG saving OFF and the
   and restore after restart or battery-flap opening.
 - Custom full-screen boot artwork, charcoal menus and flash OFF defaults.
 - Date setup through 2037; fallback 2026-11-07 noon after RTC power loss.
+
+## Unreleased development
+
+The locally tested Ember interface adds clearer menu spacing, a shortcut to
+native LCD brightness, and an option to use High power brightness during stored-
+photo Review while retaining the normal setting elsewhere. The camera user
+confirms both brightness settings survive a reset. The Film chooser
+is also accepted by camera user report. Labeled Stock, Neopan, Velvia and
+Kodachrome captures have passed JPEG-only/JPEG+DNG and DNG metadata checks.
+
+The downloads and standalone source builder below produce **0.8**. Development
+changes will be included in a future release after integration and validation.
 
 ## Generate firmware with the small app
 

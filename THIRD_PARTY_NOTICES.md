@@ -24,8 +24,9 @@ or complete upstream source distribution is bundled here.
 ## Kodak firmware — external input
 
 No stock or modified firmware image, original updater, decompiled vendor source,
-RAM dump or camera photo is included. Build scripts require a user-supplied stock
-image. Original English strings and the relocated graphic block are copied from
+RAM dump or private sensor capture is included. User-authorized photos of the
+camera interface are provided as project demonstrations under `photos/`. Build
+scripts require a user-supplied stock image. Original English strings and the relocated graphic block are copied from
 that local image during a build. The project licence does not relicense Kodak's
 firmware or imply permission to redistribute it.
 
