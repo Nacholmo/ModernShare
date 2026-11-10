@@ -1,6 +1,7 @@
+; UI9 restores the original classic-film getter logic at a separate code address.
 ; Scene film presets for Kodak C713/CD703 fw 1.30.
-; Placed at RAM 0x125600 (free part of the zero run 0x125420-0x125cef; the full-screen
-; boot image uses 0x125420-0x1255ff). Two entry points replace the colour-matrix getters
+; Placed at RAM 0xebd58 in the reclaimed legacy Share region. Two entry points
+; replace the colour-matrix getters
 ; that the capture code calls for every photo (entered with a plain branch, so blink is
 ; still the getter caller's return address):
 ;   0xaf508 GetCCM(n):  r0 = illuminant 0..2 -> pointer to a 3x4 int32 Q16 CCM
@@ -53,6 +54,7 @@
         .endm
 
         .text
+        .global ccm,ymat,getters_end
 ccm:    push_s  r2
         LOGCALL 1
         cmp     r0, 3
@@ -88,8 +90,8 @@ y_sep:  ld      r0, [r1, 0x40]
         j_s     [blink]
 
 ; r0 = FILMS + k*0x30 (k in r1); restore r2 and return to the getter's caller
-addr:   mov r2,0xebe6c
-        ld.as r0,[r2,r1]
-        pop_s r2
-        j_s [blink]
-        .fill 4,2,0x78e0
+addr:   mov     r2, 0xebe6c
+        ld.as   r0, [r2,r1]
+        pop_s   r2
+        j_s     [blink]
+getters_end:

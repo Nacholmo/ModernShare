@@ -1,0 +1,13 @@
+{
+  "camera_tested_base_sha256": "fd753680c2b0c1714fbab329d884d9dc4aac48df8f9a299014fa068f011c9c42",
+  "release_sha256": "4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f",
+  "changes": "Four status-label digits 0.8 to 0.9 and container checksums only",
+  "version_file_offsets": [
+    1279433,
+    1279448,
+    1279464,
+    1279479
+  ],
+  "total_changed_bytes": 13,
+  "checksums": []
+}

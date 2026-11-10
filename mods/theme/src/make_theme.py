@@ -34,6 +34,15 @@ TABLES = (0x144C00 + 0x1CB83C - 0x1A0000,       # graphics palette (file offset)
 ACCENT_H = 15 / 360          # warm orange-coral
 GREEN_H = 140 / 360
 KEEP = {167}                 # e2d7d1: immediate fill colour at 0x8771c
+EMBER = {247: (36,40,43), 248: (54,61,65), 249: (241,237,228),
+         250: (242,187,96), 251: (196,189,177)}
+BG,FOCUS,IVORY,AMBER,SECONDARY = EMBER.values()
+EMBER_WORDS = {
+    0x14d334: BG, 0x14d398: BG, 0xd0c74: BG, 0xd15c8: BG, 0xe6f00: BG,
+    0x14d39c: BG, 0x14d358: BG, 0x14d350: IVORY, 0x14d32c: IVORY,
+    0x14d324: AMBER, 0x6f9e4: AMBER, 0xdd2b8: AMBER,
+    0xc9ac0: AMBER, 0xe0d64: AMBER, 0xea5d4: AMBER, 0xea5c4: AMBER,
+}
 # RAM addresses of UI colour words: data-section colour table, then code literal pools
 UI_COLOURS = (0x14d324, 0x14d330, 0x14d334, 0x14d350, 0x14d358, 0x14d398, 0x14d39c,
               0x6f9e4, 0x73ccc, 0x73cd8, 0xc9ac0, 0xd0c74, 0xd15c8, 0xdd2b8, 0xe0d64,
@@ -92,6 +101,11 @@ def main():
         i = first.get(hw_colour(r, g, b, al))
         assert al == 0 and i and 0 < i < 252, f"{a:#x}: {d[o:o+4].hex()} is not a palette colour"
         d[o:o + 3] = new[4 * i:4 * i + 3]
+    for i,rgb in EMBER.items():
+        new[4*i:4*i+3]=bytes(rgb)
+        for o in TABLES:d[o+4*i:o+4*i+3]=bytes(rgb)
+    for a,rgb in EMBER_WORDS.items():
+        o=ram_to_file(a);d[o:o+3]=bytes(rgb)
     now = {}
     for i in range(255, -1, -1):
         now[hw_colour(*new[4 * i:4 * i + 4])] = i

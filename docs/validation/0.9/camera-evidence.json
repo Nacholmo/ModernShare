@@ -1,0 +1,30 @@
+{
+  "accepted_development_sha256": "fd753680c2b0c1714fbab329d884d9dc4aac48df8f9a299014fa068f011c9c42",
+  "installed_firmware_readback_matches": true,
+  "user_acceptance": [
+    "Ember interface and icon clearance",
+    "LCD brightness shortcut and return",
+    "stored-photo Review High power override",
+    "both brightness settings survive reset; method unspecified",
+    "Film chooser and film styles"
+  ],
+  "labeled_capture_checks": {
+    "films": [
+      "Stock",
+      "Fuji Neopan 1600",
+      "Velvia 100",
+      "Kodachrome 64"
+    ],
+    "jpeg_only": 4,
+    "jpeg_plus_dng": 4,
+    "paired_metadata_matches": true,
+    "neopan_jpeg_monochrome_raw_retains_colour": true,
+    "dng_cpu_render_matches_independent_reference": true
+  },
+  "limits": [
+    "Camera evidence applies to development hash; 0.9 differs only in four version digits/checksums",
+    "Varying framing/exposure prevents controlled colourimetric claims",
+    "Private captures and memory dumps are not published",
+    "Interrupted-power FAT/SD durability remains untested"
+  ]
+}

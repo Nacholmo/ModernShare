@@ -1,42 +1,52 @@
 {
   "symbols": {
     "film_next": "0x1247a0",
-    "start": "0x1256c0",
-    "init": "0x1256da",
-    "refresh": "0x125700",
-    "toggle_dng": "0x125758",
+    "start": "0x125520",
+    "init": "0x12553c",
+    "refresh": "0x125574",
+    "toggle_dng": "0x125604",
     "hidden_menu": "0x1259e0",
     "version": "0x1259ec",
     "film_end": "0x1247f8",
-    "menu_end": "0x125778",
-    "tail_end": "0x1259f0"
+    "tail_end": "0x1259f0",
+    "open_brightness": "0x125624",
+    "toggle_review": "0x125644",
+    "mode_set": "0x125670",
+    "backlight": "0x1256d0",
+    "refresh_backlight": "0x125700",
+    "code_end": "0x125770",
+    "brightness_init": "0x125710"
   },
   "labels": {
-    "TITLE": "0x168218",
-    "DNG_ON": "0x168225",
-    "DNG_OFF": "0x168234",
-    "HIDDEN": "0x168244",
-    "VERSION": "0x168250",
-    "FILM_0": "0x168262",
-    "FILM_1": "0x168270",
-    "FILM_2": "0x16827c",
-    "FILM_3": "0x168291",
-    "FILM_4": "0x1682a4",
-    "FILM_5": "0x168340",
-    "FILM_6": "0x168351"
+    "TITLE": "0x168230",
+    "FILM": "0x16823c",
+    "FORMAT": "0x168241",
+    "BRIGHTNESS": "0x16824d",
+    "REVIEW": "0x16825c",
+    "HIDDEN": "0x16826e",
+    "DNG_ON": "0x16827a",
+    "DNG_OFF": "0x168285",
+    "REVIEW_NORMAL": "0x16828a",
+    "FILM_0": "0x168291",
+    "FILM_1": "0x168299",
+    "FILM_2": "0x16829f",
+    "FILM_3": "0x1682ae",
+    "FILM_4": "0x1682bb",
+    "FILM_5": "0x168348",
+    "FILM_6": "0x168353"
   },
   "settings_symbols": {
     "capture_init": "0xebecc",
     "menu_init": "0xebeec",
     "changed": "0xebf00",
     "load_once": "0xebf2c",
-    "apply": "0xebff0",
-    "status": "0xec004",
-    "first_end": "0xec010",
+    "apply": "0xebffc",
+    "status": "0xec010",
+    "first_end": "0xec01c",
     "read_slot": "0xec088",
     "validate": "0xec0e4",
     "save": "0xec130",
-    "code_end": "0xec208"
+    "code_end": "0xec206"
   },
   "settings_layout": {
     "STATE": "0x16839c",
@@ -75,8 +85,8 @@
     "0x1257a0",
     "0x125860",
     "0x125920",
-    "0xebc90",
-    "0xebd50"
+    "0x1e6000",
+    "0x1e60c0"
   ],
   "matrix_pointer_table": "0xebe6c",
   "preview_transforms_address": "0xebe10",
@@ -283,5 +293,42 @@
     "refresh": "0xebc50",
     "stock": "0xebc80",
     "refresh_end": "0xebc8c"
+  },
+  "status_pointer_address": "0x16841c",
+  "review_option_address": "0x1683a8",
+  "return_row_address": "0x1683a9",
+  "review_config_bit": 1,
+  "brightness_screen_id": "0x9e",
+  "normal_brightness_address": "0x13295f",
+  "review_default": false,
+  "settings_format": "same 16-byte KMOD record; config bit1 = Review High power; old records default OFF",
+  "review_modes": [
+    2,
+    4
+  ],
+  "getter_symbols": {
+    "ccm": "0xebd58",
+    "ymat": "0xebda6",
+    "getters_end": "0xebe10"
+  },
+  "chooser_layout": {
+    "CHOOSER_ROOT": "0x1e6200",
+    "CHOOSER_LIST": "0x1e6240",
+    "CHOOSER_TITLE": "0x1e6280",
+    "CHOOSER_FOOTER": "0x1e62a0",
+    "CHOOSER_ITEMS": "0x1e62c0",
+    "CHOOSER_WIDGETS": "0x1e6370",
+    "CHOOSER_EVENTS": "0x1e6380",
+    "CHOOSER_TITLE_TEXT": "0x1e6440",
+    "CHOOSER_HELP_TEXT": "0x1e6450"
+  },
+  "chooser_symbols": {
+    "open": "0xebc90",
+    "dispatch": "0xebca0",
+    "init": "0xebcbc",
+    "choose": "0xebd18",
+    "cancel": "0xebd46",
+    "noop": "0xebd50",
+    "code_end": "0xebd58"
   }
 }

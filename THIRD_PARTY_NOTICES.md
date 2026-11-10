@@ -21,6 +21,24 @@ and applies local corrections; upstream portions retain Apache-2.0 terms.
 The licence is preserved in `LICENSES/Apache-2.0.txt`. No Ghidra/JDK executables
 or complete upstream source distribution is bundled here.
 
+## Ember typography and icons
+
+The unmodified Noto Sans Condensed Bold/SemiBold fonts in `assets/fonts/` are
+copyright 2022 The Noto Project Authors, licensed under SIL OFL 1.1. The licence
+is in `LICENSES/OFL-Noto.txt`; upstream is
+https://github.com/notofonts/latin-greek-cyrillic.
+
+`ModernShareMaterialIcons.ttf` is a renamed subset of Symbols Nerd Font containing
+only the Material Design Icons used by the renderer. Material Design Icons are
+copyright Austin Andrews and contributors, under Apache-2.0; see
+`LICENSES/Apache-MaterialDesign.txt` and `LICENSES/Apache-2.0.txt` and
+https://github.com/Templarian/MaterialDesign. Nerd Fonts attribution/licences are
+preserved in `LICENSES/Nerd-Fonts.txt` (Ryan L McIntyre,
+https://github.com/ryanoasis/nerd-fonts). These fonts/icons retain their applicable
+third-party terms. Subset provenance, exact hashes and reconstruction instructions
+are in `assets/fonts/`. The rasterizer changes icon size/proportions/colours for
+the camera display; the original Noto fonts remain unmodified.
+
 ## Kodak firmware — external input
 
 No stock or modified firmware image, original updater, decompiled vendor source,

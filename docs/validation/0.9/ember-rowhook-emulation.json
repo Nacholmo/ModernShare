@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "firmware_sha256": "4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f",
+  "engine": "Ghidra p-code emulation of the patched call at 0x8fc2a and the hook; string lookup 0x8a3c0 and text draw 0x78ce0 modelled, caller-saved registers trashed on return",
+  "scenarios": [
+    {
+      "name": "capture value buffer idle",
+      "passed": true,
+      "draws": 2,
+      "steps": 54
+    },
+    {
+      "name": "capture value buffer focused",
+      "passed": true,
+      "draws": 2,
+      "steps": 54
+    },
+    {
+      "name": "narrow value box without cap",
+      "passed": true,
+      "draws": 2,
+      "steps": 54
+    },
+    {
+      "name": "capture native string id idle",
+      "passed": true,
+      "draws": 2,
+      "steps": 57
+    },
+    {
+      "name": "capture native string id focused",
+      "passed": true,
+      "draws": 2,
+      "steps": 57
+    },
+    {
+      "name": "video native string id",
+      "passed": true,
+      "draws": 2,
+      "steps": 60
+    },
+    {
+      "name": "Share Film pointer name idle",
+      "passed": true,
+      "draws": 2,
+      "steps": 45
+    },
+    {
+      "name": "Share Film pointer name focused",
+      "passed": true,
+      "draws": 2,
+      "steps": 45
+    },
+    {
+      "name": "Share File format pointer name",
+      "passed": true,
+      "draws": 2,
+      "steps": 45
+    },
+    {
+      "name": "lowest name id",
+      "passed": true,
+      "draws": 2,
+      "steps": 54
+    },
+    {
+      "name": "highest name id",
+      "passed": true,
+      "draws": 2,
+      "steps": 54
+    },
+    {
+      "name": "name id past table",
+      "passed": true,
+      "draws": 1,
+      "steps": 13
+    },
+    {
+      "name": "unrelated pointer name",
+      "passed": true,
+      "draws": 1,
+      "steps": 13
+    },
+    {
+      "name": "no name",
+      "passed": true,
+      "draws": 1,
+      "steps": 13
+    },
+    {
+      "name": "review fixed row",
+      "passed": true,
+      "draws": 1,
+      "steps": 13
+    },
+    {
+      "name": "unrelated two string ids",
+      "passed": true,
+      "draws": 1,
+      "steps": 22
+    },
+    {
+      "name": "Setup action at capture table end",
+      "passed": true,
+      "draws": 1,
+      "steps": 22
+    },
+    {
+      "name": "Setup action at video table end",
+      "passed": true,
+      "draws": 1,
+      "steps": 22
+    },
+    {
+      "name": "centred row",
+      "passed": true,
+      "draws": 1,
+      "steps": 6
+    },
+    {
+      "name": "right to left",
+      "passed": true,
+      "draws": 1,
+      "steps": 6
+    }
+  ]
+}

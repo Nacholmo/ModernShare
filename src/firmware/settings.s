@@ -1,6 +1,7 @@
 ; SD-backed DNG/film preferences. A/B records: magic, config, generation, ~xor.
 ; Defaults: DNG OFF, By mode. Write inactive slot, commit RAM state after close.
         .include "settings_layout.inc"
+        .include "review_symbols.inc"
         .equ BASE,0xebecc
         .text
         .global capture_init,menu_init,changed,load_once,save,read_slot,validate,apply,status,code_end
@@ -26,7 +27,7 @@ menu_init:
         mov_s r0,r13
         pop_s r13
         pop_s blink
-        b capture_init + (0x1256da - BASE)
+        b capture_init + (UI_INIT - BASE)
         .balign 4
 changed:
         push_s blink
@@ -34,7 +35,7 @@ changed:
         mov_s r13,r0
         cmp r1,0x5000
         beq_s changed_film
-        bl capture_init + (0x125758 - BASE)
+        bl capture_init + (UI_TOGGLE_DNG - BASE)
         b_s changed_save
 changed_film:
         bl capture_init + (0x1247a0 - BASE)
@@ -58,7 +59,7 @@ load_once:
         mov_s r0,1
         st r0,[r17,0]
         mov r0,PATH0
-        mov r1,sp
+        mov_s r1,sp
         bl read_slot
         mov_s r14,r0
         mov r0,PATH1
@@ -84,6 +85,9 @@ load_selected:
         and r1,r0,1
         mov r3,0x13358c
         stb_s r1,[r3,0]
+        lsr r1,r0,1
+        and r1,r1,1
+        stb r1,[r17,12]
         lsr r0,r0,8
         and r0,r0,255
         mov r3,0x1682d0
@@ -100,6 +104,7 @@ load_default:
 load_apply:
         mov_s r0,r13
         bl apply
+        bl capture_init + (UI_REFRESH_BACKLIGHT - BASE)
 load_done:
         add_s sp,sp,32
         mov_s r0,0
@@ -114,7 +119,7 @@ apply:
         b capture_init + (0x1247b8 - BASE)
         .balign 4
 status:
-        mov r1,0x168204
+        mov r1,0x16841c
         st_s r0,[r1,0]
         j_s [blink]
         .global first_end
@@ -127,7 +132,7 @@ read_slot:
         mov_s r13,r1
         mov_s r1,0
         mov_s r2,0
-        mov r3,sp
+        mov_s r3,sp
         st_s r1,[sp,4]
         bl capture_init + (0x73224 - BASE)
         brne r0,0,read_invalid
@@ -141,7 +146,7 @@ read_slot:
         ld_s r0,[sp,4]
         cmp_s r0,16
         mov.ne r14,-1
-        mov r0,sp
+        mov_s r0,sp
         bl capture_init + (0x7324c - BASE)
         or r0,r0,r14
         brne r0,0,read_invalid
@@ -154,6 +159,7 @@ read_done:
         add_s sp,sp,8
         b capture_init + (0x11ae54 - BASE)
         .balign 4
+        .org 0xec0e4 - BASE
 validate:
         ld_s r1,[r0,0]
         cmp r1,0x444f4d4b
@@ -170,7 +176,7 @@ validate:
         and r1,r1,255
         cmp_s r1,7
         bhs_s invalid
-        and r2,r2,0xfffff8fe
+        and r2,r2,0xfffff8fc
         cmp r2,0x10000
         mov_s r0,0
         mov.eq r0,1
@@ -179,6 +185,7 @@ invalid:
         mov_s r0,0
         j_s [blink]
         .balign 4
+        .org 0xec130 - BASE
 save:
         push_s blink
         bl capture_init + (0x11addc - BASE)
@@ -195,7 +202,10 @@ save:
         asl_s r1,r1,8
         mov r2,0x13358c
         ldb_s r2,[r2,0]
-        or r1,r1,r2
+        or_s r1,r1,r2
+        ldb r2,[r13,12]
+        asl_s r2,r2,1
+        or_s r1,r1,r2
         or r1,r1,0x10000
         st_s r1,[sp,12]
         st_s r14,[sp,16]
@@ -208,9 +218,10 @@ save:
         mov.ne r0,PATH1
         mov_s r1,1
         mov_s r2,1
-        mov r3,sp
-        mov r16,0
-        st r16,[sp,4]
+        mov_s r3,sp
+        mov_s r2,0
+        st_s r2,[sp,4]
+        mov_s r2,1
         bl capture_init + (0x73224 - BASE)
         brne r0,0,save_failed
         ld_s r0,[sp,0]
@@ -219,13 +230,13 @@ save:
         mov_s r3,0
         add r4,sp,4
         bl capture_init + (0x73240 - BASE)
-        mov r16,r0
+        mov_s r16,r0
         brne r16,0,save_close
         ld_s r0,[sp,4]
         cmp_s r0,16
         mov.ne r16,-1
 save_close:
-        mov r0,sp
+        mov_s r0,sp
         bl capture_init + (0x7324c - BASE)
         or r0,r0,r16
         brne r0,0,save_failed

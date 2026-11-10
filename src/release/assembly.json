@@ -7,7 +7,7 @@
     "segments": [
       {
         "offset": 0,
-        "length": 324,
+        "length": 336,
         "address": "0xebecc"
       },
       {
@@ -43,13 +43,13 @@
   {
     "name": "scene-getters",
     "source": "src/firmware/scene-getters.s",
-    "origin": 1201664,
-    "address": "0x125600",
+    "origin": 965976,
+    "address": "0xebd58",
     "segments": [
       {
         "offset": 0,
-        "length": 192,
-        "address": "0x125600"
+        "length": 184,
+        "address": "0xebd58"
       }
     ]
   },
@@ -63,11 +63,6 @@
         "offset": 0,
         "length": 88,
         "address": "0x1247a0"
-      },
-      {
-        "offset": 3872,
-        "length": 184,
-        "address": "0x1256c0"
       },
       {
         "offset": 4672,
@@ -138,6 +133,45 @@
         "offset": 0,
         "length": 36,
         "address": "0xeae58"
+      }
+    ]
+  },
+  {
+    "name": "review-brightness",
+    "source": "src/firmware/review-brightness.s",
+    "origin": 1201440,
+    "address": "0x125520",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 592,
+        "address": "0x125520"
+      }
+    ]
+  },
+  {
+    "name": "film-chooser",
+    "source": "src/firmware/film-chooser.s",
+    "origin": 965776,
+    "address": "0xebc90",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 200,
+        "address": "0xebc90"
+      }
+    ]
+  },
+  {
+    "name": "ember-rowhook",
+    "source": "src/firmware/ember-rowhook.s",
+    "origin": 1244560,
+    "address": "0x12fd90",
+    "segments": [
+      {
+        "offset": 0,
+        "length": 226,
+        "address": "0x12fd90"
       }
     ]
   }

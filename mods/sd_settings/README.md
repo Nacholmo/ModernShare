@@ -1,3 +1,32 @@
+# ModernShare 0.9 preferences
+
+Use the root README and `scripts/build.py` for the current standalone release.
+Film, file format and Review brightness save automatically to alternating 16-byte
+`KMOD0.CFG` / `KMOD1.CFG` records in the SD root. The configuration word is
+`0x10000 | film_index << 8 | review_high_power << 1 | dng_on`; other record fields
+and newest-valid-slot handling retain the 0.8 format. Old records default Review
+to Normal. Defaults without a valid record are By mode, JPEG and Review Normal.
+
+Film opens a chooser; only applying a different film saves. Browsing, same-film
+OK, Cancel and opening a menu do not write preferences. File format and Review
+brightness toggles save all three preferences. Native LCD brightness remains a
+native camera setting; the shortcut returns to ModernShare. The Review option
+changes physical backlight output only in stored-photo Review/Favorites.
+
+The footer shows `v0.9: defaults`, `v0.9: SD loaded`, `v0.9: SD saved` or
+`v0.9: SD error`. A failed save retains active session settings and the last
+committed slot. Both brightness settings survive a reset by camera user report.
+Set Review brightness to Normal before downgrading to 0.8: its validator rejects
+an enabled Review bit. Formatting/removing both CFGs restores mod defaults.
+
+Inspect records with `python3 mods/sd_settings/src/settings_record.py /path/to/KMOD0.CFG`.
+See [release validation](../../docs/VALIDATION.md) and
+[architecture](../../docs/ARCHITECTURE.md) for current allocations and tests.
+
+---
+
+## Historical 0.8 implementation
+
 > Public export: use the root README and `scripts/build.py` for the standalone build. References below to historical `test-v0.8/` files describe development provenance; reports are exported under `docs/validation/0.8/`. Firmware images are not distributed.
 
 # ModernShare 0.8
@@ -5,7 +34,7 @@
 Camera-confirmed build: `test-v0.8/KC713.FW` (SHA-256
 `091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003`).
 Built from pinned five-film 0.7 (`57a25b3f…`). The user reports **“works as intended”**
-after the camera trial. This is the current confirmed baseline; see
+after the camera trial. This was the 0.8 baseline; see
 `test-v0.8/camera-confirmation.json`. Independent post-flash card readback and
 interrupted-power durability testing have not been performed.
 

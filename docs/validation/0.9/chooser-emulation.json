@@ -1,0 +1,1367 @@
+{
+  "passed": true,
+  "firmware_sha256": "4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f",
+  "engine": "Native root event dispatch, pointer-based screen activation, list focus/scroll/ticks, list OK, Share return, film apply/preview/save, and UI8 brightness/SD regressions. SDK, photo, drawing refresh/timer, file and compiler restore boundaries modeled. Camera interaction/output require trial.",
+  "scenarios": [
+    {
+      "name": "physical Up/Down event dispatch scrolls all seven films; Back cancels",
+      "passed": true,
+      "instructions_and_service_boundaries": 22506
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11313
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d0 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d0 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d0 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d0 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d0 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 26
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d0 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 28
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d1 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d1 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d1 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d1 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d1 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 26
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d1 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 28
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d2 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d2 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d2 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d2 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d2 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 26
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d2 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 28
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d3 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d3 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d3 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d3 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d3 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 26
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d3 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 28
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d4 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d4 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d4 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d4 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d4 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 26
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d4 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 28
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d5 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d5 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d5 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d5 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d5 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 26
+    },
+    {
+      "name": "physical override option\u003d0 mode\u003d5 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 28
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d0 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d0 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d0 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d0 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 39
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d0 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d0 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 34
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d1 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d1 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d1 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d1 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 39
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d1 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d1 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 34
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d2 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 36
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d2 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 36
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d2 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 36
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d2 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 36
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d2 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d2 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 31
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d3 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d3 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d3 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d3 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 39
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d3 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d3 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 34
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d4 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d4 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d4 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d4 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d4 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d4 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 33
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d5 lcd\u003d1 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d5 lcd\u003d1 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 38
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d5 lcd\u003d2 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 37
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d5 lcd\u003d2 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 39
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d5 lcd\u003d3 request\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 32
+    },
+    {
+      "name": "physical override option\u003d1 mode\u003d5 lcd\u003d3 request\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 34
+    },
+    {
+      "name": "Review entry/exit restores normal setting lcd\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 574
+    },
+    {
+      "name": "Review entry/exit restores normal setting lcd\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 577
+    },
+    {
+      "name": "Review entry/exit restores normal setting lcd\u003d3",
+      "passed": true,
+      "instructions_and_service_boundaries": 542
+    },
+    {
+      "name": "missing records preserve default Review Normal",
+      "passed": true,
+      "instructions_and_service_boundaries": 375
+    },
+    {
+      "name": "restore film\u003d0 dng\u003d0 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d0 dng\u003d0 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 438
+    },
+    {
+      "name": "restore film\u003d0 dng\u003d1 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d0 dng\u003d1 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 438
+    },
+    {
+      "name": "restore film\u003d1 dng\u003d0 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d1 dng\u003d0 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d1 dng\u003d1 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d1 dng\u003d1 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d2 dng\u003d0 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d2 dng\u003d0 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d2 dng\u003d1 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d2 dng\u003d1 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d3 dng\u003d0 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d3 dng\u003d0 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d3 dng\u003d1 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d3 dng\u003d1 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d4 dng\u003d0 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d4 dng\u003d0 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d4 dng\u003d1 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d4 dng\u003d1 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d5 dng\u003d0 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d5 dng\u003d0 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d5 dng\u003d1 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d5 dng\u003d1 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d6 dng\u003d0 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d6 dng\u003d0 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "restore film\u003d6 dng\u003d1 review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 426
+    },
+    {
+      "name": "restore film\u003d6 dng\u003d1 review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 432
+    },
+    {
+      "name": "newest B carries Review flag",
+      "passed": true,
+      "instructions_and_service_boundaries": 477
+    },
+    {
+      "name": "sequence wrap retains Review flag",
+      "passed": true,
+      "instructions_and_service_boundaries": 477
+    },
+    {
+      "name": "ties prefer A",
+      "passed": true,
+      "instructions_and_service_boundaries": 475
+    },
+    {
+      "name": "reject invalid newer magic",
+      "passed": true,
+      "instructions_and_service_boundaries": 455
+    },
+    {
+      "name": "reject invalid newer checksum",
+      "passed": true,
+      "instructions_and_service_boundaries": 463
+    },
+    {
+      "name": "reject invalid newer short",
+      "passed": true,
+      "instructions_and_service_boundaries": 448
+    },
+    {
+      "name": "reject invalid newer film7",
+      "passed": true,
+      "instructions_and_service_boundaries": 467
+    },
+    {
+      "name": "reject invalid newer reserved",
+      "passed": true,
+      "instructions_and_service_boundaries": 470
+    },
+    {
+      "name": "reject invalid newer schema",
+      "passed": true,
+      "instructions_and_service_boundaries": 470
+    },
+    {
+      "name": "read failure open",
+      "passed": true,
+      "instructions_and_service_boundaries": 318
+    },
+    {
+      "name": "read failure read",
+      "passed": true,
+      "instructions_and_service_boundaries": 334
+    },
+    {
+      "name": "read failure read-short",
+      "passed": true,
+      "instructions_and_service_boundaries": 334
+    },
+    {
+      "name": "read failure read-close",
+      "passed": true,
+      "instructions_and_service_boundaries": 334
+    },
+    {
+      "name": "Review toggle/chooser commit/format/shortcut/return/Hidden integration",
+      "passed": true,
+      "instructions_and_service_boundaries": 1489
+    },
+    {
+      "name": "write failure and retry create",
+      "passed": true,
+      "instructions_and_service_boundaries": 321
+    },
+    {
+      "name": "write failure and retry write",
+      "passed": true,
+      "instructions_and_service_boundaries": 335
+    },
+    {
+      "name": "interrupted write restores previous Review choice",
+      "passed": true,
+      "instructions_and_service_boundaries": 442
+    },
+    {
+      "name": "write failure and retry write-short",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "write failure and retry write-close",
+      "passed": true,
+      "instructions_and_service_boundaries": 338
+    },
+    {
+      "name": "Review-button startup review\u003d0",
+      "passed": true,
+      "instructions_and_service_boundaries": 416
+    },
+    {
+      "name": "Review-button startup review\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 502
+    },
+    {
+      "name": "native brightness choice mode\u003d1 option\u003d0 value\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 34
+    },
+    {
+      "name": "native brightness choice mode\u003d1 option\u003d0 value\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 35
+    },
+    {
+      "name": "native brightness choice mode\u003d1 option\u003d1 value\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 40
+    },
+    {
+      "name": "native brightness choice mode\u003d1 option\u003d1 value\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 41
+    },
+    {
+      "name": "native brightness choice mode\u003d4 option\u003d0 value\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 34
+    },
+    {
+      "name": "native brightness choice mode\u003d4 option\u003d0 value\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 35
+    },
+    {
+      "name": "native brightness choice mode\u003d4 option\u003d1 value\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 41
+    },
+    {
+      "name": "native brightness choice mode\u003d4 option\u003d1 value\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 41
+    },
+    {
+      "name": "capture DNG OFF",
+      "passed": true,
+      "instructions_and_service_boundaries": 6
+    },
+    {
+      "name": "capture DNG ON",
+      "passed": true,
+      "instructions_and_service_boundaries": 17
+    },
+    {
+      "name": "ordinary Review boost, toggle off/on, capture restore and reentry lcd\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 2551
+    },
+    {
+      "name": "native stored-photo Review init first\u003dfalse option\u003d0 lcd\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 1008
+    },
+    {
+      "name": "native stored-photo Review init first\u003dfalse option\u003d1 lcd\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 1046
+    },
+    {
+      "name": "native stored-photo Review init first\u003dtrue option\u003d0 lcd\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 1300
+    },
+    {
+      "name": "native stored-photo Review init first\u003dtrue option\u003d1 lcd\u003d1",
+      "passed": true,
+      "instructions_and_service_boundaries": 1342
+    },
+    {
+      "name": "ordinary Review boost, toggle off/on, capture restore and reentry lcd\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 2553
+    },
+    {
+      "name": "native stored-photo Review init first\u003dfalse option\u003d0 lcd\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 1008
+    },
+    {
+      "name": "native stored-photo Review init first\u003dfalse option\u003d1 lcd\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 1046
+    },
+    {
+      "name": "native stored-photo Review init first\u003dtrue option\u003d0 lcd\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 1301
+    },
+    {
+      "name": "native stored-photo Review init first\u003dtrue option\u003d1 lcd\u003d2",
+      "passed": true,
+      "instructions_and_service_boundaries": 1342
+    },
+    {
+      "name": "ordinary Review boost, toggle off/on, capture restore and reentry lcd\u003d3",
+      "passed": true,
+      "instructions_and_service_boundaries": 2528
+    },
+    {
+      "name": "native stored-photo Review init first\u003dfalse option\u003d0 lcd\u003d3",
+      "passed": true,
+      "instructions_and_service_boundaries": 1008
+    },
+    {
+      "name": "native stored-photo Review init first\u003dfalse option\u003d1 lcd\u003d3",
+      "passed": true,
+      "instructions_and_service_boundaries": 1041
+    },
+    {
+      "name": "native stored-photo Review init first\u003dtrue option\u003d0 lcd\u003d3",
+      "passed": true,
+      "instructions_and_service_boundaries": 1296
+    },
+    {
+      "name": "native stored-photo Review init first\u003dtrue option\u003d1 lcd\u003d3",
+      "passed": true,
+      "instructions_and_service_boundaries": 1332
+    },
+    {
+      "name": "native brightness routing shortcut\u003dfalse selected\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 663
+    },
+    {
+      "name": "native brightness routing shortcut\u003dfalse selected\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 806
+    },
+    {
+      "name": "native brightness routing shortcut\u003dtrue selected\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 738
+    },
+    {
+      "name": "native brightness routing shortcut\u003dtrue selected\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 881
+    },
+    {
+      "name": "native brightness routing shortcut\u003dfalse selected\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 670
+    },
+    {
+      "name": "native brightness routing shortcut\u003dfalse selected\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 806
+    },
+    {
+      "name": "native brightness routing shortcut\u003dtrue selected\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 745
+    },
+    {
+      "name": "native brightness routing shortcut\u003dtrue selected\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 881
+    },
+    {
+      "name": "shortcut abandoned via mode\u003d1 resets Setup OK targets",
+      "passed": true,
+      "instructions_and_service_boundaries": 694
+    },
+    {
+      "name": "shortcut abandoned via mode\u003d2 resets Setup OK targets",
+      "passed": true,
+      "instructions_and_service_boundaries": 677
+    },
+    {
+      "name": "shortcut abandoned via mode\u003d3 resets Setup OK targets",
+      "passed": true,
+      "instructions_and_service_boundaries": 694
+    },
+    {
+      "name": "shortcut abandoned via mode\u003d4 resets Setup OK targets",
+      "passed": true,
+      "instructions_and_service_boundaries": 698
+    },
+    {
+      "name": "film 0: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 1: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 2: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 3: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 4: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 5: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "film 6: 156 actual CCM/Ymat getter cases",
+      "passed": true,
+      "instructions_and_service_boundaries": 156
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11212
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11424
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d2 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11430
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d2 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d3 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11424
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d3 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11432
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d4 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11387
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d4 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11389
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d5 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11350
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d5 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11346
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d0 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11303
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11424
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11218
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d2 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11430
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d2 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d3 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11424
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d3 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11432
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d4 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11387
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d4 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11389
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d5 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11350
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d5 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11346
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11313
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d1 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11303
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11424
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11424
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d2 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11224
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d2 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11444
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d3 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11424
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d3 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11432
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d4 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11387
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d4 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11389
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d5 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11350
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d5 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11346
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11313
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d2 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11303
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11412
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11432
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11412
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11432
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d2 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11418
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d2 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11432
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d3 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11206
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d3 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11420
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d4 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11375
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d4 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11377
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d5 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11338
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d5 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11334
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11301
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d3 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11291
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11369
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11389
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11369
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11389
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d2 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11375
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d2 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11389
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d3 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11369
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d3 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11377
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d4 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11126
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d4 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11334
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d5 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11295
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d5 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11291
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11258
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d4 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11248
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11326
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11346
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11326
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11346
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d2 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11332
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d2 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11346
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d3 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11326
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d3 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11334
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d4 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11289
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d4 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11291
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d5 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11046
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d5 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11248
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11215
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d5 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11205
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d0 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11283
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d0 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11303
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d1 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11283
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d1 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11303
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d2 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11289
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d2 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11303
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d3 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11283
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d3 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11291
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d4 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11246
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d4 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11248
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d5 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11209
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d5 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11205
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 10966
+    },
+    {
+      "name": "native chooser mode\u003d1 initial\u003d6 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11162
+    },
+    {
+      "name": "native chooser mode\u003d2 initial\u003d3 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11293
+    },
+    {
+      "name": "native chooser mode\u003d2 initial\u003d3 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11289
+    },
+    {
+      "name": "native chooser mode\u003d4 initial\u003d3 target\u003d6 cancel\u003dfalse",
+      "passed": true,
+      "instructions_and_service_boundaries": 11295
+    },
+    {
+      "name": "native chooser mode\u003d4 initial\u003d3 target\u003d6 cancel\u003dtrue",
+      "passed": true,
+      "instructions_and_service_boundaries": 11291
+    }
+  ]
+}

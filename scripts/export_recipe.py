@@ -7,9 +7,10 @@ import json
 from pathlib import Path
 import sys
 ROOT=Path(__file__).resolve().parents[1]
-sys.path[:0]=[str(ROOT/'tools'),str(ROOT/'mods/fullscreen/src')]
+sys.path[:0]=[str(ROOT/'tools'),str(ROOT/'mods/fullscreen/src'),str(ROOT/'mods/ui/src')]
 import kodakfw
 import build_fullscreen as boot
+import skin
 
 def sha(b):return hashlib.sha256(b).hexdigest()
 
@@ -32,13 +33,18 @@ def export(stock,target,output):
     spec=spec_from_file_location('theme',ROOT/'mods/theme/src/make_theme.py');theme=module_from_spec(spec);spec.loader.exec_module(theme)
     for at in theme.TABLES:omit(at,1024)
     for at in theme.UI_COLOURS:omit(off(at),4)
-    # Image pixels are supplied as editable PNGs, never a compiled graphics dump.
+    for at in theme.EMBER_WORDS:omit(off(at),4)
+    # Original graphics come from local stock; authored Ember pixels/glyphs are
+    # regenerated from design.py and pinned fonts. No vendor graphics dump.
     from PIL import Image
     legacy=Image.open(ROOT/'assets/legacy-banner-indexed.png')
-    omit(off(0x1d8127),len(boot.m.encode(legacy.tobytes())))
+    graphics_base=bytearray(original)
+    encoded=boot.m.encode(legacy.tobytes())
+    graphics_base[off(0x1d8127):off(0x1d8127)+len(encoded)]=encoded
+    for at,n in skin.generated_spans(bytes(graphics_base)):omit(at,n)
     omit(boot.REC3_FILE+0x6ba00,boot.LANG_MAX)
     for i in range(5):omit(off(0x1254b0+20*i),4)
-    copies=[dict(source_offset=off(0x1cd328),destination_offset=off(0x125520),length=224,reason='Relocate original first graphic block from local stock image')]
+    copies=[] # Ember repacks the formerly relocated stream; brightness owns 125520.
     for c in copies:
         assert original[c['source_offset']:c['source_offset']+c['length']]==final[c['destination_offset']:c['destination_offset']+c['length']]
         omit(c['destination_offset'],c['length'])
@@ -52,7 +58,7 @@ def export(stock,target,output):
     for group in groups:
         at,n=group[0],len(group)
         edits.append(dict(file_offset=at,length=n,stock_sha256=sha(original[at:at+n]),value=final[at:at+n].hex()))
-    result=dict(format=1,version='ModernShare 0.8',stock_sha256=sha(original),firmware_sha256=sha(final),
+    result=dict(format=1,version='ModernShare 0.9',stock_sha256=sha(original),firmware_sha256=sha(final),
                 description='Fixed reverse-engineered edits and generated film/menu data; source-compiled and vendor-copy areas excluded',
                 assembly=assembly,stock_copies=copies,edits=edits)
     output.parent.mkdir(parents=True,exist_ok=True)

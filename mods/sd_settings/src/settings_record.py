@@ -9,10 +9,10 @@ MAGIC = 0x444f4d4b
 FILMS = ['By mode', 'Stock', 'Agfa Vista 200', 'Kodak E100VS', 'Fuji Neopan 1600', 'Velvia 100', 'Kodachrome 64']
 
 
-def encode(film, dng, generation):
-    if not 0 <= film < len(FILMS) or dng not in (False, True, 0, 1):
+def encode(film, dng, generation, review=False):
+    if not 0 <= film < len(FILMS) or dng not in (False, True, 0, 1) or review not in (False,True,0,1):
         raise ValueError('invalid preferences')
-    config = 0x10000 | (film << 8) | int(dng)
+    config = 0x10000 | (film << 8) | int(dng) | (int(review)<<1)
     generation &= 0xffffffff
     return struct.pack('<4I', MAGIC, config, generation, ~(MAGIC ^ config ^ generation) & 0xffffffff)
 
@@ -24,9 +24,9 @@ def decode(data):
     film = (config >> 8) & 255
     if magic != MAGIC or magic ^ config ^ generation ^ checksum != 0xffffffff:
         raise ValueError('bad magic/checksum')
-    if config & 0xfffff8fe != 0x10000 or film >= len(FILMS):
+    if config & 0xfffff8fc != 0x10000 or film >= len(FILMS):
         raise ValueError('unsupported schema or invalid preferences')
-    return dict(film_index=film, film=FILMS[film], dng=bool(config & 1), generation=generation)
+    return dict(film_index=film, film=FILMS[film], dng=bool(config & 1), review_high_power=bool(config&2), generation=generation)
 
 
 def choose(a, b):

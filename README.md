@@ -4,16 +4,18 @@ An open-source firmware modification for a **Kodak CD703 running C713 firmware
 1.30**. ModernShare adds direct DNG capture, selectable film looks and a useful
 replacement for the discontinued Share-button workflow.
 
-**0.8 is camera-confirmed by user report.** The source build reproduces the exact
-tested firmware, SHA-256
-`091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003`.
+**ModernShare 0.9 brings the camera-tested Ember interface, Film chooser and
+Review brightness controls.** Release firmware SHA-256:
+`4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f`.
+The release changes only four version digits and checksums from the accepted
+camera build; see [validation](docs/VALIDATION.md).
 Compatibility with other camera models or firmware versions is not established.
 
 ## On the camera
 
-### Latest Ember interface — unreleased
+### Ember interface
 
-Camera-tested development work running on the Kodak EasyShare CD703:
+Running on the Kodak EasyShare CD703:
 
 | ModernShare settings | Film chooser | Capture menu |
 |---|---|---|
@@ -22,11 +24,11 @@ Camera-tested development work running on the Kodak EasyShare CD703:
 The settings photo shows **Velvia 100**, **JPEG + DNG**, normal LCD brightness
 **Power save**, Review brightness **High power**, and **SD saved**. The chooser
 highlights the current film; the Capture menu shows the updated spacing and
-selection style. These photos show the unreleased development interface. The
-**0.8 downloads below build the earlier interface** shown here:
+selection style. Photos were taken on the accepted development build; the
+release footer reads v0.9.
 
 <details>
-<summary>Released ModernShare 0.8 interface</summary>
+<summary>Previous ModernShare 0.8 interface</summary>
 
 | Boot screen | Share-button settings | Camera menu |
 |---|---|---|
@@ -39,38 +41,34 @@ location metadata; the image pixels are unchanged.
 
 ## Features
 
-- Share → **ModernShare**: Film first, DNG saving, hidden-menu shortcut, version
-  and SD save/load status.
+- **Ember interface**: charcoal surfaces, ivory text, amber focus, clearer icons
+  and separate setting names and values.
+- Share → **ModernShare**: Film, File format, LCD brightness, Review brightness,
+  Hidden menu and an SD status footer.
+- **Film chooser**: browse all seven looks, see the applied film's check mark,
+  press OK to save or Menu/Back to cancel.
+- **Review brightness**: optional High power for stored-photo Review and
+  Favorites; your normal LCD setting applies elsewhere. The LCD shortcut returns
+  to ModernShare when you finish.
 - JPEG film choices: By mode, Stock, Agfa Vista 200, Kodak E100VS, Fuji Neopan
   1600, Velvia 100 and Kodachrome 64. Looks are matrix approximations of film LUTs.
 - Film effects in live view and new-shot Review previews.
 - Direct sensor **DNG + JPEG**, with same-shot date/time, exposure, aperture and
   ISO. DNG keeps original sensor data and editable fixed daylight white balance.
-- **DNG OFF by default**. Film and DNG choices save automatically to the SD card
-  and restore after restart or battery-flap opening.
+- **DNG OFF by default**. Film, file format and Review brightness choices save
+  automatically to the SD card and restore after restart. Both brightness settings
+  survive a reset by camera user report.
 - Custom full-screen boot artwork, charcoal menus and flash OFF defaults.
 - Date setup through 2037; fallback 2026-11-07 noon after RTC power loss.
 
-## Unreleased development
-
-The locally tested Ember interface adds clearer menu spacing, a shortcut to
-native LCD brightness, and an option to use High power brightness during stored-
-photo Review while retaining the normal setting elsewhere. The camera user
-confirms both brightness settings survive a reset. The Film chooser
-is also accepted by camera user report. Labeled Stock, Neopan, Velvia and
-Kodachrome captures have passed JPEG-only/JPEG+DNG and DNG metadata checks.
-
-The downloads and standalone source builder below produce **0.8**. Development
-changes will be included in a future release after integration and validation.
-
 ## Generate firmware with the small app
 
-**[Download ModernShare 0.8](https://github.com/Nacholmo/ModernShare/releases/tag/v0.8.0)** — ready-to-run apps, no Python or build tools required.
+**[Download ModernShare 0.9](https://github.com/Nacholmo/ModernShare/releases/tag/v0.9.0)** — ready-to-run apps, no Python or build tools required.
 
 | Your computer | Download |
 |---|---|
-| Windows 10/11, 64-bit | [ModernShare.exe](https://github.com/Nacholmo/ModernShare/releases/download/v0.8.0/ModernShare-0.8-Windows-x86_64.exe) |
-| Linux, 64-bit Intel/AMD | [ModernShare.AppImage](https://github.com/Nacholmo/ModernShare/releases/download/v0.8.0/ModernShare-0.8-Linux-x86_64.AppImage) |
+| Windows 10/11, 64-bit | [ModernShare.exe](https://github.com/Nacholmo/ModernShare/releases/download/v0.9.0/ModernShare-0.9-Windows-x86_64.exe) |
+| Linux, 64-bit Intel/AMD | [ModernShare.AppImage](https://github.com/Nacholmo/ModernShare/releases/download/v0.9.0/ModernShare-0.9-Linux-x86_64.AppImage) |
 
 1. Download the app for your computer. On Linux, open the file's Properties →
    Permissions and allow it to run as a program, then double-click it.
@@ -87,10 +85,10 @@ never replaces an existing output. The mirror's download and firmware hashes
 were verified on 2026-11-08; see [download details](docs/GETTING_FIRMWARE.md).
 
 Linux builds target Ubuntu 22.04 or a compatible newer distribution. The
-[release page](https://github.com/Nacholmo/ModernShare/releases/tag/v0.8.0) also
+[release page](https://github.com/Nacholmo/ModernShare/releases/tag/v0.9.0) also
 includes checksums, source and licence notices. [GUI instructions](docs/GUI.md).
 Both release apps were built and verified on their native platforms in
-[GitHub Actions](https://github.com/Nacholmo/ModernShare/actions/runs/42529526318).
+[GitHub Actions](https://github.com/Nacholmo/ModernShare/actions/workflows/build-apps.yml).
 
 For a terminal-only workflow, with no third-party Python packages:
 
@@ -118,13 +116,13 @@ python3 -m pip install -r requirements.txt
 python3 scripts/build.py \
   --stock /path/to/kc713.fw \
   --arc-prefix /path/to/arc-elf32- \
-  --outdir build/modernshare-0.8
+  --outdir build/modernshare-0.9
 ```
 
 If `arc-elf32-as`, `arc-elf32-objcopy` and `arc-elf32-objdump` are on PATH, omit
 `--arc-prefix`. The stock file stays unchanged. The output directory must be new.
 The builder reassembles the custom hooks from source, generates the DNG header,
-computes the theme, encodes both PNG assets and copies required vendor data from
+computes the theme, rasterizes the pinned fonts/icons, encodes the artwork and copies required vendor data from
 your local stock image. It checks all container sums and the final release hash
 before writing `KC713.FW`.
 
@@ -140,11 +138,19 @@ use the hidden menu's **UPDATE FIRMWARE** action. With ModernShare installed,
 reach it through Share → Hidden menu. The updater renames a successfully flashed
 file to `KC713.OLD`; its hash can confirm the installed build.
 
-Press Share to change settings. OK on Film or DNG saves both choices. The fourth
-row displays `defaults`, `SD loaded`, `SD saved` or `SD error` alongside v0.8.
-The root files `KMOD0.CFG` / `KMOD1.CFG` belong to that card. Without valid files,
-Film starts By mode and DNG stays OFF. Removing both files or formatting the card
-restores those defaults. A saved DNG ON preference restores ON.
+Press Share to change settings. Open **Film**, browse with Up/Down, then press OK
+to apply and save; Menu/Back/Share/Left cancels. Selecting the same film does not
+write the card. **File format** toggles JPEG / JPEG + DNG. **LCD brightness** opens
+the native setting and returns to ModernShare. **Review brightness** toggles Normal
+/ High power without changing the normal LCD setting.
+
+The footer shows `v0.9: defaults`, `SD loaded`, `SD saved` or `SD error`.
+`KMOD0.CFG` / `KMOD1.CFG` in the SD root hold Film, file format and Review brightness.
+Without valid files, defaults are By mode, JPEG and Review Normal. Removing both
+files or formatting the card restores those defaults. Existing 0.8 preferences
+load with Review Normal. Before downgrading to
+[0.8](https://github.com/Nacholmo/ModernShare/releases/tag/v0.8.0), set Review
+brightness to Normal so the older firmware can read the saved record.
 
 See [SD settings](mods/sd_settings/README.md), [architecture](docs/ARCHITECTURE.md),
 [validation](docs/VALIDATION.md) and [development](docs/DEVELOPMENT.md).
@@ -161,7 +167,7 @@ See [SD settings](mods/sd_settings/README.md), [architecture](docs/ARCHITECTURE.
 | `mods/lut/looks/filmluts/` | Film-Luts assets and original MIT licence |
 | `tools/` | Firmware inspection/checksum tool and legacy RAW→DNG converter |
 | `decompiler-project/` | Annotation/model sources and analysis setup scripts |
-| `docs/validation/0.8/` | Historical automated results and user camera acceptance |
+| `docs/validation/0.9/` | Release reproduction, instruction tests and scoped camera evidence |
 | `photos/` | Photos of ModernShare running on the camera |
 | `tests/` | Public tests and metadata fixtures without personal photographs |
 

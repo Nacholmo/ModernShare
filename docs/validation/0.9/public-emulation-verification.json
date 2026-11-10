@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "firmware_sha256": "4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f",
+  "scenarios": 357,
+  "sensor_fixture": "synthetic deterministic bytes; no personal photos",
+  "reports": {
+    "chooser-emulation.json": {
+      "scenarios": 272,
+      "sha256": "90b515ef8fe6fadbf4f3a45b8e0aecaf642ab3b2ba8d3d0ceae23c59d8a0c286"
+    },
+    "ember-rowhook-emulation.json": {
+      "scenarios": 20,
+      "sha256": "81059b30ae47fefceff4770d6d2432f2c10b857090a118b77f293985a6f0e997"
+    },
+    "date-emulation.json": {
+      "scenarios": 15,
+      "sha256": "e68030827459f9e59578b8a50ce1e1e4d1a1341ecdb6c3f106bd94ee57690a41"
+    },
+    "emulation.json": {
+      "scenarios": 50,
+      "sha256": "a912601b7b300352a3c0dca535ed23f4d2230a86caf6cdd02378d936a72e9239"
+    }
+  }
+}

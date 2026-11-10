@@ -7,6 +7,16 @@ the **C713 build, version 1.30**: the hidden menu reports MCU 66, MAIN 1.3000 an
 CamOS 2.2501, and a RAM dump of the camera's code section is byte-identical to
 `kc713.fw`.
 
+## ModernShare 0.9 — Ember, brightness and Film chooser (2026-11-10)
+
+Released preferred sources integrate the accepted camera development build.
+The consolidated builder reproduces that build exactly; 0.9 changes only four
+status version digits and checksums. Fonts and the 43-glyph Material Design
+subset are pinned with licences. Film getter code is relocated away from the
+brightness allocation, and chooser data uses audited unused graphics RAM.
+Current behavior, allocations and scoped evidence are in BUILDING.md,
+ARCHITECTURE.md and VALIDATION.md. Entries below preserve historical development.
+
 ## ModernShare 0.8 — supplied artwork and SD preferences (2026-11-08)
 
 The user renamed the mod **ModernShare**, supplied `boot_image.png`, requested
@@ -15,7 +25,7 @@ DNG OFF by default and persistence on SD. Camera-confirmed build
 `091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003`.
 Pinned base is five-film 0.7 (`57a25b3f…`), independently read back from the card's
 KC713.OLD. All previous firmware outputs remain unchanged. The user subsequently
-reported **“works as intended”** for 0.8; it is now the current user-confirmed
+reported **“works as intended”** for 0.8; it was the 0.8 user-confirmed
 baseline. This is user acceptance, without a subsequent independent CFG/capture/OLD
 readback or separately reported test steps. Evidence: `test-v0.8/camera-confirmation.json`.
 Full implementation/test procedure:

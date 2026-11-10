@@ -4,28 +4,23 @@ Use the standalone builder and final assembly described in [BUILDING.md](BUILDIN
 The `mods/` staged builders preserve implementation history and feature-specific
 reasoning; they are not a substitute for the standalone build interface.
 
-## Unreleased camera UI work
+## ModernShare 0.9 UI
 
-Private camera trials have accepted the Ember menu appearance, improved icon
-clearance, the native LCD brightness shortcut and a Review-only High power option.
-The user also confirms the native LCD setting and Review override survive a reset;
-the reset method was not specified. This is scoped user evidence, not an
-individually recorded result for every capture or restart scenario.
+The Ember interface, icon clearance, native LCD brightness shortcut, Review-only
+High power option and Film chooser are accepted on camera. The user confirms both
+brightness settings survive a reset; the reset method was unspecified. Installed
+firmware readback independently matches the accepted development build. Labeled
+Stock, Neopan, Velvia and Kodachrome captures pass JPEG-only/JPEG+DNG checks,
+metadata comparison and CPU RAW-render checks. Sensor captures and memory dumps
+remain private; authorized interface photos appear in the README.
 
-Film chooser development opens on the current film, supports Up/Down browsing,
-and saves only on OK; Cancel returns without changing the selection. The user reports the
-chooser works on camera. Subsequently supplied labeled Stock, Neopan, Velvia
-and Kodachrome captures pass JPEG-only/JPEG+DNG checks. Paired DNG metadata
-matches the JPEGs; Neopan RAW retains colour, and the supplied DNGs render
-identically to independent linear references in CPU exports. These sensor-capture validation files remain private. The user-authorized
-interface demonstration photos appear in the README gallery.
-Current work also restores film matrix getter routines that
-instruction tests found overwritten during the brightness implementation.
-
-The public builder, portable apps and published release remain at 0.8. Source
-integration, pinned font inputs and notices, portable-app updates, and final
-regressions are still required before a future release. Original firmware,
-private sensor captures and memory dumps remain outside the public source tree.
+The public builder and portable apps produce 0.9, a version-label-only derivative
+of that accepted build. Preferred sources include `mods/ui/src/` for rasterization,
+`assets/fonts/` for pinned licensed font inputs and `src/firmware/` for final hooks.
+The relocated film getters are separately allocated from brightness code. The
+standalone instruction runner requires only local stock firmware and analysis
+tools, with synthetic DNG input; it needs no historical firmware or camera dump.
+See [validation](VALIDATION.md) for the evidence and modeled boundaries.
 
 ## Annotated decompiler project
 

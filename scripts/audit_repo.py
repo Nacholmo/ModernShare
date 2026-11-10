@@ -35,7 +35,7 @@ def audit():
         if data[:4] in (b'RHIR',b'\x7fELF') or data[:2]==b'MZ':errors.append(f'firmware/executable payload: {rel}')
         if re.search(rb'-{5}BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-{5}',data):errors.append(f'private key: {rel}')
         if p.suffix in {'.py','.json','.md','.java','.sh'} and re.search(rb'/(?:home|run/media)/[A-Za-z0-9_.-]+/',data):errors.append(f'personal absolute path: {rel}')
-    for required in ['LICENSE','NOTICE','THIRD_PARTY_NOTICES.md','LICENSES/MIT-Film-Luts.txt','LICENSES/Apache-2.0.txt','boot_image.png','src/release/bundle-0.8.json']:
+    for required in ['LICENSE','NOTICE','THIRD_PARTY_NOTICES.md','LICENSES/MIT-Film-Luts.txt','LICENSES/Apache-2.0.txt','boot_image.png','src/release/bundle-0.9.json']:
         if required not in paths:errors.append(f'missing: {required}')
     if errors:raise ValueError('\n'.join(errors))
     return paths

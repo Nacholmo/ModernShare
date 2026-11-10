@@ -58,7 +58,7 @@ class LocalFirmwareIntegrationTest(unittest.TestCase):
         result=engine.patch(self.stock)
         self.assertEqual(hashlib.sha256(result).hexdigest(),engine.RELEASE_SHA256)
     def test_damaged_bundle_fails(self):
-        bundle=json.loads((ROOT/'src/release/bundle-0.8.json').read_text());bundle['patch_data_sha256']='0'*64
+        bundle=json.loads((ROOT/'src/release/bundle-0.9.json').read_text());bundle['patch_data_sha256']='0'*64
         with self.assertRaises(ValueError):engine.patch(self.stock,bundle)
     def test_crc_valid_wrong_firmware_rejected(self):
         with tempfile.TemporaryDirectory() as folder:

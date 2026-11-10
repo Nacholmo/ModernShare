@@ -1,3 +1,4 @@
-# Versions used for the byte-identical ModernShare 0.8 build.
+# Versions used for the byte-identical ModernShare 0.9 build.
 numpy==2.5.4
 Pillow==13.0.0
+fonttools==4.68.0

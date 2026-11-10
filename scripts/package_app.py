@@ -35,8 +35,8 @@ def appimage(executable,out):
     lock=json.loads((ROOT/'packaging/appimage/toolchain.json').read_text())
     download(lock['appimagetool'],tools/'appimagetool.AppImage')
     download(lock['runtime'],tools/'runtime-x86_64')
-    destination=out/'release/ModernShare-0.8-Linux-x86_64.AppImage'
-    env=os.environ.copy();env.update(ARCH='x86_64',APPIMAGE_EXTRACT_AND_RUN='1',VERSION='0.8')
+    destination=out/'release/ModernShare-0.9-Linux-x86_64.AppImage'
+    env=os.environ.copy();env.update(ARCH='x86_64',APPIMAGE_EXTRACT_AND_RUN='1',VERSION='0.9')
     subprocess.run([str(tools/'appimagetool.AppImage'),'--no-appstream','--runtime-file',str(tools/'runtime-x86_64'),
                     str(appdir),str(destination)],env=env,check=True)
     destination.chmod(0o755)
@@ -53,22 +53,22 @@ if __name__=='__main__':
     command=[sys.executable,'-m','PyInstaller','--onefile' if system=='Windows' else '--onedir','--windowed','--noupx','--name','ModernShare',
              '--distpath',str(out/'app'),'--workpath',str(out/'work'),'--specpath',str(out/'spec'),
              '--paths',str(ROOT),'--hidden-import','tools.kodakfw','--exclude-module','numpy','--exclude-module','PIL']
-    for source,destination in [('src/release/bundle-0.8.json','src/release'),('LICENSE','.'),('NOTICE','.'),('THIRD_PARTY_NOTICES.md','.'),('LICENSES','LICENSES')]:
+    for source,destination in [('src/release/bundle-0.9.json','src/release'),('LICENSE','.'),('NOTICE','.'),('THIRD_PARTY_NOTICES.md','.'),('LICENSES','LICENSES')]:
         command.extend(['--add-data',str(ROOT/source)+':'+destination])
     command.append(str(ROOT/'modernshare_gui.py'))
     subprocess.run(command,cwd=ROOT,check=True)
     (out/'release').mkdir()
     if system=='Windows':
-        executable=out/'release/ModernShare-0.8-Windows-x86_64.exe'
+        executable=out/'release/ModernShare-0.9-Windows-x86_64.exe'
         shutil.copyfile(out/'app/ModernShare.exe',executable)
     else:
         executable=appimage(out/'app/ModernShare/ModernShare',out)
-    source_zip=out/'release/ModernShare-0.8-source.zip'
+    source_zip=out/'release/ModernShare-0.9-source.zip'
     with zipfile.ZipFile(source_zip,'x',compression=zipfile.ZIP_DEFLATED) as archive:
-        for rel in sources:archive.write(ROOT/rel,'ModernShare-0.8/'+rel)
+        for rel in sources:archive.write(ROOT/rel,'ModernShare-0.9/'+rel)
     for name in ['LICENSE','NOTICE','THIRD_PARTY_NOTICES.md']:shutil.copyfile(ROOT/name,out/name)
     shutil.copytree(ROOT/'LICENSES',out/'LICENSES')
-    with zipfile.ZipFile(out/'release/ModernShare-0.8-licenses.zip','x',compression=zipfile.ZIP_DEFLATED) as archive:
+    with zipfile.ZipFile(out/'release/ModernShare-0.9-licenses.zip','x',compression=zipfile.ZIP_DEFLATED) as archive:
         for name in ['LICENSE','NOTICE','THIRD_PARTY_NOTICES.md']:archive.write(ROOT/name,name)
         for path in sorted((ROOT/'LICENSES').glob('*')):archive.write(path,'LICENSES/'+path.name)
     (out/'release/SHA256SUMS').write_text(''.join(f'{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n'

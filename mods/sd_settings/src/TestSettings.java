@@ -70,7 +70,7 @@ public class TestSettings extends TestModernShare {
   require(Arrays.equals(header,e.readMemory(toAddr(0x1241a0),1536))&&jpeg==e.readMemoryByte(toAddr(0x133185)),"DNG header/JPEG untouched");
   return steps;
  }
- String status(EmulatorHelper e){return e.readNullTerminatedString(toAddr(word(e,ITEMS+76)),64);}
+ String status(EmulatorHelper e){return e.readNullTerminatedString(toAddr(word(e,statusAddress())),64);}
  void choice(EmulatorHelper e,int film,int dng){
   require((e.readMemoryByte(toAddr(0x1682d0))&255)==film&&(e.readMemoryByte(toAddr(FLAG))&255)==dng,"restored preferences");
   require(Arrays.equals(e.readMemory(toAddr(TAB),24),map(film)),"film map applies before capture");

@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('repo_audit',ROOT/'scripts/audit_repo.py')
 audit=importlib.util.module_from_spec(spec);spec.loader.exec_module(audit)
 REQUIRED=['LICENSE','NOTICE','THIRD_PARTY_NOTICES.md','LICENSES/MIT-Film-Luts.txt',
-          'LICENSES/Apache-2.0.txt','boot_image.png','src/release/bundle-0.8.json']
+          'LICENSES/Apache-2.0.txt','boot_image.png','src/release/bundle-0.9.json']
 PHOTO='photos/modernshare.jpg'
 
 class PublicPhotoAuditTests(unittest.TestCase):

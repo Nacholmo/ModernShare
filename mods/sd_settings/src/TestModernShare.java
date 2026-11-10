@@ -10,6 +10,8 @@ import ghidra.program.model.symbol.Reference;
 public class TestModernShare extends GhidraScript {
  static final long ROOT=0x180000,LIST=0x168154,ITEMS=0x1681b8,FLAG=0x13358c,SP=0x19f000,RET=0x30010,TAB=0x125780;
  byte[] fw;JsonObject manifest;JsonArray results=new JsonArray();long state,start;
+ long statusAddress(){return ITEMS+76;}
+ String dngLabel(boolean enabled){return enabled?"DNG saving: ON":"DNG saving: OFF";}
  long reg(EmulatorHelper e,String r){return e.readRegister(r).longValue()&0xffffffffL;}
  long word(EmulatorHelper e,long p){byte[] b=e.readMemory(toAddr(p),4);return ((long)b[0]&255)|((long)(b[1]&255)<<8)|((long)(b[2]&255)<<16)|((long)(b[3]&255)<<24);}
  void require(boolean b,String s){if(!b)throw new IllegalStateException(s);}
@@ -24,7 +26,7 @@ public class TestModernShare extends GhidraScript {
   e.writeMemoryValue(toAddr(FLAG),1,dng);e.writeMemoryValue(toAddr(0x132904),1,mode);e.writeMemoryValue(toAddr(state),1,film);e.writeMemory(toAddr(TAB),map(film));
   byte[] header=e.readMemory(toAddr(0x1241a0),1536),before=e.readMemory(toAddr(TAB-16),16),after=e.readMemory(toAddr(TAB+24),16);
   e.writeMemoryValue(toAddr(0x16839c),4,1); // exercise runtime callbacks independently of startup tests
-  e.writeMemoryValue(toAddr(ITEMS+76),4,Long.decode(manifest.getAsJsonObject("settings_layout").get("LABEL_DEFAULT").getAsString()));
+  e.writeMemoryValue(toAddr(statusAddress()),4,Long.decode(manifest.getAsJsonObject("settings_layout").get("LABEL_DEFAULT").getAsString()));
   int jpeg=e.readMemoryByte(toAddr(0x133185));registers(e,start,ROOT,event,0x12345678);
   int steps=0,selects=0,opens=0,defaults=0,refreshes=0;long opened=-1;
   while(steps++<1000){long pc=e.getExecutionAddress().getOffset();if(pc==RET)break;
@@ -48,11 +50,11 @@ public class TestModernShare extends GhidraScript {
   require(Arrays.equals(before,e.readMemory(toAddr(TAB-16),16))&&Arrays.equals(after,e.readMemory(toAddr(TAB+24),16)),"film table guard bytes");
   require((e.readMemoryByte(toAddr(0x132904))&255)==mode,"capture mode changed");
   if(!missing&&(event==0x4405||event==0x4409||event==0x5001||event==0x5000)){
-   require(e.readNullTerminatedString(toAddr(word(e,ITEMS+28)),64).equals(value==0?"DNG saving: OFF":"DNG saving: ON"),"DNG label");
+   require(e.readNullTerminatedString(toAddr(word(e,ITEMS+28)),64).equals(dngLabel(value!=0)),"DNG label");
    long label=Long.decode(manifest.getAsJsonObject("labels").get("FILM_"+next).getAsString());
    require(word(e,ITEMS+4)==label,"film label pointer");
   }
-  require(e.readNullTerminatedString(toAddr(word(e,ITEMS+76)),64).equals((event==0x5000||event==0x5001)?"v0.8: SD error":"v0.8: defaults"),"version row");
+  require(e.readNullTerminatedString(toAddr(word(e,statusAddress())),64).equals((event==0x5000||event==0x5001)?"v0.8: SD error":"v0.8: defaults"),"version/status feedback");
   require(selects==(event==0x4405?1:0)&&refreshes==((event==0x5001||event==0x5000)?2:0),"UI callback counts");
   boolean close=event==0x680||event==0x780||event==0x700;
   require(opens==((event==0x5002||close)?1:0),"open count");

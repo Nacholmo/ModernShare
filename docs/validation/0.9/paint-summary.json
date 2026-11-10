@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "firmware_sha256": "4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f",
+  "scenarios": 70,
+  "scope": "Native menu paint dispatch with a private captured-state fixture; graphics/text boundaries modeled",
+  "report_sha256": "ec67253be6db0f369395d7836b097499524c74bfbde7cde56a25d2b758bad351",
+  "fixture_in_public_repository": false,
+  "includes": "49 Film chooser focus/applied combinations and 21 inherited menu/brightness paints"
+}

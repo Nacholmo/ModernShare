@@ -11,8 +11,9 @@ import zipfile
 import zlib
 
 ROOT=Path(__file__).resolve().parent
+PATCH_LIMIT=512*1024
 STOCK_SHA256='06133ed6bc6272f6b1ab9c784723d9259c71cb4ef88b3defb6ed36f4a4e66c9b'
-RELEASE_SHA256='091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003'
+RELEASE_SHA256='4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f'
 STOCK_BYTES=2172416
 DOWNLOAD_PAGE='https://www.touslesdrivers.com/index.php?v_page=23&v_code=19867&v_langue=en'
 
@@ -44,25 +45,38 @@ def read_stock(path):
 
 def patch(stock,bundle=None):
     if len(stock)!=STOCK_BYTES or sha(stock)!=STOCK_SHA256:raise ValueError('Unsupported stock firmware.')
-    if bundle is None:bundle=json.loads((ROOT/'src/release/bundle-0.8.json').read_text())
+    if bundle is None:bundle=json.loads((ROOT/'src/release/bundle-0.9.json').read_text())
     if bundle['stock_sha256']!=STOCK_SHA256 or bundle['firmware_sha256']!=RELEASE_SHA256:
         raise ValueError('Unsupported modification bundle.')
     result=bytearray(stock)
     # Bound decoding even if a local bundle is accidentally damaged/replaced.
     decoder=zlib.decompressobj()
-    packed=decoder.decompress(base64.b64decode(bundle['patch_data_zlib_base64'],validate=True),128*1024+1)
-    if len(packed)>128*1024 or not decoder.eof or decoder.unused_data:raise ValueError('Invalid modification data.')
+    packed=decoder.decompress(base64.b64decode(bundle['patch_data_zlib_base64'],validate=True),PATCH_LIMIT+1)
+    if len(packed)>PATCH_LIMIT or not decoder.eof or decoder.unused_data:raise ValueError('Invalid modification data.')
     if sha(packed)!=bundle['patch_data_sha256']:raise ValueError('Modification data checksum mismatch.')
     edits=json.loads(packed)
     for edit in edits:
         at=edit['offset'];value=bytes.fromhex(edit['value'])
         if at<0 or at+len(value)>len(result):raise ValueError('Modification lies outside firmware.')
         result[at:at+len(value)]=value
+    # Preserved vendor image streams are rebuilt from the local input rather
+    # than distributed in the patch bundle, including noncanonical stock RLE.
+    from mods.ui.src.local_graphics import repack
+    for image in bundle.get('local_graphics',[]):
+        value=repack(stock,image['source'],image['pixels'])+b'\0'
+        at=image['destination']
+        if at<0 or at+len(value)>len(result) or sha(value)!=image['sha256']:
+            raise ValueError('Invalid local graphics copy.')
+        result[at:at+len(value)]=value
     for copy in bundle['copies']:
         a,b,n=copy['source'],copy['destination'],copy['length']
         if min(a,b,n)<0 or max(a+n,b+n)>len(result):raise ValueError('Invalid local firmware copy.')
         source=stock if copy['input']=='stock' else result
-        result[b:b+n]=source[a:a+n]
+        value=source[a:a+n]
+        if copy.get('transform')=='sentence-case':
+            from mods.ui.src.english import apply
+            value=apply(value)
+        result[b:b+n]=value
     from tools import kodakfw
     kodakfw.fix(result)
     if kodakfw.check(result) or sha(result)!=RELEASE_SHA256:

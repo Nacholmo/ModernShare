@@ -21,7 +21,7 @@ class SettingsRecordTest(unittest.TestCase):
             data=bytearray(original);data[bit//8]^=1<<(bit%8)
             with self.subTest(bit=bit),self.assertRaises(ValueError):decode(data)
     def test_reserved_bits_and_schema_with_valid_checksum_are_rejected(self):
-        for config in (0x10002,0x10700,0x1ff00,0x20000,0x1010000):
+        for config in (0x10004,0x10700,0x1ff00,0x20000,0x1010000):
             magic=0x444f4d4b;g=17;record=struct.pack('<4I',magic,config,g,~(magic^config^g)&0xffffffff)
             with self.subTest(config=hex(config)),self.assertRaises(ValueError):decode(record)
     def test_newest_and_wrap(self):
@@ -33,5 +33,10 @@ class SettingsRecordTest(unittest.TestCase):
     def test_partial_newer_slot_preserves_previous(self):
         self.assertEqual(choose(encode(1,0,5),encode(6,1,6)[:7])[0],0)
     def test_no_valid_slots(self):self.assertIsNone(choose(b'',b'broken'))
+    def test_review_flag_roundtrip_and_older_records(self):
+        for film in range(7):
+            for dng in range(2):
+                self.assertFalse(decode(encode(film,dng,12))['review_high_power'])
+                self.assertTrue(decode(encode(film,dng,13,review=True))['review_high_power'])
 
 if __name__=='__main__':unittest.main()

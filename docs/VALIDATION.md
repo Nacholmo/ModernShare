@@ -1,76 +1,78 @@
 # Validation and evidence
 
-## Confirmed release
+## ModernShare 0.9
 
-ModernShare 0.8 firmware SHA-256:
-`091663ac848b6ee07c2a9252b9a9662e8cc7c463275e2dde62edb10d8e0f6003`.
+Release firmware SHA-256:
+`4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f`.
 
-The camera owner reports **“works as intended”** following the artwork, branding,
-DNG default-OFF and SD-persistence trial. This is overall user acceptance; the
-individual trial steps were not reported separately, and there is no independent
-post-0.8 CFG/capture/KC713.OLD readback in this repository.
+The standalone source builder first reproduced the accepted development firmware
+byte for byte (`fd753680c2b0c1714fbab329d884d9dc4aac48df8f9a299014fa068f011c9c42`).
+The release changes only four footer version digits from 0.8 to 0.9 and container
+checksums. [Version-only comparison](validation/0.9/version-only.json).
+The final release hash has automated regression coverage; camera acceptance and
+installed-firmware readback apply to the development hash.
 
-Historical results from the development workspace are preserved in
-`docs/validation/0.8/`. They refer to the original workspace's paths; those paths
-are provenance, not bundled photos, firmware or tools. The original manifest
-identifies source/build hashes before repository packaging changes.
+The camera owner accepts Ember styling/icon clearance, LCD shortcut return,
+stored-photo Review High power, the Film chooser and film styles. Both brightness
+settings survive a reset by user report; reset method was unspecified. Eight
+labeled Stock, Neopan, Velvia and Kodachrome cases pass JPEG-only/JPEG+DNG and
+paired-metadata checks. Neopan JPEGs are monochrome while RAW retains colour.
+DNG CPU renders match independent linear references. Varying framing/exposure
+prevents controlled colourimetric claims. Private sensor captures/dumps are not
+published. [Scoped camera evidence](validation/0.9/camera-evidence.json).
 
-## Automated coverage
+## Automated coverage of the release
 
 | Suite | Scenarios | Coverage |
 |---|---:|---|
-| Preferences | 54 | Every film/DNG combination; missing/invalid/short records; A/B newest/ties/wrap; read/write/open/close errors; retry; previous-slot recovery; Review-first and failed stock init |
-| Menu/preview/capture | 129 | Seven choices, wrap, native callbacks, DNG gate, preview guards, 1,092 matrix getter cases |
+| Film chooser, brightness and preferences | 272 | All 98 choose/cancel pairs; native navigation/OK/return; stored-photo Review/Favorites; native brightness choices; SD load/save/error/retry; capture gate; 1,092 individual matrix getter checks |
+| Ember row hook | 20 | Separate names/values, alignment, selected colours, ABI and stack preservation |
 | Date | 15 | Supported dates, fallback, retained RTC and reset paths |
-| DNG writer | 50 | Full writer, error/short-write handling, black/unknown/size fallback and capture metadata |
+| DNG writer | 50 | Full writer, short writes/errors, fallback and same-shot metadata |
+| Native paint replay | 70 | 49 chooser focus/applied combinations and 21 inherited menu/brightness paints |
 
-Suites execute actual ARC instructions. Stock UI, RTC, file APIs and selected
-hardware boundaries are modeled. Caller-saved registers are deliberately
-destroyed by mocked services. The known SLEIGH compiler-restore alias and stock
-multiply helper are modeled explicitly. Ghidra process exit status alone is not
-accepted: the runner checks logs plus every hash-bound JSON result.
+All **427 scenarios** pass against the release firmware. The first four suites
+are reproducible through `scripts/run_emulation.py` using a local stock Ghidra
+project and synthetic DNG input: no camera dump or historical firmware is needed.
+Their hash-bound reports are in [validation/0.9](validation/0.9/).
+The paint replay uses a private captured-state fixture; its public
+[summary](validation/0.9/paint-summary.json) records that boundary.
 
-The public DNG suite uses deterministic synthetic sensor bytes and measured
-metadata values. It requires no personal photo, RAW, DNG or memory-dump fixture.
-Historical development tests also used real camera payloads; that is separate
-evidence, not a claim that those images are included here.
+Tests execute actual ARC instructions while modeling file/UI/RTC/SDK/photo,
+rendering and hardware boundaries. Known compiler restore aliases and the stock
+multiply helper are modeled explicitly. Passing tests do not establish physical
+output timing or interrupted-power FAT/SD durability. Historical UI7/UI8 negative
+controls reproduced earlier defects before the final getter/brightness fixes;
+they are separate development evidence, not additional release scenarios.
 
-The standalone repository build reassembles every custom hook, generates header,
-theme and artwork, verifies the exact final release hash and checks tile decoder
-roundtrips. Package verification records are in `docs/validation/repository.json`.
+The standalone build regenerates every custom hook, DNG header, theme, icons,
+Latin glyphs and boot tiles. Font inputs are pinned with licences. Source and
+standard-library patcher outputs match exactly. Vendor English text and preserved
+graphics are rebuilt from the local stock input. Output/container hashes and
+boot tile roundtrips are checked before a firmware file is written.
 
-## Published Windows and AppImage release
+**25 host tests** pass with local stock/updater input, plus **four GUI-flow cases**:
+missing fields, invalid input, original updater to exact firmware, and refusal
+to replace an existing output. Integration tests are skipped when proprietary
+inputs are absent. The small app requires no assembler, Pillow or NumPy.
 
-[Release v0.8.0](https://github.com/Nacholmo/ModernShare/releases/tag/v0.8.0)
-contains native Windows x86-64 and Linux x86-64 AppImage applications, built and
-verified in [GitHub Actions](https://github.com/Nacholmo/ModernShare/actions/runs/42529526318).
-Both platforms passed all 19 host integration tests, four GUI-flow cases, and
-five checks of the actual packaged app: startup, Tk GUI initialization, exact
-confirmed firmware from the original updater, existing-output protection, and
-invalid-input rejection. Both corresponding source archives were compared byte
-for byte with the tested Git commit before publishing. Uploaded asset hashes
-were checked against the verified local artifacts. Results are preserved in
-`validation/portable-release.json` and the release's `verification.json`.
+## Release applications
 
-The Linux AppImage built on Ubuntu 22.04 was also checked locally. Hosted CI uses
-AppImage extract-and-run mode because FUSE mounting may be unavailable. Earlier
-local packaging reports below predate these native release checks.
+The [v0.9.0 release](https://github.com/Nacholmo/ModernShare/releases/tag/v0.9.0)
+provides native Windows x86-64 and Linux x86-64 AppImage applications, corresponding
+source, licences, checksums and `verification.json`. Native packaging runs through
+[GitHub Actions](https://github.com/Nacholmo/ModernShare/actions/workflows/build-apps.yml).
+The workflow runs host and GUI checks, then tests each actual packaged app for
+startup, Tk initialization, exact firmware output, existing-output protection and
+invalid-input rejection. AppImage CI uses extract-and-run mode where FUSE is
+unavailable. Source archives and downloaded asset hashes are verified before
+publication. The release verification record identifies the exact source commit,
+workflow and executable hashes.
 
-## Public repository and GUI checks
-
-The standalone source build and the standard-library GUI patch bundle both
-reproduce the exact confirmed release. An isolated source archive was extracted
-into a clean path containing spaces, with PYTHONPATH cleared; both build paths
-passed without using the original workspace's sources. See
-`validation/isolated-export.json` and `validation/repository.json`.
-
-Nineteen host tests pass when supplied the local stock/updater. Four GUI cases
-pass on Linux using a virtual display. A packaged Linux executable starts the GUI
-and generates the exact firmware from the original updater. The initial local build report predates the native Windows release validation above. Reports:
-`validation/gui.json`, `validation/linux-app.json`, and `validation/public-emulation.json`.
-
-The mirror download was independently fetched and hash-checked; see
-`validation/download-source.json`. No downloaded firmware is included.
+The previous [0.8 release](https://github.com/Nacholmo/ModernShare/releases/tag/v0.8.0)
+remains available. Historical reports under `validation/0.8/` and the older
+`validation/*.json` describe that release and earlier development, not 0.9.
+Before downgrading, set Review brightness to Normal for the older CFG validator.
 
 ## Re-run
 
@@ -78,22 +80,14 @@ The mirror download was independently fetched and hash-checked; see
 python3 -m unittest discover -s tests -v
 ```
 
-For firmware suites, first build the release and create a local stock Ghidra
-project using [DEVELOPMENT.md](DEVELOPMENT.md). Then:
+For instruction suites, build the release and create a local stock project as
+explained in [DEVELOPMENT.md](DEVELOPMENT.md), then:
 
 ```sh
 bash -c 'source decompiler-project/scripts/environment.sh; \
-  python3 scripts/run_emulation.py --build build/modernshare-0.8'
+  python3 scripts/run_emulation.py --build build/modernshare-0.9'
 ```
 
-The project is opened read-only and firmware bytes are overlaid only in the
-emulator. The runner writes results into the chosen build directory. Use a fresh
-build for a repeated run. Firmware is not flashed by any test/build command.
-
-## Camera regression checklist
-
-Check boot/title; with no valid CFG files, take a JPEG-only shot. Change Film,
-restart through a battery-flap reset and verify Film restores. Enable DNG,
-restart and capture a JPEG+DNG pair; disable, restart and capture JPEG only.
-Confirm SD saved/loaded feedback and film in live view/immediate/later Review.
-Interrupted-power FAT/SD durability is not established by the virtual file tests.
+The project is opened read-only and firmware is overlaid only in the emulator.
+Results are written into a fresh build directory. Test/build commands do not
+flash the camera.

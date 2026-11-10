@@ -25,7 +25,7 @@ class App:
         style.map('Accent.TButton',background=[('active','#bf4510'),('disabled','#e6b59a')])
         page=ttk.Frame(root,padding=26);page.pack(fill='both',expand=True);page.columnconfigure(0,weight=1)
         ttk.Label(page,text='ModernShare',style='Title.TLabel').grid(row=0,column=0,sticky='w')
-        ttk.Label(page,text='Firmware builder · version 0.8 · Kodak CD703 / C713 1.30').grid(row=1,column=0,sticky='w',pady=(2,22))
+        ttk.Label(page,text='Firmware builder · version 0.9 · Kodak CD703 / C713 1.30').grid(row=1,column=0,sticky='w',pady=(2,22))
         ttk.Label(page,text='1. Select the Kodak updater',style='Section.TLabel').grid(row=2,column=0,sticky='w')
         inputs=ttk.Frame(page);inputs.grid(row=3,column=0,sticky='ew',pady=(8,5));inputs.columnconfigure(0,weight=1)
         ttk.Entry(inputs,textvariable=self.source,state='readonly').grid(row=0,column=0,sticky='ew',padx=(0,8))
@@ -80,7 +80,7 @@ class App:
         except queue.Empty:pass
         self.root.after(100,self.poll)
     def about(self):
-        messagebox.showinfo('About ModernShare','ModernShare 0.8\nAGPL-3.0-or-later\n\nSource code is distributed alongside the app release.\nIndependent project; not affiliated with Kodak.\n\nThe original Kodak updater is not included.',parent=self.root)
+        messagebox.showinfo('About ModernShare','ModernShare 0.9\nAGPL-3.0-or-later\n\nSource code is distributed alongside the app release.\nIndependent project; not affiliated with Kodak.\n\nThe original Kodak updater is not included.',parent=self.root)
     def close(self):
         if self.busy:self.status.set('Finishing the firmware file. Please wait a moment.');return
         self.root.destroy()
@@ -88,7 +88,7 @@ class App:
 def main():
     import sys
     if '--version' in sys.argv:
-        print('ModernShare 0.8');return
+        print('ModernShare 0.9');return
     if '--smoke-test' in sys.argv:
         root=tk.Tk();App(root);root.update();root.destroy();return
     if '--headless' in sys.argv:

@@ -16,10 +16,12 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 ROOT=Path(__file__).resolve().parents[1]
-sys.path[:0]=[str(ROOT/'tools'),str(ROOT/'mods/native_dng/src'),str(ROOT/'mods/fullscreen/src')]
+sys.path[:0]=[str(ROOT/'tools'),str(ROOT/'mods/native_dng/src'),str(ROOT/'mods/fullscreen/src'),str(ROOT/'mods/ui/src')]
 import kodakfw
 import build_fullscreen as boot
 from metadata_header import make_metadata_header
+import skin
+import english
 
 def sha(data):return hashlib.sha256(data).hexdigest()
 
@@ -43,7 +45,7 @@ def assemble(source,out,name,origin,prefix):
 
 def build(stock,out,prefix,artwork,modified=False):
     original=stock.read_bytes()
-    recipe=json.loads((ROOT/'src/release/recipe-0.8.json').read_text())
+    recipe=json.loads((ROOT/'src/release/recipe-0.9.json').read_text())
     if sha(original)!=recipe['stock_sha256'] or kodakfw.check(original):
         raise ValueError('Unsupported stock image; requires exact C713 firmware 1.30 SHA-256 in README')
     if out.exists():raise FileExistsError('Use a fresh output directory')
@@ -65,6 +67,12 @@ def build(stock,out,prefix,artwork,modified=False):
         theme.main()
     finally:sys.argv=argv
     fw=bytearray(themefile.read_bytes())
+    # Repack original local graphics with authored Ember icons and pinned fonts.
+    # The legacy banner participates in this repack; it is not written afterwards.
+    legacy=Image.open(ROOT/'assets/legacy-banner-indexed.png')
+    if legacy.mode!='P' or legacy.size!=(430,60):raise ValueError('legacy banner must retain palette indices')
+    put(0x1d8127,boot.m.encode(legacy.tobytes()))
+    fw=skin.apply(bytes(fw))
     # Small reverse-engineered instruction/default edits, new menu/film data and pointers.
     # No original firmware payloads or language text are stored in the recipe.
     for patch in recipe['edits']:
@@ -95,22 +103,25 @@ def build(stock,out,prefix,artwork,modified=False):
             if not modified and sha(code)!=segment['sha256']:
                 raise ValueError(f'{unit["name"]}: source differs from confirmed release; use --allow-modified for intentional edits')
             put(unit['origin']+start,code)
-    # Legacy logo is unused by the fullscreen boot but retained for exact reproduction.
-    legacy=Image.open(ROOT/'assets/legacy-banner-indexed.png')
-    if legacy.mode!='P' or legacy.size!=(430,60):raise ValueError('legacy banner must retain palette indices')
-    put(0x1d8127,boot.m.encode(legacy.tobytes()))
     # Exact same five-tile encoding as the camera-confirmed development build.
     im=Image.open(artwork).convert('RGB').resize((480,240),Image.Resampling.LANCZOS)
     prepared=im.filter(ImageFilter.MedianFilter(3))
     for box in [(0,0,180,52),(0,85,251,145),(0,203,480,240)]:prepared.paste(im.crop(box),box)
     prepared.save(out/'boot-prepared.png')
-    palette_input=out/'palette-input.fw';palette_input.write_bytes(fw)
+    # Boot artwork was accepted with the original ModernShare quantizer palette.
+    # Ember's five formerly unused slots must not change its colour selection.
+    quantizer=bytearray(fw)
+    for table in theme.TABLES:
+        for index in theme.EMBER:
+            at=table+4*index
+            quantizer[at:at+3]=bytes(theme.remap(*original[at:at+3]))
+    palette_input=out/'palette-input.fw';palette_input.write_bytes(quantizer)
     boot.FLATTEN,boot.FLATTEN_N=16,1
     idx,palette=boot.quantize(out/'boot-prepared.png',boot.FW(palette_input))
     if idx.min()==0 or idx.max()>=252:raise ValueError('invalid boot palette index')
     english_source=boot.REC3_FILE
     # Reuse English from the user's image after the SEPIA->VIVID text edits.
-    combo=bytearray(fw[english_source:english_source+0x5c00])+boot.MAGIC
+    combo=english.apply(fw[english_source:english_source+0x5c00])+boot.MAGIC
     for i,y in enumerate(range(0,240,48)):
         pointer=boot.LANG_BUF+len(combo)
         put(0x1254b0+20*i,struct.pack('<I',pointer))
@@ -135,14 +146,14 @@ def build(stock,out,prefix,artwork,modified=False):
     # Ghidra test fixtures contain synthetic payloads and measured metadata only.
     shutil.copyfile(ROOT/'tests/capture-fixtures.json',out/'capture-fixtures.json')
     manifest=json.loads((ROOT/'src/release/runtime-layout.json').read_text())
-    manifest.update(firmware_sha256=digest,firmware_bytes=len(fw),version='ModernShare 0.8',
-                    status='Reproduced confirmed release' if exact else 'Modified build; not camera-confirmed',
+    manifest.update(firmware_sha256=digest,firmware_bytes=len(fw),version='ModernShare 0.9',
+                    status='Reproduced pinned release; behavior accepted on camera-tested base' if exact else 'Modified build; not camera-confirmed',
                     release_exact=exact,stock_sha256=sha(original),artwork_sha256=sha(artwork.read_bytes()),
                     boot_payload_bytes=used,checksums=problems)
     (out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (out/'SHA256SUMS').write_text(f'{digest}  KC713.FW\n')
     for path in [themefile,palette_input]:path.unlink()
-    print(f'{out/"KC713.FW"}\nSHA-256: {digest}\nExact confirmed release: {exact}')
+    print(f'{out/"KC713.FW"}\nSHA-256: {digest}\nExact pinned release: {exact}')
     return digest
 
 if __name__=='__main__':

@@ -35,12 +35,12 @@ jobs:
       - run: python scripts/package_app.py --outdir build/app-package
       - name: Verify Linux AppImage
         if: runner.os == 'Linux'
-        run: xvfb-run -a python scripts/verify_release_app.py --app build/app-package/release/ModernShare-0.8-Linux-x86_64.AppImage --updater build/test-input/KC713130.exe --report build/app-package/release/verification-Linux.json
+        run: xvfb-run -a python scripts/verify_release_app.py --app build/app-package/release/ModernShare-0.9-Linux-x86_64.AppImage --updater build/test-input/KC713130.exe --report build/app-package/release/verification-Linux.json
       - name: Verify Windows executable
         if: runner.os == 'Windows'
-        run: python scripts/verify_release_app.py --app build/app-package/release/ModernShare-0.8-Windows-x86_64.exe --updater build/test-input/KC713130.exe --report build/app-package/release/verification-Windows.json
+        run: python scripts/verify_release_app.py --app build/app-package/release/ModernShare-0.9-Windows-x86_64.exe --updater build/test-input/KC713130.exe --report build/app-package/release/verification-Windows.json
       - uses: actions/upload-artifact@v4
         with:
-          name: ModernShare-0.8-${{ runner.os }}
+          name: ModernShare-0.9-${{ runner.os }}
           if-no-files-found: error
           path: build/app-package/release/*

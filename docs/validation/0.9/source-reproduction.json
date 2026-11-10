@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "firmware_sha256": "4025f886abb312dac31c60d923f67118843601663579ca53a96ac47ea33f609f",
+  "files": 300,
+  "source_archive_sha256": "9e1a3a0d4e6c726be6c443c235f7c6ee9cfef4ad04559df6b4ab697d4fc8a9a5",
+  "source_and_patcher_identical": true,
+  "fresh_path_with_spaces": true,
+  "pythonpath_cleared": true,
+  "stock_unchanged": true,
+  "accepted_development_build_reproduced_before_version_bump": true
+}
